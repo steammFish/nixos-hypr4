@@ -1,0 +1,10 @@
+{
+   "extDesc": {
+      "description": "Extension description",
+      "message": "QR Code Extension: An accelerated, more direct path to generating and sharing QR codes - even better than Bitly's Short Links!"
+   },
+   "extName": {
+      "description": "Extension name",
+      "message": "Bitly - Barcode"
+   }
+}

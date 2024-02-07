@@ -1,0 +1,6 @@
+2024/01/21-02:53:09.353 34bfb Creating DB /home/ck/.config/google-chrome/Default/IndexedDB/https_zhuanlan.zhihu.com_0.indexeddb.leveldb since it was missing.
+2024/01/21-02:53:09.356 34bfb Reusing MANIFEST /home/ck/.config/google-chrome/Default/IndexedDB/https_zhuanlan.zhihu.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/01/21-03:24:40.983 34bfc Level-0 table #5: started
+2024/01/21-03:24:40.985 34bfc Level-0 table #5: 20090 bytes OK
+2024/01/21-03:24:40.987 34bfc Delete type=0 #3
+2024/01/21-03:24:40.987 34bfc Manual compaction at level-0 from (begin) .. (end); will stop at (end)

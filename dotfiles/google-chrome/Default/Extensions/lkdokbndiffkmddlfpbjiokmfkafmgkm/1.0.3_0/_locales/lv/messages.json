@@ -1,0 +1,10 @@
+{
+   "extDesc": {
+      "description": "Paplašinājuma apraksts",
+      "message": "QR koda paplašinājums: ātrāks, tiešāks veids, kā izveidot un koplietot QR kodus, pat labāks nekā īsas saites."
+   },
+   "extName": {
+      "description": "Paplašinājuma nosaukums",
+      "message": "QR koda ģenerators"
+   }
+}

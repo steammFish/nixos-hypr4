@@ -1,0 +1,6 @@
+2024/01/24-12:43:59.129 2a17 Creating DB /home/ck/.config/google-chrome/Default/IndexedDB/https_discourse.nixos.org_0.indexeddb.leveldb since it was missing.
+2024/01/24-12:43:59.131 2a17 Reusing MANIFEST /home/ck/.config/google-chrome/Default/IndexedDB/https_discourse.nixos.org_0.indexeddb.leveldb/MANIFEST-000001
+2024/01/24-12:44:33.413 2a25 Level-0 table #5: started
+2024/01/24-12:44:33.414 2a25 Level-0 table #5: 54441 bytes OK
+2024/01/24-12:44:33.415 2a25 Delete type=0 #3
+2024/01/24-12:44:33.415 2a25 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

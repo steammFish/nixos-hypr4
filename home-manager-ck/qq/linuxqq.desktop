@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Linux QQ
+Exec=/home/ck/nixos/home-manager/qq/launch_linuxqq.sh
+Icon=/home/ck/nixos/home-manager/qq/tencent-qq.png
+Type=Application
+Categories=Network;

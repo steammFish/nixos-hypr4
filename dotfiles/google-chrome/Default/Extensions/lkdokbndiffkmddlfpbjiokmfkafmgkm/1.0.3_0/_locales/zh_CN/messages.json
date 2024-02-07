@@ -1,0 +1,10 @@
+{
+   "extDesc": {
+      "description": "扩展描述",
+      "message": "二维码扩展：一种更快，更直接的创建和分享二维码的方式，甚至比短链接更好。"
+   },
+   "extName": {
+      "description": "扩展名",
+      "message": "二维码生成器"
+   }
+}

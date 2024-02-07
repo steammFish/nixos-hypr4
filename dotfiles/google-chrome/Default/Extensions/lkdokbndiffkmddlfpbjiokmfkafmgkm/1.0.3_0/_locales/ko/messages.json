@@ -1,0 +1,10 @@
+{
+   "extDesc": {
+      "description": "확장 프로그램 설명",
+      "message": "QR 코드 확장 프로그램: 더 빠르고 직접적인 방법으로 QR 코드를 생성하고 공유하십시오, 짧은 링크보다 더 좋습니다."
+   },
+   "extName": {
+      "description": "확장 프로그램 이름",
+      "message": "QR 코드 생성기"
+   }
+}

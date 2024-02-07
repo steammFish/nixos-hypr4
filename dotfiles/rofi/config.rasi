@@ -1,0 +1,7 @@
+* {
+    font:   "Iosevka Nerd Font 24";
+}
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+
+

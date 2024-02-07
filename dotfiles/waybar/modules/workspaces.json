@@ -1,0 +1,41 @@
+{
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "default": "",
+      "focused": "",
+      "urgent": ""
+    },
+    "persistent-workspaces": {
+      "*": 6
+    }
+  },
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "pkill wofi || wofi --show drun --gtk-dark",
+    "on-click-middle": "exec wallpaper_default",
+    "on-click-right": "exec wallpaper_random gif",
+    "tooltip": false
+  },
+  "wlr/taskbar": {
+    "all-outputs": true,
+    "format": "{icon}",
+    "icon-size": 28,
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "tooltip-format": "{name}"
+  },
+  "tray": {
+    "icon-size": 28,
+    "spacing": 10
+  }
+}

@@ -1,0 +1,10 @@
+{
+   "extDesc": {
+      "description": "Extension description",
+      "message": "QR Code Extension: A faster, more direct way to create and share QR codes than ever before - with Bitly short links, qr code generator, and qr code scanner for effortless QR code scanning."
+   },
+   "extName": {
+      "description": "Extension name",
+      "message": "Shorten URL - Barcode"
+   }
+}

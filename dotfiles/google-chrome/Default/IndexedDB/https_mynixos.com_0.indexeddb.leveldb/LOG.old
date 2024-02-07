@@ -1,0 +1,22 @@
+2024/02/05-14:44:49.926 2685 Reusing MANIFEST /home/ck/.config/google-chrome/Default/IndexedDB/https_mynixos.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/02/05-14:44:49.927 2685 Recovering log #385
+2024/02/05-14:44:49.927 2685 Reusing old log /home/ck/.config/google-chrome/Default/IndexedDB/https_mynixos.com_0.indexeddb.leveldb/000385.log 
+2024/02/05-15:05:59.198 2685 Level-0 table #390: started
+2024/02/05-15:05:59.200 2685 Level-0 table #390: 4119 bytes OK
+2024/02/05-15:05:59.201 2685 Delete type=0 #385
+2024/02/05-15:05:59.201 2685 Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x81\x00\x00\x05' @ 4469 : 1
+2024/02/05-15:05:59.201 2685 Compacting 1@0 + 1@1 files
+2024/02/05-15:05:59.202 2685 Generated table #391@0: 152 keys, 2347 bytes
+2024/02/05-15:05:59.203 2685 Compacted 1@0 + 1@1 files => 2347 bytes
+2024/02/05-15:05:59.204 2685 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/02/05-15:05:59.204 2685 Delete type=2 #387
+2024/02/05-15:05:59.204 2685 Delete type=2 #390
+2024/02/05-15:05:59.204 2685 Manual compaction at level-0 from '\x00\x81\x00\x00\x05' @ 4469 : 1 .. (end); will stop at (end)
+2024/02/05-15:05:59.204 2685 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x81\x00\x00\x05' @ 4469 : 1
+2024/02/05-15:05:59.204 2685 Compacting 1@1 + 1@2 files
+2024/02/05-15:05:59.205 2685 Generated table #392@1: 63 keys, 1681 bytes
+2024/02/05-15:05:59.205 2685 Compacted 1@1 + 1@2 files => 1681 bytes
+2024/02/05-15:05:59.206 2685 compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/02/05-15:05:59.206 2685 Delete type=2 #242
+2024/02/05-15:05:59.206 2685 Delete type=2 #391
+2024/02/05-15:05:59.206 2685 Manual compaction at level-1 from '\x00\x81\x00\x00\x05' @ 4469 : 1 .. (end); will stop at (end)

@@ -1,0 +1,56 @@
+{
+   "brandDescription": {
+      "message": "Bilingual web page translation, also supports PDF translation, bilingual Epub eBook translation, free to use."
+   },
+   "brandName": {
+      "message": "Immersion Translation: traduzione bilingue di pagine web e documenti PDF"
+   },
+   "donateContext": {
+      "message": "Scopri i vantaggi della sponsorizzazione"
+   },
+   "openAboutPage": {
+      "message": "Informazioni/Risposte"
+   },
+   "openEbookBuilder": {
+      "message": "Creare eBook EPUB bilingue"
+   },
+   "openEbookViewer": {
+      "message": "Leggere gli eBook locali"
+   },
+   "openOptionsPage": {
+      "message": "Aprire la pagina delle impostazioni"
+   },
+   "shareToDraft": {
+      "message": "Condividi le pagine bilingue"
+   },
+   "shortBrandName": {
+      "message": "Traduzione in immersione"
+   },
+   "toggleOnlyTransation": {
+      "message": "Cambia modalità bilingue/solo traduzione"
+   },
+   "toggleTranslatePage": {
+      "message": "Tradurre la pagina/visualizzare il testo originale"
+   },
+   "toggleTranslateTheMainPage": {
+      "message": "Tradurre l'area principale della pagina/visualizzare il testo originale"
+   },
+   "toggleTranslateTheWholePage": {
+      "message": "Tradurre tutte le aree della pagina/visualizzare il testo originale"
+   },
+   "toggleTranslateToThePageEndImmediately": {
+      "message": "Traduzione immediata a fondo pagina/visualizzazione del testo originale"
+   },
+   "toggleTranslationMask": {
+      "message": "Mostra/nascondi l'effetto di sfocatura della traslazione"
+   },
+   "translateLocalHtmlFile": {
+      "message": "Tradurre file HTML/testo"
+   },
+   "translateLocalPdfFile": {
+      "message": "Tradurre i file PDF locali"
+   },
+   "translateLocalSubtitleFile": {
+      "message": "Tradurre i file dei sottotitoli locali"
+   }
+}

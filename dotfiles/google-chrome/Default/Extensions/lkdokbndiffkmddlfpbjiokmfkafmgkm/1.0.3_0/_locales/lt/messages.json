@@ -1,0 +1,10 @@
+{
+   "extDesc": {
+      "description": "Plėtinio aprašymas",
+      "message": "QR kodo plėtinys: greitesnis, tiesiogesnis būdas kurti ir dalintis QR kodais, netgi geresnis nei trumpieji nuorodų adresai."
+   },
+   "extName": {
+      "description": "Plėtinio pavadinimas",
+      "message": "QR kodo generatorius"
+   }
+}

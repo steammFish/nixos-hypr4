@@ -1,0 +1,83 @@
+{
+   "brandDescription": {
+      "message": "Bilingual web page translation, also supports PDF, Epub eBook, Video subtitles translation, free to use."
+   },
+   "brandName": {
+      "message": "Immersive Translate: Web Page&PDF Translation"
+   },
+   "donateContext": {
+      "message": "Explore Sponsorship Benefits"
+   },
+   "openAboutPage": {
+      "message": "About / Feedback/Sponsor"
+   },
+   "openEbookBuilder": {
+      "message": "Create Bilingual EPUB E-books"
+   },
+   "openEbookViewer": {
+      "message": "Read local e-books"
+   },
+   "openOptionsPage": {
+      "message": "Open Settings Page"
+   },
+   "shareToDraft": {
+      "message": "Share Bilingual Page"
+   },
+   "shortBrandName": {
+      "message": "Immersive Translate"
+   },
+   "toggleMouseHoverTranslateDirectly": {
+      "message": "Temporarily enable or disable direct translation by mouse hover on the page"
+   },
+   "toggleOnlyTransation": {
+      "message": "Switch to bilingual/translation-only mode"
+   },
+   "toggleTranslatePage": {
+      "message": "Translate webpage/Display original text"
+   },
+   "toggleTranslateTheMainPage": {
+      "message": "Translate main page /Display original text"
+   },
+   "toggleTranslateTheWholePage": {
+      "message": "Translate entire page/Display original text"
+   },
+   "toggleTranslateToThePageEndImmediately": {
+      "message": "Translate instantly to the bottom of the page/Display original text"
+   },
+   "toggleTranslationMask": {
+      "message": "Toggle blur effect on translated text (learning mode) for the current page"
+   },
+   "toggleVideoSubtitlePreTranslation": {
+      "message": "Switch Video Subtitles with Immersive Translation Feature"
+   },
+   "translateInputBox": {
+      "message": "Translate the content of the current input box"
+   },
+   "translateLocalHtmlFile": {
+      "message": "Translate HTML/txt File"
+   },
+   "translateLocalPdfFile": {
+      "message": "Translate local PDF File"
+   },
+   "translateLocalSubtitleFile": {
+      "message": "Translate Local Subtitle File"
+   },
+   "translateWithBing": {
+      "message": "Temporarily translate the current page with Microsoft Translator"
+   },
+   "translateWithDeepL": {
+      "message": "Temporarily translate the current page with DeepL"
+   },
+   "translateWithGemini": {
+      "message": "Temporarily translate the current page with Gemini"
+   },
+   "translateWithGoogle": {
+      "message": "Temporarily translate the current page with Google"
+   },
+   "translateWithOpenAI": {
+      "message": "Temporarily translate the current page with OpenAI"
+   },
+   "translateWithTransmart": {
+      "message": "Temporarily translate the current page with Tencent Translator"
+   }
+}
