@@ -1,3 +1,15 @@
-2024/02/07-20:19:08.118 dfd Reusing MANIFEST /home/ck/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
-2024/02/07-20:19:08.122 dfd Recovering log #196
-2024/02/07-20:19:08.122 dfd Reusing old log /home/ck/.config/google-chrome/Default/Sync Data/LevelDB/000196.log 
+2024/02/07-20:54:12.210 d61 Reusing MANIFEST /home/ck/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2024/02/07-20:54:12.216 d61 Recovering log #196
+2024/02/07-20:54:12.220 d61 Reusing old log /home/ck/.config/google-chrome/Default/Sync Data/LevelDB/000196.log 
+2024/02/07-20:54:15.467 d55 Level-0 table #200: started
+2024/02/07-20:54:15.469 d55 Level-0 table #200: 99846 bytes OK
+2024/02/07-20:54:15.470 d55 Delete type=0 #196
+2024/02/07-20:54:15.470 d55 Compacting 4@0 + 1@1 files
+2024/02/07-20:54:15.474 d55 Generated table #201@0: 517 keys, 65663 bytes
+2024/02/07-20:54:15.474 d55 Compacted 4@0 + 1@1 files => 65663 bytes
+2024/02/07-20:54:15.475 d55 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/02/07-20:54:15.475 d55 Delete type=2 #194
+2024/02/07-20:54:15.475 d55 Delete type=2 #197
+2024/02/07-20:54:15.475 d55 Delete type=2 #191
+2024/02/07-20:54:15.475 d55 Delete type=2 #200
+2024/02/07-20:54:15.475 d55 Delete type=2 #188

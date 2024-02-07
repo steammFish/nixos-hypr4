@@ -1,3 +1,3 @@
-2024/02/07-20:19:08.458 e07 Reusing MANIFEST /home/ck/.config/google-chrome/Default/IndexedDB/chrome-extension_cofdbpoegempjloogbagkncekinflcnj_0.indexeddb.leveldb/MANIFEST-000001
-2024/02/07-20:19:08.458 e07 Recovering log #15
-2024/02/07-20:19:08.459 e07 Reusing old log /home/ck/.config/google-chrome/Default/IndexedDB/chrome-extension_cofdbpoegempjloogbagkncekinflcnj_0.indexeddb.leveldb/000015.log 
+2024/02/07-20:54:12.563 d62 Reusing MANIFEST /home/ck/.config/google-chrome/Default/IndexedDB/chrome-extension_cofdbpoegempjloogbagkncekinflcnj_0.indexeddb.leveldb/MANIFEST-000001
+2024/02/07-20:54:12.564 d62 Recovering log #15
+2024/02/07-20:54:12.565 d62 Reusing old log /home/ck/.config/google-chrome/Default/IndexedDB/chrome-extension_cofdbpoegempjloogbagkncekinflcnj_0.indexeddb.leveldb/000015.log 
