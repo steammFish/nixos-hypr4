@@ -2,18 +2,11 @@
 
 {
   imports = [
-    ./docker
+    ./virtualization.nix
     ./pkgs-gtk-themes
-    ./fcitx5.nix
     ./networking.nix
-    ./nixvim.nix
+    ./hardware.nix
     ./packages.nix
-    ./power.nix
-    ./zsh.nix
-    ./virtualbox.nix
-    ./pipewire.nix
-    ./bluetooth.nix
-    ./thunar.nix
-    ./yazi.nix
+    ./programs
   ];
 }

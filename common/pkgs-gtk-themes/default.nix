@@ -14,7 +14,6 @@ let
         inherit lib; # lib = nixpkgs.lib;
       };
 
-
     in
     {
       everforest-theme = themeImporter "everforest";

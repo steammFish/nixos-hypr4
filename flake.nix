@@ -14,7 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ags.url = "github:Aylur/ags";
     hyprland.url = "github:hyprwm/Hyprland";
+    nix-colors.url = "github:misterio77/nix-colors";
+    # nix-colors.inputs.base16-schemes.follows = "base16-schemes"; # Be sure to add this
 
   };
 
@@ -24,6 +27,8 @@
     , home-manager
     , nixvim
     , hyprland
+    , nix-colors
+    , ags
     }:
     let
 
@@ -31,20 +36,17 @@
       pkgs = nixpkgs.legacyPackages.${system};
       lib = pkgs.lib;
 
-      globalVariable = {
-        username = "ck"; # FIXME: global variable 
-        hostname = "ck-nixos";
-        # userGroups = ["networkmanager" "wheel" "keyd" "video" "input"  ];
-        # desktop = "gnome"; # "gnome", "plasma" or  # FIXME: desktop change
-      };
+      username = "ck"; # FIXME: global variable 
+      hostname = "ck-nixos";
+      userGroups = ["networkmanager" "wheel" "keyd" "video" "input"  ];
 
     in
     {
       formatter.${system} = pkgs.nixpkgs-fmt;
 
-      nixosConfigurations.${globalVariable.hostname} = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs globalVariable; };
+        specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
 
@@ -52,8 +54,8 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${globalVariable.username} = import ./home-manager-ck/home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs self globalVariable; };
+            home-manager.users.${username} = import ./home-manager/home.nix;
+            home-manager.extraSpecialArgs = { inherit inputs username; };
           }
 
         ];
@@ -61,15 +63,8 @@
 
       homeConfigurations."ck" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home-manager-ck/home.nix ];
-        extraSpecialArgs = { inherit inputs; };
-      };
-
-
-      homeConfigurations."mr" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./home-manager-mr/home.nix ];
-        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./home-manager/home.nix ];
+        extraSpecialArgs = { inherit inputs username; };
       };
 
     };

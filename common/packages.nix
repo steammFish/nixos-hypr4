@@ -3,25 +3,10 @@ let
 
   pkgsBasic = with pkgs;  [
 
-    nmap
-    file # show file information.
-    wl-clipboard
-    man-pages
-    filebrowser
-    nix-prefetch-git
-    home-manager
-    appimage-run
-    libnotify
-    ntfs3g
-
-    htop
-    aichat # Chat with gpt-3.5/chatgpt in terminal.
-    pfetch
-    neofetch
-
     ## dev 
     gcc
     clang
+    glibc
     gnumake
     cmake
     ffmpeg-full
@@ -43,8 +28,12 @@ let
     spotify
     telegram-desktop
     discord
-    tartube-yt-dlp
     youtube-music
+    gnome.gnome-calendar
+    gnome.gnome-software
+    flatpak
+    home-manager
+
 
   ];
 
@@ -98,19 +87,20 @@ let
 in
 {
 
-  # environment.systemPackages = with pkgs; [
-  environment.systemPackages = lib.mkMerge [
-    pkgsBasic
-    pkgsDesktop
-  ];
-
+  # █▀█ ▄▀█ █▀▀ █▄▀ ▄▀█ █▀▀ █▀▀ █▀
+  # █▀▀ █▀█ █▄▄ █░█ █▀█ █▄█ ██▄ ▄█
+  nixpkgs = {
+    config = {
+      allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [ "ngrok" ];
+      permittedInsecurePackages = [ "electron-25.9.0" ];
+    };
+  };
+  # environment.systemPackages = with pkgs; [];
+  environment.systemPackages = lib.mkMerge [ pkgsBasic pkgsDesktop ];
 
   # █▀▀ █▀█ █▄░█ ▀█▀ █▀
   # █▀░ █▄█ █░▀█ ░█░ ▄█
-
-  fonts.packages = lib.mkMerge [
-    fontsExtra
-  ];
+  fonts.packages = lib.mkMerge [ fontsExtra ];
 
   # 确保字体配置生效
   fonts.fontconfig.defaultFonts = {
@@ -118,19 +108,6 @@ in
     serif = [ "Noto Serif CJK SC" "JetBrainsMono Nerd Font" ];
     monospace = [ "Noto Sans Mono CJK SC" ];
   };
-
-
-  nixpkgs = {
-    config = {
-      allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
-        "ngrok"
-      ];
-      permittedInsecurePackages = [
-        "electron-25.9.0"
-      ];
-    };
-  };
-
 
   # █▀▀ █░░ ▄▀█ ▀█▀ █▀█ ▄▀█ █▄▀
   # █▀░ █▄▄ █▀█ ░█░ █▀▀ █▀█ █░█

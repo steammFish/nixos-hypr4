@@ -16,7 +16,7 @@
 
   fileSystems."/" =
     {
-      device = "/dev/disk/by-uuid/13df3c59-4e0c-4174-897f-343532c67308";
+      device = "/dev/disk/by-uuid/d9dfb689-e570-4f9c-9286-8aea235785d6";
       fsType = "ext4";
     };
 
@@ -33,7 +33,6 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp0s13f0u3u3c2.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

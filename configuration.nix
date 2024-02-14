@@ -15,6 +15,8 @@ in
       ./hardware-configuration.nix
       ./minimal.nix
       ./common
+      
+      # /etc/nixos/hardware-configuration.nix
       # ./gnome-desktop
       # ./plasma-desktop
     ];
