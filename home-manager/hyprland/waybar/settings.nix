@@ -42,7 +42,8 @@
       };
       "custom/launcher" = {
         "format" = " ";
-        "on-click" = "pkill wofi || wofi --show drun --gtk-dark";
+        # "on-click" = "pkill wofi || wofi --show drun --gtk-dark";
+        "on-click" = "pkill rofi || rofi -show drun -show-icons";
         "on-click-middle" = "exec wallpaper_default";
         "on-click-right" = "exec wallpaper_random gif";
         "tooltip" = false;
@@ -106,16 +107,18 @@
           "headset" = "";
         };
         "format-muted" = "";
+        "scroll-step" = 1;
         "on-click" = "pamixer --toggle-mute";
         "on-click-right" = "pavucontrol";
         "on-scroll-down" = "pamixer --decrease 1";
         "on-scroll-up" = "pamixer --increase 1";
-        "scroll-step" = 1;
       };
       "pulseaudio#microphone" = {
         "format" = "{format_source}";
         "format-source" = " {volume}";
         "format-source-muted" = "";
+        "on-scroll-down" = "pamixer --default-source  -d 2";
+        "on-scroll-up" = "pamixer --default-source  -i 2";
       };
       "backlight" = {
         "device" = "intel_backlight";

@@ -95,17 +95,16 @@ in
 
       #workspaces button {
         margin: 0px 8px;
-        color: #FFCCCC;
+        color: #FFCCCC;  /* sakura pink */
       }
 
-      /*
-      #workspaces button.empty {
-        color: #d3d3d3;
-      }
-      */
+      /* #workspaces button.empty { */
+        /* light gray */
+        /* color: #d3d3d3; */
+      /* } */
 
       #workspaces button.active {
-        color: #F7879A;
+        color: #F7879A;  /* rose pink */
       }
 
       #custom-sep,

@@ -43,7 +43,7 @@
     nix-prefetch-git
     appimage-run
 
-    
+
 
   ];
 

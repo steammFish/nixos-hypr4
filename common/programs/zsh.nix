@@ -60,9 +60,9 @@ in
       sys = "cd /etc/nixos";
     };
 
-    promptInit = ''
-      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-    '';
+    # promptInit = ''
+    #   source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    # '';
 
     interactiveShellInit = ''
       # ${pkgs.pokemon-colorscripts-mac}/bin/pokemon-colorscripts -r
@@ -71,6 +71,8 @@ in
     # loginShellInit = "";
   };
 }
+
+
 
 # programs.zsh.shellInit = "";
 # 在 zsh shell 初始化过程中调用的 Shell 脚本代码

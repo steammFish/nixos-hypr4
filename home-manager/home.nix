@@ -4,6 +4,16 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  programs.zsh = {
+    enable = true;
+    historySubstringSearch.enable = true;
+    zsh-abbr.enable = true;
+    prezto.enable = true;
+    initExtra = ''
+      [[ ! -f ~/.bashrc ]] || source ~/.bashrc
+    '';
+  };
+
   imports = [
     ./hyprland
     ./programs

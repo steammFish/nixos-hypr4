@@ -38,7 +38,7 @@
 
       username = "ck"; # FIXME: global variable 
       hostname = "ck-nixos";
-      userGroups = ["networkmanager" "wheel" "keyd" "video" "input"  ];
+      userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" ];
 
     in
     {

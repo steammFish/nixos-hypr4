@@ -1,6 +1,5 @@
-
-{config, pkgs, ...}:
-let 
+{ config, pkgs, ... }:
+let
 
   rofi-theme1 = ./spotlight-dark.rasi;
 
@@ -13,7 +12,7 @@ let
       /* @import "~/.cache/wal/colors-rofi-dark.rasi" */
     '';
 
-in 
+in
 {
   home.file = {
     ".config/rofi/config.rasi".text = rofi;

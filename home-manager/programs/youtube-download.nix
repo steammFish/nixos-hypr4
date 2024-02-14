@@ -15,8 +15,8 @@ in
   };
 
   home.packages = with pkgs;[
-      tlp
-      tartube-yt-dlp
-    ];
+    tlp
+    tartube-yt-dlp
+  ];
 
 }
