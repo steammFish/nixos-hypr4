@@ -14,6 +14,7 @@ screenshot - grim+swappy+slurp
 theme - pywal
 terminal - kitty 
 
-![pic](./res/swappy-20240205-182103.png "t")
-![pic](./res/swappy-20240205-182114.png "t")
-![pic](./res/swappy-20240205-182135.png "t")
+
+![pic](./res/20240214_19h41m48s_grim.png "t")
+
+
