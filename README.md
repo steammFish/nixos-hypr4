@@ -1,7 +1,6 @@
 # nixos-hypr3
 
-* pdf - zathura,mupdf
-* img - imv,viewnior,nomacs
+
 * bar - waybar
 * launcher - rofi-wayland
 * screenshot - grim+swappy+slurp,grimblast
@@ -11,10 +10,18 @@
 * notify - dunst+libnotify
 * colorscheme - pywal
 * cliperboard - rofi+cliphist
+
+* pdf - zathura,mupdf
+* img - imv,viewnior,nomacs
+* filebrowser - thunar, yazi
+* editor - helix
+* shell - zsh
+
 * network - nm-applet
 * bluetooth - blueman-applet
 * audio - pavucontrol
 * brightness - brightnessctl
+* powerManager - power-profile-daemon
 
 
 ![pic](./res/img1_.png "t")
