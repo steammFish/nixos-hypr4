@@ -1,20 +1,23 @@
 # nixos-hypr3
 
-img - imv
-pdf - zathura
-monitor - htop
-bar - waybar
-notify - dunst 
-launcher - rofi-wayland
-cliperboard - rofi+cliphist
-network - nm-applet
-bluetooth - blueman-applet
-wallpaper - swww
-screenshot - grim+swappy+slurp
-theme - pywal
-terminal - kitty 
+* pdf - zathura,mupdf
+* img - imv,viewnior,nomacs
+* bar - waybar
+* launcher - rofi-wayland
+* screenshot - grim+swappy+slurp,grimblast
+* terminal - kitty,foot 
+* monitor - htop,gotop
+* wallpaper - swww
+* notify - dunst+libnotify
+* colorscheme - pywal
+* cliperboard - rofi+cliphist
+* network - nm-applet
+* bluetooth - blueman-applet
+* audio - pavucontrol
+* brightness - brightnessctl
 
 
-![pic](./res/20240214_19h41m48s_grim.png "t")
+![pic](./res/img1_.png "t")
+![pic](./res/img2_.png "t")
 
 
