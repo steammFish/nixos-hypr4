@@ -14,7 +14,7 @@
       };
       "layer" = "top";
       "position" = "top";
-      "width" = 1600;
+      "width" = 1800;
       "margin-top" = 10;
       "modules-left" = [ "custom/launcher" "clock" "battery" "disk" ];
       "modules-right" = [ "group/mysoundDevice" "backlight" "tray" ];
@@ -32,8 +32,8 @@
           # "5" = "";
           # "6" = "";
           "default" = "";
-          "active" = "";
           "empty" = "";
+          "active" = "";
           "urgent" = "";
         };
         "persistent-workspaces" = {

@@ -2,8 +2,7 @@
 
 {
   imports = [
-    # ./nixvim.nix
-    # ./fcitx5.nix
+    ./nixvim.nix
     ./zsh.nix
     ./thunar.nix
   ];

@@ -4,13 +4,31 @@ let
   hypr_start =
     pkgs.writeShellScriptBin "hypr_start"
       ''
-        image_dir="''${HOME}/Pictures/wallpapers"
+        dir1="$HOME/wallpapers/"
+        dir2="$HOME/Pictures/wallpapers/"
 
         WALLPAPER="$1"
 
         # 如果没有提供壁纸路径作为参数，就从指定文件夹随机选择一个
         if [[ -z "$WALLPAPER" ]]; then
-          WALLPAPER=$(find "$image_dir" | shuf -n 1)
+
+          pic1=$(find "$dir1" -type f -o -type l | shuf -n 1)
+          pic2=$(find "$dir2" -type f -o -type l | shuf -n 1)
+
+          # 再次从 pic1 和 pic2 中随机选择一张图片
+          WALLPAPER=$(echo -e "$pic1\n$pic2" | shuf -n 1)
+
+          # 如果 pic1 或 pic2 为空，则将另一个非空的值赋给 WALLPAPER
+          if [ -z "$WALLPAPER" ]; then
+              if [ -n "$pic1" ]; then
+                  WALLPAPER="$pic1"
+              elif [ -n "$pic2" ]; then
+                  WALLPAPER="$pic2"
+              else
+                  echo "no such picture!"
+              fi
+          fi
+
         fi
 
         # 检查是否成功找到壁纸
@@ -25,10 +43,10 @@ let
 
         # 设置壁纸
         # wal -i "$WALLPAPER"
-        swww init && swww img "$WALLPAPER"
+        swww init && swww img "$WALLPAPER" --transition-type random
 
         # 启动waybar
-        waybar&
+        waybar &
 
       '';
 

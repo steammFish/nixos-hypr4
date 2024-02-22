@@ -31,14 +31,16 @@
     cava
     hyprpicker
     hyprpaper
+    # gsettings-qt
+    gsettings-desktop-schemas
 
     # pdf
     mupdf
     zathura
 
     # img 
+    imagemagick # 命令行中编辑查看图像
     imv
-    imagemagick
     nomacs
     viewnior
 
@@ -51,7 +53,7 @@
 
     # 系统权限
     polkit-kde-agent
-    polkit_gnome
+    # polkit_gnome
 
     # 系统通知
     dunst
@@ -67,6 +69,7 @@
     grim
     swappy
     slurp
+    grimblast
 
   ];
 

@@ -17,6 +17,7 @@
       thunar-archive-plugin
       thunar-volman
       thunar-media-tags-plugin
+      exo
     ]) ++ (with pkgs.gnome; [
       file-roller
     ]);

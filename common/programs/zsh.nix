@@ -50,28 +50,43 @@ in
 
   programs.zsh.enable = true;
   programs.zsh = {
-    zsh-autoenv.enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    ohMyZsh.enable = true;
-    ohMyZsh.plugins = [ "git" "z" "extract" "dirhistory" "colored-man-pages" ];
+
+    # histFile
+    # histSize
+    # setOptions
+    # vteIntegration
+
     shellAliases = {
       home = "cd ~/.config/home-manager";
       sys = "cd /etc/nixos";
     };
-
-    # promptInit = ''
-    #   source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-    # '';
 
     interactiveShellInit = ''
       # ${pkgs.pokemon-colorscripts-mac}/bin/pokemon-colorscripts -r
       ${pkgs.pfetch}/bin/pfetch
     '';
     # loginShellInit = "";
+    # promptInit = ''
+    #   source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    # '';
+
+    zsh-autoenv.enable = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    enableLsColors = true;
+    enableCompletion = true;
+    enableGlobalCompInit = true;
+    enableBashCompletion = true;
+
+    ohMyZsh = {
+      enable = true;
+      theme = "fishy";
+      plugins = [ "git" "z" "extract" "dirhistory" "colored-man-pages" ];
+    };
+
   };
 }
-
 
 
 # programs.zsh.shellInit = "";

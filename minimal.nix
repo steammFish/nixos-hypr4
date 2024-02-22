@@ -2,7 +2,7 @@
 
 {
 
-  fileSystems."/home/ck/dr" = {
+  fileSystems."/home/ck/dotfiles" = {
     device = "/dev/nvme0n1p6";
     fsType = "auto"; # 或者指定你的文件系统类型，比如 "ext4"、"ntfs"、"vfat" 等
     options = [ "rw" "nosuid" "nodev" ]; # 根据需要添加更多的挂载选项
@@ -12,8 +12,8 @@
   # █░▀░█ █ █░▀█ █ █░▀░█ █▀█ █▄▄
 
   # networking.firewall.enable = false;
+  services.v2raya.enable = true;
   programs.hyprland.enable = true;
-  # services.v2raya.enable = true;
   security.polkit.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -42,8 +42,6 @@
     filebrowser
     nix-prefetch-git
     appimage-run
-
-
 
   ];
 

@@ -34,11 +34,12 @@
 
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      lib = pkgs.lib;
+      # lib = pkgs.lib;
 
-      username = "ck"; # FIXME: global variable 
+      username = "ck";
       hostname = "ck-nixos";
-      userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" ];
+      # userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" ];
+      # fontSize = 18;
 
     in
     {
@@ -46,7 +47,7 @@
 
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs username; };
         modules = [
           ./configuration.nix
 

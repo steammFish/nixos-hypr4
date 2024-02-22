@@ -48,8 +48,7 @@ in
         border-radius: 10px;
       }
 
-      #battery
-      {
+      #clock {
         font-weight: bold;
       }
 
@@ -99,8 +98,7 @@ in
       }
 
       /* #workspaces button.empty { */
-        /* light gray */
-        /* color: #d3d3d3; */
+        /* color: #d3d3d3; */ /* light gray */
       /* } */
 
       #workspaces button.active {

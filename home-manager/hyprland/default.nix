@@ -5,12 +5,13 @@ in
 {
   imports = [
     inputs.hyprland.homeManagerModules.default
-    ./conf
+    # ./conf
     ./waybar
     ./rofi
+    ./kitty.nix
     ./dunst.nix
     ./gtk.nix
-    ./wayland-packages.nix
+    # ./wayland-packages.nix
   ];
 
   # █░█ █▄█ █▀█ █▀█ █░░ ▄▀█ █▄░█ █▀▄
@@ -22,7 +23,8 @@ in
   wayland.windowManager.hyprland.settings = {
     monitor = ",preferred,auto,1.0";
     exec-once = [
-      "hypr_start $HOME/Pictures/default.jpg"
+      # "hypr_start $HOME/wallpapers/paper3.jpg"
+      "hypr_start"
       "fcitx5"
       "${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
       # "hypr_start"
@@ -79,18 +81,24 @@ in
     };
 
     decoration = {
-      rounding = 0;
+      rounding = 6;
+      # active_opacity=0.9;
+      # inactive_opacity=0.9;
       blur = {
         enabled = true;
-        # size = 3;
-        # passes = 1;
-        size = 10;
-        passes = 2;
-        blurls = "waybar";
+
+        passes = 6;
+        size = 6;
+        # noise = 0.01;
+
+        blurls = [
+          "waybar"
+          "kitty"
+        ];
 
       };
       drop_shadow = "yes";
-      shadow_range = 4;
+      shadow_range = 8;
       shadow_render_power = 3;
       # shadow_offset = "3 3";
 
@@ -100,39 +108,37 @@ in
     };
 
 
-    animations = {
-      enabled = true;
-      bezier = [
-        "overshot, 0.05, 0.9, 0.1, 1.05"
-        "smoothOut, 0.5, 0, 0.99, 0.99"
-        "smoothIn, 0.5, -0.5, 0.68, 1.5"
-      ];
-      animation = [
-        "windows, 1, 5, overshot, slide"
-        "windowsOut, 1, 3, smoothOut"
-        "windowsIn, 1, 3, smoothOut"
-        "windowsMove, 1, 4, smoothIn, slide"
-        "border, 1, 5, default"
-        "fade, 1, 5, smoothIn"
-        "fadeDim, 1, 5, smoothIn"
-        "workspaces, 1, 6, default"
-      ];
-    };
-
-
-
     # animations = {
-    #   enabled = "yes";
-    #   bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+    #   enabled = true;
+    #   bezier = [
+    #     "overshot, 0.05, 0.9, 0.1, 1.05"
+    #     "smoothOut, 0.5, 0, 0.99, 0.99"
+    #     "smoothIn, 0.5, -0.5, 0.68, 1.5"
+    #   ];
     #   animation = [
-    #     "windows, 1, 7, myBezier"
-    #     "windowsOut, 1, 7, default, popin 80%"
-    #     "border, 1, 10, default"
-    #     "borderangle, 1, 8, default"
-    #     "fade, 1, 7, default"
+    #     "windows, 1, 5, overshot, slide"
+    #     "windowsOut, 1, 3, smoothOut"
+    #     "windowsIn, 1, 3, smoothOut"
+    #     "windowsMove, 1, 4, smoothIn, slide"
+    #     "border, 1, 5, default"
+    #     "fade, 1, 5, smoothIn"
+    #     "fadeDim, 1, 5, smoothIn"
     #     "workspaces, 1, 6, default"
     #   ];
     # };
+
+    animations = {
+      enabled = "yes";
+      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+      animation = [
+        "windows, 1, 7, myBezier"
+        "windowsOut, 1, 7, default, popin 80%"
+        "border, 1, 10, default"
+        "borderangle, 1, 8, default"
+        "fade, 1, 7, default"
+        "workspaces, 1, 6, default"
+      ];
+    };
     dwindle = {
       pseudotile = "yes";
       preserve_split = "yes";
@@ -220,11 +226,10 @@ in
     bind =
       [
         # "$mod, F, exec, firefox"
-        # ", Print, exec, grimblast copy area"
 
-        "$mainMod, HOME, exec, ~/.config/hypr/scripts/start_eww"
-        "$mainMod CTRL, Space, exec, ags --toggle-window applauncher"
-        "$mainMod, escape, exec, eww close powermenu || eww open powermenu"
+        # "$mainMod, HOME, exec, ~/.config/hypr/scripts/start_eww"
+        # "$mainMod CTRL, Space, exec, ags --toggle-window applauncher"
+        # "$mainMod, escape, exec, eww close powermenu || eww open powermenu"
 
         # ", XF86AudioRaiseVolume, exec, ~/.config/eww/scripts/toggle_osd.sh --up"
         # ", XF86AudioLowerVolume, exec, ~/.config/eww/scripts/toggle_osd.sh --down"
@@ -262,18 +267,23 @@ in
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod, SLASH, exec, code"
+        "$mainMod SHIFT, SLASH, exec, code ~/nixos"
+        "$mainMod CTRL, SLASH, exec, hx ~/nixos"
         "$mainMod, SPACE, exec, playerctl play-pause"
         "$mainMod, E, exec, $explorer"
-        "$mainMod SHIFT, F, exec, kitty sh -c yazi"
+        "$mainMod SHIFT, E, exec, kitty sh -c yazi"
         "$mainMod, A, exec, rofi -show drun -show-icons"
         "$mainMod SHIFT, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
         "$mainMod, B, exec, $browser"
-        "$mainMod CTRL, W, exec, pkill waybar && sleep 0.4 && waybar"
-        ", Print, exec, scrs"
+        "$mainMod CTRL, W, exec, hypr_start"
         "ALT, R, exec, zathura ~/Desktop/Linux网络编程.pdf"
 
-        ''CTRL, Print, exec, grim -g "$(slurp)" - | wl-copy''
-        ''SHIFT, Print, exec, grim -g "$(slurp)" - | swappy -f -''
+        ",Print, exec, grimblast --notify save screen"
+        "SHIFT, Print, exec, grimblast --notify save area"
+        "CTRL, Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
+        # ", Print, exec, grim $(xdg-user-dir PICTURES)/screenshots/$(date +'%s_grim.png') && notify-send \"Saved to ~/Pictures/screenshots\""
+        # "ALT CTRL, Print, exec, grimblast copy area"
+        # "CTRL, Print, exec, grim -g \"$(slurp)\" - | wl-copy"
 
       ]
       ++ (
