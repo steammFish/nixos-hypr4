@@ -23,11 +23,10 @@ in
   wayland.windowManager.hyprland.settings = {
     monitor = ",preferred,auto,1.0";
     exec-once = [
-      # "hypr_start $HOME/wallpapers/paper3.jpg"
       "hypr_start"
       "fcitx5"
       "${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
-      # "hypr_start"
+      # "hypr_start $HOME/wallpapers/paper3.jpg"
       # "ags"
       # "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
     ];
@@ -35,6 +34,8 @@ in
     "$browser" = "google-chrome-stable";
     "$explorer" = "thunar";
     "$terminal" = "kitty";
+    "$menu" = "rofi -show drun -show-icons";
+    "$clipboard" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
     "$color0" = "rgba(ffccccee)";
     "$color1" = "rgba(f7879aee)";
@@ -91,10 +92,10 @@ in
         size = 6;
         # noise = 0.01;
 
-        blurls = [
-          "waybar"
-          "kitty"
-        ];
+        # blurls = [
+        #   "waybar"
+        #   "kitty"
+        # ];
 
       };
       drop_shadow = "yes";
@@ -158,9 +159,16 @@ in
       enable_swallow = true;
       swallow_regex = "^(kitty)$";
     };
-    "device:epic-mouse-v1" = {
+
+    # "device:epic-mouse-v1" = {
+    #   sensitivity = -0.5;
+    # };
+
+    device = {
+      name = "epic-mouse-v1";
       sensitivity = -0.5;
     };
+
 
     "$mainMod" = "SUPER";
     "$mod" = "SUPER";
@@ -172,31 +180,31 @@ in
     ];
 
     windowrule = [
-      "float, ^(steam)$"
-      "float, ^(guifetch)$ "
       "float,^(nm-connection-editor)$ "
-      "float,^(zenity)$ "
       "float,^(pavucontrol)$ "
-      "float,title:^(New Text Note — Okular)$ "
-      "float,title:^(org.gnome.Nautilus New Folder)$ "
       "float,title:^(Bluetooth Devices)(.*)$ "
-      "float,title:^(Fcitx Configuration)(.*)$ "
-      "float,title:^(Pinyin dictionary manager)(.*)$ "
       "float,title:^(.*)(Settings)$ "
       "float,title:^(.*)(Preferences)$ "
       "float,title:^(.*)(CopyQ)$ "
       "float,title:^(Oracle VM VirtualBox Manager)(.*)$ "
-      "float,title:^(sh)$ "
-      "nofullscreenrequest,title:^(Firefox — Sharing Indicator)$ "
-      "float,title:^(Firefox — Sharing Indicator)$ "
-      "move 100%-470 15,title:^(Firefox — Sharing Indicator)$ "
-      "float,title:^(Open File)(.*)$ "
-      "float,title:^(Open)(.*)$ "
-      "float,title:^(Select a File)(.*)$ "
-      "float,title:^(Choose wallpaper)(.*)$ "
-      "float,title:^(Open Folder)(.*)$ "
-      "float,title:^(Save As)(.*)$ "
-      "float,title:^(Library)(.*)$"
+
+      # "float, ^(steam)$"
+      # "float, ^(guifetch)$ "
+      # "float,^(zenity)$ "
+      # "float,title:^(New Text Note — Okular)$ "
+      # "float,title:^(org.gnome.Nautilus New Folder)$ "
+      # "float,title:^(Fcitx Configuration)(.*)$ "
+      # "float,title:^(Pinyin dictionary manager)(.*)$ "
+      # "float,title:^(sh)$ "
+      # "float,title:^(Firefox — Sharing Indicator)$ "
+      # "move 100%-470 15,title:^(Firefox — Sharing Indicator)$ "
+      # "float,title:^(Open File)(.*)$ "
+      # "float,title:^(Open)(.*)$ "
+      # "float,title:^(Select a File)(.*)$ "
+      # "float,title:^(Choose wallpaper)(.*)$ "
+      # "float,title:^(Open Folder)(.*)$ "
+      # "float,title:^(Save As)(.*)$ "
+      # "float,title:^(Library)(.*)$"
     ];
 
     windowrulev2 = [
@@ -268,12 +276,12 @@ in
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod, SLASH, exec, code"
         "$mainMod SHIFT, SLASH, exec, code ~/nixos"
-        "$mainMod CTRL, SLASH, exec, hx ~/nixos"
+        # "$mainMod CTRL, SLASH, exec, hx ~/nixos"
         "$mainMod, SPACE, exec, playerctl play-pause"
         "$mainMod, E, exec, $explorer"
         "$mainMod SHIFT, E, exec, kitty sh -c yazi"
-        "$mainMod, A, exec, rofi -show drun -show-icons"
-        "$mainMod SHIFT, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+        "$mainMod, A, exec, $menu"
+        "$mainMod SHIFT, V, exec, $clipboard"
         "$mainMod, B, exec, $browser"
         "$mainMod CTRL, W, exec, hypr_start"
         "ALT, R, exec, zathura ~/Desktop/Linux网络编程.pdf"

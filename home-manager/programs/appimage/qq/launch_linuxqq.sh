@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 DOWNLOAD_DIR=/home/ck/.cache/qq/
-APPIMAGE_PATH="$DOWNLOAD_DIR/linuxqq_3.2.5-20979_x86_64.AppImage"
-DOWNLOAD_URL=https://dldir1.qq.com/qqfile/qq/QQNT/c64ca459/linuxqq_3.2.5-20979_x86_64.AppImage
+APPIMAGE_PATH="$DOWNLOAD_DIR/linuxqq.AppImage"
+DOWNLOAD_URL=https://dldir1.qq.com/qqfile/qq/QQNT/852276c1/linuxqq_3.2.5-21453_x86_64.AppImage
+
 
 # Function to show notification
 show_notification() {

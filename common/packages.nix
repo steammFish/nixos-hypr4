@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 let
 
-  pkgsBasic = with pkgs;  [
+  pkgsDev = with pkgs;  [
 
     ## dev 
     gcc
@@ -39,12 +39,12 @@ let
 
   fontsExtra = with pkgs; [
 
+    # comic-mono
+    # comic-relief
     ubuntu_font_family
     dejavu_fonts
     monaspace
     montserrat
-    comic-mono
-    comic-relief
     liberation_ttf
     mplus-outline-fonts.githubRelease
     dina-font
@@ -92,11 +92,12 @@ in
   nixpkgs = {
     config = {
       allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [ "ngrok" ];
-      permittedInsecurePackages = [ "electron-25.9.0" ];
+      permittedInsecurePackages = [ "electron-25.9.0" "freeimage-unstable-2021-11-01" ];
     };
   };
+
   # environment.systemPackages = with pkgs; [];
-  environment.systemPackages = lib.mkMerge [ pkgsBasic pkgsDesktop ];
+  environment.systemPackages = lib.mkMerge [ pkgsDev pkgsDesktop ];
 
   # █▀▀ █▀█ █▄░█ ▀█▀ █▀
   # █▀░ █▄█ █░▀█ ░█░ ▄█

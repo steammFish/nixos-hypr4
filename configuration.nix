@@ -2,12 +2,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, username, hostname, desktop, ... }:
 
-let
-  username = "ck";
-  hostname = "ck-nixos";
-in
 {
   imports =
     [
@@ -15,10 +11,6 @@ in
       ./hardware-configuration.nix
       ./minimal.nix
       ./common
-
-      # /etc/nixos/hardware-configuration.nix
-      # ./gnome-desktop
-      # ./plasma-desktop
     ];
 
   # Bootloader.
@@ -42,10 +34,10 @@ in
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
+  # services.xserver = {
+  #   layout = "us";
+  #   xkbVariant = "";
+  # };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -54,9 +46,9 @@ in
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.ck = {
+  users.users."${username}" = {
     isNormalUser = true;
-    description = "ck";
+    description = "${username}-${desktop}";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       # firefox

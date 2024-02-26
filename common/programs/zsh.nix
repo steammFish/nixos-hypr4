@@ -61,14 +61,14 @@ in
       sys = "cd /etc/nixos";
     };
 
-    interactiveShellInit = ''
-      # ${pkgs.pokemon-colorscripts-mac}/bin/pokemon-colorscripts -r
+    # interactiveShellInit = ''
+    #   # ${pkgs.pokemon-colorscripts-mac}/bin/pokemon-colorscripts -r
+    # '';
+
+    promptInit = ''
+      # source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       ${pkgs.pfetch}/bin/pfetch
     '';
-    # loginShellInit = "";
-    # promptInit = ''
-    #   source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-    # '';
 
     zsh-autoenv.enable = true;
     autosuggestions.enable = true;

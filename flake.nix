@@ -38,6 +38,7 @@
 
       username = "ck";
       hostname = "ck-nixos";
+      desktop = "hyprland";
       # userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" ];
       # fontSize = 18;
 
@@ -47,7 +48,7 @@
 
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs username; };
+        specialArgs = { inherit inputs username hostname desktop; };
         modules = [
           ./configuration.nix
 

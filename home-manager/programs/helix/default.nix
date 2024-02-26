@@ -44,8 +44,9 @@
 
     settings = {
       # theme = "adwaita-dark";
-      theme = "gruvbox";
+      # theme = "gruvbox";
       # theme = "catppuccin_mocha";
+      theme = "autumn_night";
       editor = {
 
         cursorline = true; # 光标所在行高亮显示

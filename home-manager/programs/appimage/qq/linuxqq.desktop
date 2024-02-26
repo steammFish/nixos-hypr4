@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Linux QQ
+Exec=/home/ck/.mybin/qq/launch_linuxqq.sh
+Icon=/home/ck/.mybin/qq/tencent-qq.png
+Type=Application
+Categories=Network;

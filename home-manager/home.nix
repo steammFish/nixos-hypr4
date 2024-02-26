@@ -1,18 +1,20 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
-
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "freeimage-unstable-2021-11-01"
+  ];
 
-  # programs.zsh = {
-  #   enable = true;
-  #   historySubstringSearch.enable = true;
-  #   zsh-abbr.enable = true;
-  #   prezto.enable = true;
-  #   initExtra = ''
-  #     [[ ! -f ~/.bashrc ]] || source ~/.bashrc
-  #   '';
-  # };
+  programs.zsh = {
+    enable = true;
+    historySubstringSearch.enable = true;
+    zsh-abbr.enable = true;
+    prezto.enable = true;
+    initExtra = ''
+      [[ ! -f ~/.bashrc ]] || source ~/.bashrc
+    '';
+  };
 
   imports = [
     ./conf
@@ -25,8 +27,8 @@
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "ck";
-  home.homeDirectory = "/home/ck";
+  home.username = "${username}";
+  home.homeDirectory = "/home/${username}";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

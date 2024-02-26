@@ -2,19 +2,31 @@
 
 {
 
+  # █▀▄▀█ █ █▄░█ █ █▀▄▀█ ▄▀█ █░░
+  # █░▀░█ █ █░▀█ █ █░▀░█ █▀█ █▄▄
+
+  # programs.zsh.enable = true;
+  # networking.hostName = "ck-nixos"; # Define your hostname.
+  # networking.firewall.enable = false;
+  # networking.proxy.default = "http://192.168.43.1:10809/";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  security.polkit.enable = true;
+  services.v2raya.enable = true;
+  programs.hyprland.enable = true;
+
   fileSystems."/home/ck/dotfiles" = {
     device = "/dev/nvme0n1p6";
     fsType = "auto"; # 或者指定你的文件系统类型，比如 "ext4"、"ntfs"、"vfat" 等
     options = [ "rw" "nosuid" "nodev" ]; # 根据需要添加更多的挂载选项
   };
 
-  # █▀▄▀█ █ █▄░█ █ █▀▄▀█ ▄▀█ █░░
-  # █░▀░█ █ █░▀█ █ █░▀░█ █▀█ █▄▄
-
-  # networking.firewall.enable = false;
-  services.v2raya.enable = true;
-  programs.hyprland.enable = true;
-  security.polkit.enable = true;
+  # services.xserver = {
+  #   xkb = {
+  #     layout = "us";
+  #     options = "caps:escape";
+  #     variant = "";
+  #   };
+  # };
 
   environment.systemPackages = with pkgs; [
 

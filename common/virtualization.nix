@@ -1,7 +1,5 @@
 { pkgs, config, username, ... }:
-# let
-#   username = "ck";
-# in
+
 {
   users.extraGroups.vboxusers.members = [ username ];
   users.extraGroups.docker.members = [ username ];

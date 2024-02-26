@@ -29,7 +29,9 @@ let
       fill_shape=false
     '';
 
-  dictURL = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20220416.dict";
+  # dictURL = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20220416.dict";
+  # vim-plug = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim";
+
 
 in
 
@@ -37,17 +39,25 @@ in
 
   # imports = [ ./wallpapers ];
 
-  xdg.dataFile."fcitx5/pinyin/dictionaries/zhwiki-20220416.dict".source = pkgs.fetchurl {
-    url = dictURL;
-    sha256 = "vyvsychfpRMSQWgxQfCxD3QllmKBjDdcbIvJiEDfz+8=";
-  };
+  # xdg.dataFile."fcitx5/pinyin/dictionaries/zhwiki-20220416.dict".source = pkgs.fetchurl {
+  #   url = dictURL;
+  #   sha256 = "vyvsychfpRMSQWgxQfCxD3QllmKBjDdcbIvJiEDfz+8=";
+  # };
 
+  # xdg.dataFile."nvim/site/autoload/plug.vim".source = pkgs.fetchurl {
+  #   url = vim-plug;
+  #   sha256 = "163cb9ar2bfd7sq2hfhmzvk7qn2s12gs66fxjcdx6qxqp8g08i9c";
+  # };
 
   home.file = {
     "wallpapers".source = ./wallpapers;
     ".filebrowser.json".text = filebrowser;
-    ".config/swappy/config".text = swappy;
+    # ".config/swappy/config".text = swappy;
   };
 
+  # xdg.configHome = "~/.config";
+  xdg.configFile = {
+    "swappy/config".text = swappy;
+  };
 
 }
