@@ -3,7 +3,7 @@
 {
   imports = [
     ./virtualization.nix
-    ./pkgs-gtk-themes
+    # ./pkgs-gtk-themes
     ./networking.nix
     ./hardware.nix
     ./packages.nix

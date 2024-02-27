@@ -26,8 +26,11 @@ in
       "hypr_start"
       "fcitx5"
       "${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
-      # "hypr_start $HOME/wallpapers/paper3.jpg"
+      "kitty"
+      "google-chrome-stable"
+
       # "ags"
+      # "hypr_start $HOME/wallpapers/paper3.jpg"
       # "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
     ];
 
@@ -215,18 +218,20 @@ in
       "float, class:^(thunar)$, title:^(Confirm to replace files)$"
       "float, class:^(org.fcitx.)$"
 
-      # "workspace 1 silent,class:^(cool-retro-term.)$"
-      # "workspace 2 silent,class:^(Google-chrome)$"
-      # "workspace 2 silent,class:^(Brave-browser)$"
-      # "workspace 2 silent,class:^(org.qutebrowser.qutebrowser)$"
-      # "workspace 2 silent,class:^(firefox)$"
-      # "workspace 2 silent,class:^(librewolf)$"
-      # "workspace 3 silent,class:^(Code)$"
-      # "workspace 4 silent,class:^(thunar)$"
-      # "workspace 4 silent,class:^(Spotify)$"
-      # "workspace 5 silent,class:^(org.telegram.desktop)$"
-      # "workspace 6 silent,class:^(VirtualBox Machine)$"
-      # "workspace 6 silent,class:^(virt-manager)$"
+      "workspace 1 ,class:^(cool-retro-term.)$"
+      "workspace 1 ,class:^(kitty)$"
+      "workspace 2 silent,class:^(Google-chrome)$"
+      "workspace 2 silent,class:^(Brave-browser)$"
+      "workspace 2 silent,class:^(org.qutebrowser.qutebrowser)$"
+      "workspace 2 silent,class:^(firefox)$"
+      "workspace 2 silent,class:^(librewolf)$"
+      "workspace 3 silent,class:^(Code)$"
+      "workspace 3 silent,class:^(thunar)$"
+      "workspace 4 silent,class:^(org.telegram.desktop)$"
+      "workspace 4 ,class:^(org.pwmt.zathura)$"
+      "workspace 4 silent,class:^(Spotify)$"
+      "workspace 5 silent,class:^(VirtualBox Machine)$"
+      "workspace 5 silent,class:^(virt-manager)$"
 
     ];
 

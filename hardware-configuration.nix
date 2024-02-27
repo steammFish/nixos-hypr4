@@ -16,7 +16,7 @@
 
   fileSystems."/" =
     {
-      device = "/dev/disk/by-uuid/d9dfb689-e570-4f9c-9286-8aea235785d6";
+      device = "/dev/disk/by-uuid/1fee0a4c-55b4-48e6-8895-15f44bc1bb6f";
       fsType = "ext4";
     };
 

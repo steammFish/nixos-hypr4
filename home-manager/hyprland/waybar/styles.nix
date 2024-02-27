@@ -97,9 +97,9 @@ in
         color: #FFCCCC;  /* sakura pink */
       }
 
-      /* #workspaces button.empty { */
-        /* color: #d3d3d3; */ /* light gray */
-      /* } */
+       #workspaces button.empty { 
+       color: #666666;  /* light gray */
+       } 
 
       #workspaces button.active {
         color: #F7879A;  /* rose pink */

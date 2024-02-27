@@ -6,8 +6,8 @@ let
       syntax on
       filetype plugin indent on
 
-      set tabstop=2
       set expandtab
+      set tabstop=2
       set softtabstop=2
       set shiftwidth=2
       set autoindent
@@ -22,8 +22,10 @@ let
       Plug 'dracula/vim'
       Plug 'sickill/vim-monokai'
 
-      Plug 'vim-airline/vim-airline'
-      Plug 'vim-airline/vim-airline-themes'
+      " Plug 'vim-airline/vim-airline'
+      " Plug 'vim-airline/vim-airline-themes'
+      Plug 'itchyny/lightline.vim'
+
 
       Plug 'voldikss/vim-translate-me'
 
@@ -31,11 +33,12 @@ let
 
       " space key as leader 
       let mapleader = " "
+
+      " copy to clipboard
       nnoremap <Leader>y "+y
       vnoremap <Leader>y "+y
 
-
-      """ Configuration example
+      """ translate-me
       " Echo translation in the cmdline
       nmap <silent> <Leader>t <Plug>Translate
       vmap <silent> <Leader>t <Plug>TranslateV
@@ -47,7 +50,6 @@ let
       vmap <silent> <Leader>r <Plug>TranslateRV
       " Translate the text in clipboard
       nmap <silent> <Leader>x <Plug>TranslateX
-
 
     '';
 in

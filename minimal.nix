@@ -1,12 +1,20 @@
 { config, pkgs, ... }:
+let
+  zshInit = ''
+    export MY_NIX_CONFIG_DIR="/home/ck/dotfiles/myhome/nixos"
+    alias epr="export all_proxy=http://192.168.43.1:10809/ && curl www.google.com"
+    alias upd="sudo nixos-rebuild switch --flake $MY_NIX_CONFIG_DIR"
+  '';
+in
 
 {
 
   # █▀▄▀█ █ █▄░█ █ █▀▄▀█ ▄▀█ █░░
   # █░▀░█ █ █░▀█ █ █░▀░█ █▀█ █▄▄
+  # networking.hostName = "ck-nixos"; # Define your hostname.
 
   # programs.zsh.enable = true;
-  # networking.hostName = "ck-nixos"; # Define your hostname.
+  # programs.zsh.shellInit = zshInit;
   # networking.firewall.enable = false;
   # networking.proxy.default = "http://192.168.43.1:10809/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";

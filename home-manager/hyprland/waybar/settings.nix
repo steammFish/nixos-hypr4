@@ -25,19 +25,18 @@
         "on-click" = "activate";
         "format" = "{icon}";
         "format-icons" = {
-          # "1" = "";
-          # "2" = "";
-          # "3" = "";
-          # "4" = "";
-          # "5" = "";
-          # "6" = "";
-          "default" = "";
-          "empty" = "";
-          "active" = "";
-          "urgent" = "";
+          "1" = "";
+          "2" = "";
+          "3" = "";
+          "4" = "";
+          "5" = "";
+          # "default" = "";
+          # "empty" = "";
+          # "active" = "";
+          # "urgent" = "";
         };
         "persistent-workspaces" = {
-          "*" = 6;
+          "*" = 5;
         };
       };
       "custom/launcher" = {
