@@ -82,7 +82,14 @@ in
     ohMyZsh = {
       enable = true;
       theme = "fishy";
-      plugins = [ "git" "z" "extract" "dirhistory" "colored-man-pages" ];
+      plugins = [
+        "git"
+        "z"
+        "extract"
+        "dirhistory"
+        "colored-man-pages"
+        # "web-search"
+      ];
     };
 
   };

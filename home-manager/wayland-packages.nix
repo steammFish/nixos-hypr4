@@ -2,7 +2,7 @@
 
 {
 
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
 
     # 终端模拟器
     kitty
@@ -33,6 +33,7 @@
     hyprpaper
     # gsettings-qt
     gsettings-desktop-schemas
+    neo-cowsay
 
     # pdf
     mupdf
@@ -65,13 +66,21 @@
     # clipman 
     # copyq
 
+  ]) ++ (with pkgs; [
     # screenshot
     grim
     swappy
     slurp
     grimblast
 
-  ];
+  ]) ++ (with pkgs; [
+    # google translate
+    translate-shell
+    rlwrap
+    aspell
+    espeak
+    fribidi
+  ]);
 
 
 }

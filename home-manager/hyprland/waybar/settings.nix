@@ -14,7 +14,7 @@
       };
       "layer" = "top";
       "position" = "top";
-      "width" = 1800;
+      "width" = 1880;
       "margin-top" = 10;
       "modules-left" = [ "custom/launcher" "clock" "battery" "disk" ];
       "modules-right" = [ "group/mysoundDevice" "backlight" "tray" ];
@@ -28,9 +28,9 @@
           "1" = "";
           "2" = "";
           "3" = "";
-          "4" = "";
+          "4" = "";
           "5" = "";
-          # "default" = "";
+          "default" = "";
           # "empty" = "";
           # "active" = "";
           # "urgent" = "";

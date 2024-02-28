@@ -34,13 +34,15 @@
 
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      # lib = pkgs.lib;
+      lib = pkgs.lib;
 
       username = "ck";
       hostname = "ck-nixos";
       desktop = "hyprland";
+      fontSize = 20;
+      fontFamily = "MesloLGM Nerd Font";
+      cursorSize = 32;
       # userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" ];
-      # fontSize = 18;
 
     in
     {
@@ -48,7 +50,7 @@
 
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs username hostname desktop; };
+        specialArgs = { inherit inputs lib username hostname desktop; };
         modules = [
           ./configuration.nix
 
@@ -57,7 +59,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./home-manager/home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs username; };
+            home-manager.extraSpecialArgs = { inherit inputs username fontSize fontFamily cursorSize; };
           }
 
         ];
@@ -66,7 +68,7 @@
       homeConfigurations."ck" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home-manager/home.nix ];
-        extraSpecialArgs = { inherit inputs username; };
+        extraSpecialArgs = { inherit inputs username fontSize fontFamily cursorSize; };
       };
 
     };

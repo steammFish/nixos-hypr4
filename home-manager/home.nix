@@ -1,20 +1,10 @@
-{ config, pkgs, username, ... }:
+{ config, lib, pkgs, username, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
     "freeimage-unstable-2021-11-01"
   ];
-
-  programs.zsh = {
-    enable = true;
-    historySubstringSearch.enable = true;
-    zsh-abbr.enable = true;
-    prezto.enable = true;
-    initExtra = ''
-      [[ ! -f ~/.bashrc ]] || source ~/.bashrc
-    '';
-  };
 
   imports = [
     ./conf

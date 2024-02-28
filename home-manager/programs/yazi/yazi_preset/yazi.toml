@@ -22,11 +22,15 @@ edit = [
 	{ exec = 'hx "$@"', block = true, desc = "open with helix",  for = "unix" },
 	{ exec = 'nvim "$@"', block = true, desc = "open with neovim",  for = "unix" },
 	{ exec = 'code "$@"', block = true, desc = "open with vscode",  for = "unix" },
+	{ exec = 'thunar "$@"', block = true, desc = "open with thunar",  for = "unix" },
+	{ exec = 'kitty "$@"', block = true, desc = "open with kitty",  for = "unix" },
+	{ exec = 'viewnior "$@"', block = true, desc = "open with viewnior",  for = "unix" },
 ]
 open = [
 	{ exec = 'xdg-open "$@"',             desc = "Open", for = "linux" },
 	{ exec = 'imv "$@"',                  desc = "open with imv", for = "linux" },
-	{ exec = 'swww img "$@"',             desc = "set as wallpaper", for = "linux" },
+	{ exec = 'zathura "$@"',                  desc = "open with zathura", for = "linux" },
+	{ exec = 'hypr_start "$@"',                  desc = "hypr start - set wallpapaer", for = "linux" },
 ]
 reveal = [
 	{ exec = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF", for = "unix" },

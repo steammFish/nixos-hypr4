@@ -1,7 +1,4 @@
-{ pkgs, config, inputs, ... }:
-let
-  cursorSize = 32;
-in
+{ pkgs, config, inputs, cursorSize, ... }:
 {
   imports = [
     inputs.hyprland.homeManagerModules.default
@@ -26,8 +23,9 @@ in
       "hypr_start"
       "fcitx5"
       "${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
-      "kitty"
-      "google-chrome-stable"
+
+      "$terminal"
+      "$browser"
 
       # "ags"
       # "hypr_start $HOME/wallpapers/paper3.jpg"
@@ -37,6 +35,7 @@ in
     "$browser" = "google-chrome-stable";
     "$explorer" = "thunar";
     "$terminal" = "kitty";
+    "$terminal_workspace_1" = "hyprctl dispatch workspace 1 && $terminal";
     "$menu" = "rofi -show drun -show-icons";
     "$clipboard" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
@@ -95,10 +94,10 @@ in
         size = 6;
         # noise = 0.01;
 
-        # blurls = [
-        #   "waybar"
-        #   "kitty"
-        # ];
+        blurls = [
+          # "waybar"
+          # "kitty"
+        ];
 
       };
       drop_shadow = "yes";
@@ -159,8 +158,8 @@ in
     };
     misc = {
       force_default_wallpaper = -1;
-      enable_swallow = true;
-      swallow_regex = "^(kitty)$";
+      # enable_swallow = true;
+      # swallow_regex = "^(kitty)$";
     };
 
     # "device:epic-mouse-v1" = {
@@ -219,19 +218,19 @@ in
       "float, class:^(org.fcitx.)$"
 
       "workspace 1 ,class:^(cool-retro-term.)$"
-      "workspace 1 ,class:^(kitty)$"
-      "workspace 2 silent,class:^(Google-chrome)$"
+      # "workspace 1 ,class:^(kitty)$"
+      "workspace 2 ,class:^(Google-chrome)$"
+      "workspace 2 ,class:^(org.qutebrowser.qutebrowser)$"
       "workspace 2 silent,class:^(Brave-browser)$"
-      "workspace 2 silent,class:^(org.qutebrowser.qutebrowser)$"
       "workspace 2 silent,class:^(firefox)$"
       "workspace 2 silent,class:^(librewolf)$"
-      "workspace 3 silent,class:^(Code)$"
-      "workspace 3 silent,class:^(thunar)$"
-      "workspace 4 silent,class:^(org.telegram.desktop)$"
+      "workspace 3 ,class:^(Code)$"
+      "workspace 3 ,class:^(thunar)$"
+      "workspace 4 ,class:^(org.telegram.desktop)$"
       "workspace 4 ,class:^(org.pwmt.zathura)$"
-      "workspace 4 silent,class:^(Spotify)$"
-      "workspace 5 silent,class:^(VirtualBox Machine)$"
-      "workspace 5 silent,class:^(virt-manager)$"
+      "workspace 4 ,class:^(Spotify)$"
+      "workspace 5 ,class:^(VirtualBox Machine)$"
+      "workspace 5 ,class:^(virt-manager)$"
 
     ];
 
@@ -265,7 +264,7 @@ in
         "$mainMod, up, movefocus, u"
         "$mainMod, down, movefocus, d"
 
-        "$mainMod, Q, exec, $terminal"
+        # "$mainMod, Q, exec, $terminal"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
@@ -279,6 +278,7 @@ in
         "$mainMod, S, togglespecialworkspace, magic"
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
         "$mainMod, RETURN, exec, $terminal"
+        "$mainMod SHIFT, RETURN, exec, $terminal_workspace_1"
         "$mainMod, SLASH, exec, code"
         "$mainMod SHIFT, SLASH, exec, code ~/nixos"
         # "$mainMod CTRL, SLASH, exec, hx ~/nixos"

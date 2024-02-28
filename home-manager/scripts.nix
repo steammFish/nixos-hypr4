@@ -8,13 +8,49 @@ let
         dir2="$HOME/Pictures/wallpapers/"
 
         WALLPAPER="$1"
+        
+        function select_wallpaper1 {
+          # 初始化一个空数组来存储存在的目录
+          existing_dirs=()
 
-        # 如果没有提供壁纸路径作为参数，就从指定文件夹随机选择一个
-        if [[ -z "$WALLPAPER" ]]; then
+          # 检查每个目录是否存在，如果存在，则添加到数组中
+          [[ -d "$dir1" ]] && existing_dirs+=("$dir1")
+          [[ -d "$dir2" ]] && existing_dirs+=("$dir2")
 
+          # 如果至少有一个目录存在
+          if [ ''${#existing_dirs[@]} -gt 0 ]; then
+            # 使用存在的目录作为 find 命令的参数
+            wallpapers_list=$(find "''${existing_dirs[@]}" -type f -o -type l 2>/dev/null)
+            # 从找到的壁纸列表中随机选择一张壁纸
+            WALLPAPER=$(echo "$wallpapers_list" | shuf -n 1)
+            # 检查是否找到了壁纸
+            if [ -z "$WALLPAPER" ]; then
+                echo "No wallpapers found!"
+                exit 1
+            fi
+          else
+            echo "No directories found."
+            exit 1
+          fi
+        }
+      
+        # function select_wallpaper1 {
+        #   # 查找两个目录中的壁纸文件，并合并到一个列表中
+        #   wallpapers_list=$(find "$dir1" "$dir2" -type f -o -type l 2>/dev/null)
+
+        #   # 从合并后的列表中随机选择一张壁纸
+        #   WALLPAPER=$(echo "$wallpapers_list" | shuf -n 1)
+
+        #   # 检查是否找到了壁纸
+        #   if [ -z "$WALLPAPER" ]; then
+        #       echo "No wallpapers found!"
+        #       exit 1
+        #   fi
+        # }
+
+        function select_wallpaper2 {
           pic1=$(find "$dir1" -type f -o -type l | shuf -n 1)
           pic2=$(find "$dir2" -type f -o -type l | shuf -n 1)
-
           # 再次从 pic1 和 pic2 中随机选择一张图片
           WALLPAPER=$(echo -e "$pic1\n$pic2" | shuf -n 1)
 
@@ -25,29 +61,28 @@ let
               elif [ -n "$pic2" ]; then
                   WALLPAPER="$pic2"
               else
-                  echo "no such picture!"
+                  echo "No wallpapers found!"
+                  exit 1
               fi
           fi
+        }
 
+        function hypr_exec() {
+          # 终止正在运行的waybar和swww进程
+          pkill waybar || true
+          pkill swww || true
+
+          # wal -i "$WALLPAPER"
+          swww init && swww img "$WALLPAPER" --transition-type random
+          waybar &
+        }
+
+        # 如果没有提供壁纸路径作为参数，就从指定文件夹随机选择一个
+        if [[ -z "$WALLPAPER" ]]; then
+           select_wallpaper1
         fi
 
-        # 检查是否成功找到壁纸
-        if [[ ! -f "$WALLPAPER" ]]; then
-          echo "壁纸文件没有找到: $WALLPAPER"
-          exit 1
-        fi
-
-        # 终止正在运行的waybar和swww进程
-        pkill waybar || true
-        pkill swww || true
-
-        # 设置壁纸
-        # wal -i "$WALLPAPER"
-        swww init && swww img "$WALLPAPER" --transition-type random
-
-        # 启动waybar
-        waybar &
-
+        hypr_exec
       '';
 in
 

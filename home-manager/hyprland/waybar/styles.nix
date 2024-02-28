@@ -8,10 +8,18 @@ in
     ''
       /* @import "/home/ck/.cache/wal/colors-waybar.css"; */
 
-      @define-color color0 #282828; /* dark gray - background */
-      @define-color color1 #ebdbb2; /* light tan - foreground/text */
-      @define-color color2 #686868; /* medium gray - comment/secondary text */
-      @define-color color3 #fe8019; /* bright orange - active */
+      @define-color bgBar rgba(0,0,0,0.3);
+      @define-color bgWidget rgba(0,0,0,0.4);
+
+      @define-color fgWhite #ffffff;
+      @define-color bgBlack #000000;
+      @define-color fgSakuraPink @fgWhite; 
+
+      @define-color InactiveLightGray rgba(255,255,255,0.4);
+      @define-color activeRosePink #F7879A;
+
+      @define-color warningRed #f53c3c;
+      @define-color healthGreen #26A65B;
 
       * {
         font-family:'Monospace','Font Awesome 6 Free';
@@ -22,13 +30,15 @@ in
       }
 
       window#waybar {
-        background: transparent;
         transition-property: background-color;
         transition-duration: .5s;
+        border-radius: 10px;
+        /* background: transparent; */
+        background-color: @bgBar;
       }
 
       button.urgent {
-        background-color: #eb4d4b;
+        background-color:  @warningRed;
       }
 
       /* #workspaces button, */
@@ -43,9 +53,13 @@ in
         margin: 0px 4px;
         padding:  0px 8px;
         min-width: 28px;
-        background-color: rgba(0,0,0,0.3);
-        color: #ffffff;
+        color: @fgWhite;
         border-radius: 10px;
+        /* background-color: rgba(0,0,0,0.3); */
+        background-color: @bgWidget;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
       }
 
       #clock {
@@ -53,22 +67,21 @@ in
       }
 
       #battery.charging, #battery.plugged {
-        color: #ffffff;
-        background-color: #26A65B;
+        color: @fgWhite;
+        background-color: @healthGreen;
       }
 
       @keyframes blink {
         to {
-          background-color: #ffffff;
-          color: #000000;
+          background-color: @fgWhite;
+          color: @bgBlack;
         }
       }
 
       #battery.critical:not(.charging) ,
       #battery.warning:not(.charging) {
-        background-color: #f53c3c;
-        color: #ffffff;
-        animation-name: blink;
+        background-color: @warningRed;
+        color: @fgWhite;
         animation-duration: 0.5s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
@@ -76,11 +89,11 @@ in
       }
 
       label:focus {
-        background-color: #000000;
+        background-color: @bgBlack;
       }
 
       #network.disconnected {
-        background-color: #f53c3c;
+        background-color: @warningRed;
       }
 
       #tray > .passive {
@@ -89,20 +102,20 @@ in
 
       #tray > .needs-attention {
         -gtk-icon-effect: highlight;
-        background-color: #eb4d4b;
+        background-color: @warningRed;
       }
 
       #workspaces button {
         margin: 0px 8px;
-        color: #FFCCCC;  /* sakura pink */
+        color: @fgSakuraPink;
       }
 
        #workspaces button.empty { 
-       color: #666666;  /* light gray */
+       color: @InactiveLightGray;
        } 
 
       #workspaces button.active {
-        color: #F7879A;  /* rose pink */
+        color: @activeRosePink;
       }
 
       #custom-sep,
@@ -114,10 +127,10 @@ in
       }
 
       #custom-launcher {
-        margin-left: 30px;
+        margin-left: 20px;
       }
       #tray {
-        margin-right: 30px;
+        margin-right: 20px;
       }
 
     '';

@@ -1,12 +1,14 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
+
 
 {
   imports = [
-    ./virtualization.nix
-    # ./pkgs-gtk-themes
-    ./networking.nix
-    ./hardware.nix
-    ./packages.nix
+    ./mypkgs
     ./programs
+    ./hardware.nix
+    ./networking.nix
+    ./packages.nix
+    ./virtualization.nix
   ];
+
 }

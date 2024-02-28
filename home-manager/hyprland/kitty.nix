@@ -1,4 +1,4 @@
-{ pkgs, config, username, ... }:
+{ pkgs, config, username, fontFamily, fontSize, ... }:
 let
   kitty =
     ''
@@ -7,11 +7,11 @@ let
       window_padding_width    0.0
       confirm_os_window_close 0
       background_opacity      0.8
-      font_size 20
-      font_family      MesloLGM Nerd Font 
-      bold_font        MesloLGM Nerd Font 
-      italic_font      MesloLGM Nerd Font 
-      bold_italic_font MesloLGM Nerd Font 
+      font_size ${builtins.toString fontSize}
+      font_family      ${fontFamily}
+      bold_font        ${fontFamily}
+      italic_font      ${fontFamily}
+      bold_italic_font ${fontFamily}
 
       # BEGIN_KITTY_THEME
       # Crayon Pony Fish

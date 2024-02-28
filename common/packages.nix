@@ -33,6 +33,7 @@ let
     gnome.gnome-software
     flatpak
     home-manager
+    wpsoffice
 
 
   ];
@@ -57,6 +58,8 @@ let
     wqy_microhei
     arphic-ukai
     arphic-uming
+
+    google-fonts
 
     font-awesome
     line-awesome
@@ -91,10 +94,15 @@ in
   # █▀▀ █▀█ █▄▄ █░█ █▀█ █▄█ ██▄ ▄█
   nixpkgs = {
     config = {
-      allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [ "ngrok" ];
+      allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
+        "ngrok"
+        "wpsoffice"
+      ];
       permittedInsecurePackages = [ "electron-25.9.0" "freeimage-unstable-2021-11-01" ];
     };
   };
+
+
 
   # environment.systemPackages = with pkgs; [];
   environment.systemPackages = lib.mkMerge [ pkgsDev pkgsDesktop ];
