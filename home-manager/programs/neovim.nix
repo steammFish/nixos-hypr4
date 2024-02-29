@@ -66,10 +66,10 @@ in
   # };
 
   programs.neovim.enable = true;
-  programs.neovim = {
-    viAlias = true;
-    extraConfig = neovim-config;
-  };
+  # programs.neovim = {
+  #   viAlias = true;
+  #   extraConfig = neovim-config;
+  # };
 
 }
 

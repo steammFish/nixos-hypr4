@@ -7,12 +7,12 @@
     ./firefox
     ./helix
     ./vscode
-    ./appimage
+    ./myapp
     ./youtube-download.nix
     ./yazi
     ./zsh
     ./fcitx5.nix
-    # ./neovim.nix
+    ./neovim.nix
 
   ];
 }

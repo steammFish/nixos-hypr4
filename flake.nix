@@ -39,9 +39,11 @@
       username = "ck";
       hostname = "ck-nixos";
       desktop = "hyprland";
-      fontSize = 20;
-      fontFamily = "MesloLGM Nerd Font";
+      fontSize = 22;
+      fontFamily = "FantasqueSansM Nerd Font Mono";
       cursorSize = 32;
+      majorColor = "#F7879A";
+      # fontFamily = "MesloLGM Nerd Font";
       # userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" ];
 
     in
@@ -59,7 +61,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./home-manager/home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs username fontSize fontFamily cursorSize; };
+            home-manager.extraSpecialArgs = { inherit inputs username fontSize fontFamily cursorSize majorColor; };
           }
 
         ];
@@ -68,7 +70,7 @@
       homeConfigurations."ck" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home-manager/home.nix ];
-        extraSpecialArgs = { inherit inputs username fontSize fontFamily cursorSize; };
+        extraSpecialArgs = { inherit inputs username fontSize fontFamily cursorSize majorColor; };
       };
 
     };

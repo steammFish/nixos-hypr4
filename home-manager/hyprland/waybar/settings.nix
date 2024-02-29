@@ -15,7 +15,7 @@
       "layer" = "top";
       "position" = "top";
       "width" = 1880;
-      "margin-top" = 10;
+      "margin-top" = 6;
       "modules-left" = [ "custom/launcher" "clock" "battery" "disk" ];
       "modules-right" = [ "group/mysoundDevice" "backlight" "tray" ];
       "modules-center" = [ "hyprland/workspaces" "wlr/taskbar" ];
@@ -30,6 +30,10 @@
           "3" = "";
           "4" = "";
           "5" = "";
+          # "6" = "❻";
+          # "7" = "❼";
+          # "8" = "❽";
+          # "9" = "❾";
           "default" = "";
           # "empty" = "";
           # "active" = "";
@@ -95,7 +99,7 @@
           "on-scroll" = 1;
           "weeks-pos" = "right";
         };
-        "format" = " {:%H:%M %u}";
+        "format" = " {:%H:%M(%u)}";
         "tooltip-format" = "<big><span color='orange'> {:%Y-%m-%d %H:%M:%S %A}</span></big>\n<tt><big>{calendar}</big></tt>";
       };
       "pulseaudio" = {

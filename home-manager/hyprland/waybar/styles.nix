@@ -1,5 +1,7 @@
 let
-  fontsize = "24px";
+  # fontsize = builtins.toString fontSize + 2;
+  fontsize = "26";
+  fontFamily = "'FantasqueSansM Nerd Font', 'Monospace','Font Awesome 6 Free'";
 in
 
 {
@@ -10,9 +12,8 @@ in
 
       @define-color bgBar rgba(0,0,0,0.3);
       @define-color bgWidget rgba(0,0,0,0.4);
-
-      @define-color fgWhite #ffffff;
       @define-color bgBlack #000000;
+      @define-color fgWhite #ffffff;
       @define-color fgSakuraPink @fgWhite; 
 
       @define-color InactiveLightGray rgba(255,255,255,0.4);
@@ -22,7 +23,7 @@ in
       @define-color healthGreen #26A65B;
 
       * {
-        font-family:'Monospace','Font Awesome 6 Free';
+        font-family: ${fontFamily};
         font-size: ${fontsize};
         padding: 0;
         margin: 0;
@@ -32,7 +33,7 @@ in
       window#waybar {
         transition-property: background-color;
         transition-duration: .5s;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         /* background: transparent; */
         background-color: @bgBar;
       }
@@ -52,14 +53,21 @@ in
       {
         margin: 0px 4px;
         padding:  0px 8px;
-        min-width: 28px;
         color: @fgWhite;
         border-radius: 10px;
         /* background-color: rgba(0,0,0,0.3); */
-        background-color: @bgWidget;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        
+        /* background-color: @bgWidget; */
+        margin-top: 4px;
+        margin-bottom: 4px; 
+        background: transparent;
+      }
+
+      #workspaces button {
+        min-width: 28px;
+      }
+
+      #backlight {
+        padding: 0;
       }
 
       #clock {
@@ -132,6 +140,7 @@ in
       #tray {
         margin-right: 20px;
       }
+      
 
     '';
 

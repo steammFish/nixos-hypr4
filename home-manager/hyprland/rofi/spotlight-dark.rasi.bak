@@ -8,12 +8,12 @@
     font:   "Montserrat 22";
 
     bg0:    #242424E6;
-    bg2:    #F7879AE6;
-    bg1:    #7E7E7E;
+    bg1:    #7E7E7E80;
+    bg2:    #0860f2E6;
 
     fg0:    #DEDEDE;
     fg1:    #FFFFFF;
-    fg2:    #DEDEDE;
+    fg2:    #DEDEDE80;
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -29,10 +29,6 @@ window {
     location:       center;
     width:          1440;
     border-radius:  8;
-
-    border: 1px;
-    border-color: @fg2;
-
 }
 
 inputbar {

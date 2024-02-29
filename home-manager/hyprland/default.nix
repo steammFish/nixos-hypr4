@@ -95,8 +95,8 @@
         # noise = 0.01;
 
         blurls = [
-          # "waybar"
-          # "kitty"
+          "waybar"
+          "kitty"
         ];
 
       };
@@ -225,7 +225,7 @@
       "workspace 2 silent,class:^(firefox)$"
       "workspace 2 silent,class:^(librewolf)$"
       "workspace 3 ,class:^(Code)$"
-      "workspace 3 ,class:^(thunar)$"
+      "workspace 4 ,class:^(thunar)$"
       "workspace 4 ,class:^(org.telegram.desktop)$"
       "workspace 4 ,class:^(org.pwmt.zathura)$"
       "workspace 4 ,class:^(Spotify)$"
@@ -269,7 +269,7 @@
         "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating,"
-        "$mainMod, R, exec, $menu"
+        # "$mainMod, R, exec, $menu"
         "$mainMod, P, pseudo,"
         "$mainMod, J, togglesplit,"
         "$mainMod, G, fullscreen, 0"
@@ -288,6 +288,7 @@
         "$mainMod, A, exec, $menu"
         "$mainMod SHIFT, V, exec, $clipboard"
         "$mainMod, B, exec, $browser"
+        "$mainMod SHIFT, B, exec, rofi_google"
         "$mainMod CTRL, W, exec, hypr_start"
         "ALT, R, exec, zathura ~/Desktop/Linux网络编程.pdf"
 

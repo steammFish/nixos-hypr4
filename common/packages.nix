@@ -28,12 +28,12 @@ let
     spotify
     telegram-desktop
     discord
-    youtube-music
     gnome.gnome-calendar
     gnome.gnome-software
     flatpak
     home-manager
     wpsoffice
+    # youtube-music
 
 
   ];
