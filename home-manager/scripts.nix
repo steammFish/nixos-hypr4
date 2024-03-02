@@ -87,9 +87,12 @@ let
 
   rofi_google = pkgs.writeShellScriptBin "rofi_google"
     ''
-      query=$( (echo -n) | rofi -dmenu -p "Search:" )
+      query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "在 Google 中搜索")
+       # -filter "bilibili")
       if [ -n "$query" ]; then
           google-chrome-stable "https://www.google.com/search?q=$query"
+          # google-chrome --new-window "https://www.google.com/search?q=$query"
+
       fi
     '';
 in

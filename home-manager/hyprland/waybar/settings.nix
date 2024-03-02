@@ -19,6 +19,33 @@
       "modules-left" = [ "custom/launcher" "clock" "battery" "disk" ];
       "modules-right" = [ "group/mysoundDevice" "backlight" "tray" ];
       "modules-center" = [ "hyprland/workspaces" "wlr/taskbar" ];
+
+      # "mpd" = {
+      #   "format" = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ";
+      #   "format-disconnected" = "Disconnected ";
+      #   "format-stopped" = "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ";
+      #   "interval" = 10;
+      #   "consume-icons" = {
+      #     "on" = " "; # Icon shows only when "consume" is on
+      #   };
+      #   "random-icons" = {
+      #     "off" = "<span color=\"#f53c3c\"></span> "; # Icon grayed out when "random" is off
+      #     "on" = " ";
+      #   };
+      #   "repeat-icons" = {
+      #     "on" = " ";
+      #   };
+      #   "single-icons" = {
+      #     "on" = "1 ";
+      #   };
+      #   "state-icons" = {
+      #     "paused" = "";
+      #     "playing" = "";
+      #   };
+      #   "tooltip-format" = "MPD (connected)";
+      #   "tooltip-format-disconnected" = "MPD (disconnected)";
+      # };
+
       "hyprland/workspaces" = {
         "active-only" = false;
         "all-outputs" = true;

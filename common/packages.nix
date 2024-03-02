@@ -32,8 +32,9 @@ let
     gnome.gnome-software
     flatpak
     home-manager
-    wpsoffice
+    # wpsoffice
     # youtube-music
+    # mpd
 
 
   ];

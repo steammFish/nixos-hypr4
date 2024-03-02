@@ -43,4 +43,22 @@
   };
 
 
+  # services.mpd = {
+  #   enable = true;
+  #   musicDirectory = "/home/ck/Music";
+  #   extraConfig =
+  #     ''
+  #       audio_output {
+  #         type "pulse"
+  #         name "Pulseaudio"
+  #         server "127.0.0.1" # add this line - MPD must connect to the local sound server
+  #       }
+  #     '';
+
+  #   # Optional:
+  #   network.listenAddress = "any"; # if you want to allow non-localhost connections
+  #   startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
+  # };
+
+
 }

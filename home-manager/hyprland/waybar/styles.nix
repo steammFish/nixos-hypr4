@@ -36,6 +36,7 @@ in
         /* border-radius: 10px; */
         /* background: transparent; */
         background-color: @bgBar;
+        /* border: 1px solid @activeRosePink; */
       }
 
       button.urgent {
@@ -43,6 +44,7 @@ in
       }
 
       /* #workspaces button, */
+      #mpd,
       #workspaces,
       #custom-launcher,
       #clock,
@@ -62,6 +64,12 @@ in
         background: transparent;
       }
 
+      #mpd {
+        min-width: 38px;
+        background-color: red;
+        color: green;
+        
+      }
       #workspaces button {
         min-width: 28px;
       }

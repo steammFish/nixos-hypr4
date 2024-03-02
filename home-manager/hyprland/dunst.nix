@@ -1,5 +1,6 @@
-{ pkgs, config, ... }:
+{ pkgs, config, majorColor, fontSize, fontFamily, ... }:
 
+# majorColor = "#F7879A";
 let
 
   dunst = {
@@ -7,13 +8,14 @@ let
       origin = "top-right";
       width = "(0, 450)";
       offset = "30x30";
-      font = "\"Fira Sans Semibold\" 18";
+      font = "\"${fontFamily}\" ${builtins.toString fontSize}";
       transparency = 30;
-      corner_radius = 10;
+      corner_radius = 6;
+      frame_color = "#ffffff70";
+      frame_width = 1;
     };
 
     urgency_low = {
-
       background = "#00000070";
       foreground = "#888888";
       timeout = 6;
@@ -25,10 +27,8 @@ let
       timeout = 6;
     };
     urgency_critical = {
-
       background = "#90000070";
       foreground = "#ffffff";
-      frame_color = "#ffffff";
       timeout = 6;
     };
 

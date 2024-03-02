@@ -38,13 +38,13 @@
 
       username = "ck";
       hostname = "ck-nixos";
-      desktop = "hyprland";
+      # desktop = "hyprland";
       fontSize = 22;
       fontFamily = "FantasqueSansM Nerd Font Mono";
       cursorSize = 32;
       majorColor = "#F7879A";
       # fontFamily = "MesloLGM Nerd Font";
-      # userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" ];
+      userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" "mpd" ];
 
     in
     {
@@ -52,7 +52,7 @@
 
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs lib username hostname desktop; };
+        specialArgs = { inherit inputs lib username hostname userGroups; };
         modules = [
           ./configuration.nix
 

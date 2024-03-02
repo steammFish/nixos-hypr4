@@ -82,6 +82,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
   };
 
   # Let Home Manager install and manage itself.

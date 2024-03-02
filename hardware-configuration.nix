@@ -4,6 +4,8 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+  security.polkit.enable = true;
+
   imports =
     [
       (modulesPath + "/installer/scan/not-detected.nix")

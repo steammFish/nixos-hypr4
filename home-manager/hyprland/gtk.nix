@@ -31,10 +31,8 @@ in
 
 
 
-  # 确保启用了 GTK 集成
-  # programs.gtk.enable = true;
   # 配置 GTK 3 书签
-  # xdg.userDirs.enable = true;
+  xdg.userDirs.enable = true;
   gtk.gtk3.bookmarks = [
     "file:///home/${username}/Documents"
     "file:///home/${username}/Downloads"

@@ -17,7 +17,7 @@
     pamixer
     playerctl
     waybar
-    eww-wayland
+    eww
     rofi-wayland
     wofi
     swaylock-effects

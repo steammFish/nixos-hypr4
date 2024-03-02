@@ -18,7 +18,6 @@ in
   # networking.firewall.enable = false;
   # networking.proxy.default = "http://192.168.43.1:10809/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  security.polkit.enable = true;
   services.v2raya.enable = true;
   programs.hyprland.enable = true;
 

@@ -6,7 +6,7 @@ let
       shell zsh
       window_padding_width    0.0
       confirm_os_window_close 0
-      background_opacity      0.8
+      background_opacity      0.6
       font_size ${builtins.toString fontSize}
       font_family      ${fontFamily}
       bold_font        ${fontFamily}

@@ -74,8 +74,10 @@
     };
 
     general = {
-      gaps_in = 5;
-      gaps_out = 20;
+      # gaps_in = 5;
+      # gaps_out = 20;
+      gaps_in = 15;
+      gaps_out = 40;
       border_size = 0;
       "col.active_border" = "$color0 $color1 45deg";
       "col.inactive_border" = "$color2";
@@ -97,6 +99,7 @@
         blurls = [
           "waybar"
           "kitty"
+          "rofi"
         ];
 
       };
