@@ -1,6 +1,17 @@
-{ pkgs, config, majorColor, fontSize, fontFamily, ... }:
+{ pkgs
+, config
+, majorColor
+, fontSize
+  # , fontFamily
+, ...
+}:
 
 # majorColor = "#F7879A";
+
+let
+  fontFamily = "FantasqueSansM Nerd Font";
+in
+
 let
 
   dunst = {
@@ -8,7 +19,8 @@ let
       origin = "top-right";
       width = "(0, 450)";
       offset = "30x30";
-      font = "\"${fontFamily}\" ${builtins.toString fontSize}";
+      # font = "\"${fontFamily}\" ${builtins.toString fontSize}";
+      font = "FantasqueSansM Nerd Font 20";
       transparency = 30;
       corner_radius = 6;
       frame_color = "#ffffff70";

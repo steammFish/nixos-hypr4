@@ -4,6 +4,7 @@
 
   home.packages = (with pkgs; [
 
+
     # 终端模拟器
     kitty
     foot

@@ -61,15 +61,15 @@ in
     sha256 = "163cb9ar2bfd7sq2hfhmzvk7qn2s12gs66fxjcdx6qxqp8g08i9c";
   };
 
-  # home.sessionVariables = {
-  #   MANPAGER = "nvim +Man!";
-  # };
+  home.sessionVariables = {
+    MANPAGER = "nvim +Man!";
+  };
 
   programs.neovim.enable = true;
-  # programs.neovim = {
-  #   viAlias = true;
-  #   extraConfig = neovim-config;
-  # };
+  programs.neovim = {
+    viAlias = true;
+    extraConfig = neovim-config;
+  };
 
 }
 

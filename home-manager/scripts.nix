@@ -84,7 +84,6 @@ let
       hypr_exec
     '';
 
-
   rofi_google = pkgs.writeShellScriptBin "rofi_google"
     ''
       query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "在 Google 中搜索")
@@ -92,12 +91,21 @@ let
       if [ -n "$query" ]; then
           google-chrome-stable "https://www.google.com/search?q=$query"
           # google-chrome --new-window "https://www.google.com/search?q=$query"
+      fi
+    '';
 
+  rofi_google_trans = pkgs.writeShellScriptBin "rofi_google_trans"
+    ''
+      query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "Google 翻译")
+       # -filter "bilibili")
+      # query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "Google 翻译" | tr -s ' ')
+      if [ -n "$query" ]; then
+          google-chrome-stable "https://translate.google.com/?text=$query"
       fi
     '';
 in
 
 {
-  home.packages = [ hypr_start rofi_google ];
+  home.packages = [ hypr_start rofi_google rofi_google_trans ];
 }
 

@@ -20,13 +20,11 @@
   wayland.windowManager.hyprland.settings = {
     monitor = ",preferred,auto,1.0";
     exec-once = [
-      "hypr_start"
-      "fcitx5"
       "${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
-
+      "hypr_start $HOME/wallpapers/default.jpg"
+      "fcitx5"
       "$terminal"
       "$browser"
-
       # "ags"
       # "hypr_start $HOME/wallpapers/paper3.jpg"
       # "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
@@ -74,10 +72,10 @@
     };
 
     general = {
-      # gaps_in = 5;
-      # gaps_out = 20;
-      gaps_in = 15;
-      gaps_out = 40;
+      gaps_in = 5;
+      gaps_out = 20;
+      # gaps_in = 15;
+      # gaps_out = 40;
       border_size = 0;
       "col.active_border" = "$color0 $color1 45deg";
       "col.inactive_border" = "$color2";
@@ -98,8 +96,10 @@
 
         blurls = [
           "waybar"
+          "alacritty"
           "kitty"
           "rofi"
+          "dunst"
         ];
 
       };
@@ -282,6 +282,7 @@
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod SHIFT, RETURN, exec, $terminal_workspace_1"
+        "$mainMod CTRL, RETURN, exec, alacritty"
         "$mainMod, SLASH, exec, code"
         "$mainMod SHIFT, SLASH, exec, code ~/nixos"
         # "$mainMod CTRL, SLASH, exec, hx ~/nixos"
@@ -292,6 +293,7 @@
         "$mainMod SHIFT, V, exec, $clipboard"
         "$mainMod, B, exec, $browser"
         "$mainMod SHIFT, B, exec, rofi_google"
+        "$mainMod SHIFT, T, exec, rofi_google_trans"
         "$mainMod CTRL, W, exec, hypr_start"
         "ALT, R, exec, zathura ~/Desktop/Linux网络编程.pdf"
 

@@ -27,6 +27,12 @@ in
     options = [ "rw" "nosuid" "nodev" ]; # 根据需要添加更多的挂载选项
   };
 
+  fileSystems."/home/ck/virtualMachine" = {
+    device = "/dev/nvme0n1p5";
+    fsType = "auto"; # 或者指定你的文件系统类型，比如 "ext4"、"ntfs"、"vfat" 等
+    options = [ "rw" "nosuid" "nodev" ]; # 根据需要添加更多的挂载选项
+  };
+
   # services.xserver = {
   #   xkb = {
   #     layout = "us";
@@ -58,8 +64,10 @@ in
     nmap
     wl-clipboard
     man-pages
+    stdmanpages
     filebrowser
     nix-prefetch-git
+    nix-index
     appimage-run
 
   ];

@@ -1,6 +1,8 @@
 # nixos-hypr3
 
 
+## Tools:
+
 * bar - waybar
 * launcher - rofi-wayland
 * screenshot - grim+swappy+slurp,grimblast
@@ -26,5 +28,6 @@
 
 ![pic](./res/img1_.png "t")
 ![pic](./res/img2_.png "t")
-
-
+![pic](2024-02-28T20:33:18,330027228+08:00.png "t")
+![pic](2024-03-06T22:57:11,947021948+08:00.png "t")
+![pic](2024-03-06T22:58:21,853905451+08:00.png "t")

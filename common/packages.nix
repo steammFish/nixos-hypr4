@@ -1,18 +1,27 @@
 { config, pkgs, lib, ... }:
 let
 
+
+
   pkgsDev = with pkgs;  [
 
     ## dev 
     gcc
-    clang
-    glibc
-    gnumake
+    gdb
     cmake
+    gnumake
+    ninja
+    # clang
+    # glibc
     ffmpeg-full
     openssl
     asio
     (python311.withPackages (ps: with ps; [ pandas requests ]))
+
+    vulkan-loader
+    qt6.full
+    qt6.qtwayland
+    qtcreator
 
   ];
   pkgsDesktop = with pkgs;  [
@@ -32,7 +41,7 @@ let
     gnome.gnome-software
     flatpak
     home-manager
-    # wpsoffice
+    wpsoffice
     # youtube-music
     # mpd
 

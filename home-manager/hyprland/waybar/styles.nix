@@ -33,9 +33,9 @@ in
       window#waybar {
         transition-property: background-color;
         transition-duration: .5s;
+        background-color: @bgBar;
         /* border-radius: 10px; */
         /* background: transparent; */
-        background-color: @bgBar;
         /* border: 1px solid @activeRosePink; */
       }
 
@@ -43,8 +43,7 @@ in
         background-color:  @warningRed;
       }
 
-      /* #workspaces button, */
-      #mpd,
+      #myPlayctl,
       #workspaces,
       #custom-launcher,
       #clock,
@@ -53,33 +52,13 @@ in
       #backlight,
       #pulseaudio
       {
-        margin: 0px 4px;
+        margin: 4px 4px;
         padding:  0px 8px;
-        color: @fgWhite;
         border-radius: 10px;
+        color: @fgWhite;
+        background: transparent;
         /* background-color: rgba(0,0,0,0.3); */
         /* background-color: @bgWidget; */
-        margin-top: 4px;
-        margin-bottom: 4px; 
-        background: transparent;
-      }
-
-      #mpd {
-        min-width: 38px;
-        background-color: red;
-        color: green;
-        
-      }
-      #workspaces button {
-        min-width: 28px;
-      }
-
-      #backlight {
-        padding: 0;
-      }
-
-      #clock {
-        font-weight: bold;
       }
 
       #battery.charging, #battery.plugged {
@@ -122,7 +101,8 @@ in
       }
 
       #workspaces button {
-        margin: 0px 8px;
+        /* margin: 0px 5px; */
+        margin: 0px 5px;
         color: @fgSakuraPink;
       }
 
@@ -134,21 +114,31 @@ in
         color: @activeRosePink;
       }
 
-      #custom-sep,
-      #tray,
+      #custom-launcher {
+        margin-left: 20px;
+      }
+
+      #clock {
+        margin-right: 20px;
+      }
+      
+
+      #workspaces button { min-width: 32px; } 
+      #backlight { padding: 0; }
+      #clock { font-weight: bold; }
+
       #taskbar button {
         font-weight: bold;
         background: none;
         margin: 0px 5px;
       }
 
-      #custom-launcher {
-        margin-left: 20px;
-      }
       #tray {
-        margin-right: 20px;
+        margin: 4px 4px; 
+        padding:  0px 8px; 
+        border-radius: 10px;
+        background-color: @InactiveLightGray;
       }
-      
 
     '';
 

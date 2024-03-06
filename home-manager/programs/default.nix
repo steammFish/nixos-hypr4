@@ -12,6 +12,7 @@
     ./yazi
     ./zsh
     ./fcitx5.nix
+    ./alacritty.nix
     ./neovim.nix
 
   ];
