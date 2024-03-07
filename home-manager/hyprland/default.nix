@@ -221,6 +221,8 @@
       "float, class:^(org.fcitx.)$"
 
       "workspace 1 ,class:^(cool-retro-term.)$"
+      # "workspace 1 ,class:^(alacritty)$"
+      "workspace 1 ,class:^(org.wezfurlong.wezterm)$"
       # "workspace 1 ,class:^(kitty)$"
       "workspace 2 ,class:^(Google-chrome)$"
       "workspace 2 ,class:^(org.qutebrowser.qutebrowser)$"

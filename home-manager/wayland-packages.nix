@@ -10,6 +10,7 @@
     foot
     alacritty
     starship
+    # wezterm
 
     # 外观和主题定制，系统工具
     ocs-url
