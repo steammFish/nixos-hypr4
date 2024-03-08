@@ -1,6 +1,5 @@
 # nixos-hypr3
 
-
 ## Tools:
 
 * bar - waybar

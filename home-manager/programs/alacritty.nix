@@ -1,9 +1,6 @@
 { pkgs, config, fontSize, fontFamily, ... }:
 let
-
-
 in
-
 {
 
   programs.alacritty.enable = true;
