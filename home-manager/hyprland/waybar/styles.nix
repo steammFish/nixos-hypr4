@@ -10,7 +10,7 @@ in
     ''
       /* @import "/home/ck/.cache/wal/colors-waybar.css"; */
 
-      @define-color bgBar rgba(0,0,0,0.3);
+      @define-color bgBar rgba(0,0,0,0.5);
       @define-color bgWidget rgba(0,0,0,0.4);
       @define-color bgBlack #000000;
       @define-color fgWhite #ffffff;
@@ -34,7 +34,7 @@ in
         transition-property: background-color;
         transition-duration: .5s;
         background-color: @bgBar;
-        /* border-radius: 10px; */
+        /* border-radius: 10px;  */
         /* background: transparent; */
         /* border: 1px solid @activeRosePink; */
       }

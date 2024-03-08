@@ -32,7 +32,8 @@
 
     "$browser" = "google-chrome-stable";
     "$explorer" = "thunar";
-    "$terminal" = "kitty";
+    # "$terminal" = "kitty";
+    "$terminal" = "alacritty";
     "$terminal_workspace_1" = "hyprctl dispatch workspace 1 && $terminal";
     "$menu" = "rofi -show drun -show-icons";
     "$clipboard" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
@@ -248,7 +249,7 @@
 
       "workspace 1 ,class:^(cool-retro-term.)$"
       "workspace 1 ,class:^(org.wezfurlong.wezterm)$"
-      "workspace 1 ,class:^(alacritty)$"
+      # "workspace 1 ,class:^(alacritty)$"
       # "workspace 1 ,class:^(kitty)$"
       "workspace 2 ,class:^(Google-chrome)$"
       "workspace 2 ,class:^(org.qutebrowser.qutebrowser)$"
@@ -310,7 +311,7 @@
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
         "$mainMod, RETURN, exec, $terminal"
         "$mainMod SHIFT, RETURN, exec, $terminal_workspace_1"
-        "$mainMod CTRL, RETURN, exec, alacritty"
+        # "$mainMod CTRL, RETURN, exec, alacritty"
         "$mainMod, SLASH, exec, code"
         "$mainMod SHIFT, SLASH, exec, code ~/nixos"
         # "$mainMod CTRL, SLASH, exec, hx ~/nixos"
