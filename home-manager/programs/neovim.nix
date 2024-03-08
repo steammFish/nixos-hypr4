@@ -1,6 +1,11 @@
 { pkgs, config, ... }:
 let
 
+  plug = {
+    url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim";
+    sha256 = "0n9x4av3vk3zb7jzjhb9s1h48chyg13d62cas31c666hv06ggmv6";
+  };
+
   neovim-config =
     ''
       syntax on
@@ -57,8 +62,8 @@ in
 {
 
   xdg.dataFile."nvim/site/autoload/plug.vim".source = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim";
-    sha256 = "163cb9ar2bfd7sq2hfhmzvk7qn2s12gs66fxjcdx6qxqp8g08i9c";
+    url = plug.url;
+    sha256 = plug.sha256;
   };
 
   home.sessionVariables = {

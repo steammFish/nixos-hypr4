@@ -11,8 +11,8 @@
     ./youtube-download.nix
     ./yazi
     ./zsh
-    ./fcitx5.nix
     ./alacritty.nix
+    ./fcitx5.nix
     ./neovim.nix
 
   ];

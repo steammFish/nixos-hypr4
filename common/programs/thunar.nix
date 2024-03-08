@@ -11,6 +11,8 @@
 
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
+  programs.file-roller.enable = true;
+
 
   programs.thunar = {
     plugins = (with pkgs.xfce; [
@@ -18,11 +20,19 @@
       thunar-volman
       thunar-media-tags-plugin
       exo
-    ]) ++ (with pkgs.gnome; [
-      file-roller
+      # ]) ++ (with pkgs.gnome; [
+      #   file-roller
     ]);
   };
 
-  # environment.systemPackages = with pkgs.gnome; [ file-roller ];
+  environment.systemPackages = (with pkgs; [
+    dolphin
+    ark
+    nautilus-open-any-terminal
+  ]) ++ (with pkgs.gnome; [
+    # file-roller 
+    nautilus
+
+  ]);
 
 }

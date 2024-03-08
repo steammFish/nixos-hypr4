@@ -31,44 +31,42 @@
     , ags
     }:
     let
-
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       lib = pkgs.lib;
-      username = "ck";
-      hostname = "ck-nixos";
-      fontSize = 22;
-      fontFamily = "FantasqueSansM Nerd Font Mono";
-      cursorSize = 32;
-      majorColor = "#F7879A";
-      fontFamily = "MesloLGM Nerd Font";
-      userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" "mpd" ];
+      shareSpecialArgs = {
+        inherit inputs;
+        username = "ck";
+        hostname = "ck-nixos";
+        fontSize = 22;
+        cursorSize = 32;
+        fontFamily = "FantasqueSansM Nerd Font Mono";
+        # fontFamily = "MesloLGM Nerd Font";
+        majorColor = "#F7879A";
+        userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" "mpd" ];
+      };
 
     in
     {
       formatter.${system} = pkgs.nixpkgs-fmt;
-
-      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
+      nixosConfigurations."ck-nixos" = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs lib username hostname userGroups; };
+        specialArgs = shareSpecialArgs;
         modules = [
           ./configuration.nix
-
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./home-manager/home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs username fontSize fontFamily cursorSize majorColor; };
+            home-manager.users."ck" = import ./home-manager/home.nix;
+            home-manager.extraSpecialArgs = shareSpecialArgs;
           }
-
         ];
       };
-
       homeConfigurations."ck" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home-manager/home.nix ];
-        extraSpecialArgs = { inherit inputs username fontSize fontFamily cursorSize majorColor; };
+        extraSpecialArgs = shareSpecialArgs;
       };
 
     };

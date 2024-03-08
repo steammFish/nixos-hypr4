@@ -37,6 +37,12 @@
     gsettings-desktop-schemas
     neo-cowsay
 
+
+    # ydotool
+    # xdotool
+    # xbindkeys
+    # xbindkeys-config
+
     # pdf
     mupdf
     zathura
@@ -67,6 +73,7 @@
     cliphist
     # clipman 
     # copyq
+
 
   ]) ++ (with pkgs; [
     # screenshot

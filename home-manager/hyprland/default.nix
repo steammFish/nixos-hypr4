@@ -113,6 +113,29 @@
 
     };
 
+    animations = {
+      enabled = true;
+
+      bezier = [
+        "wind, 0.05, 0.9, 0.1, 1.05"
+        "winIn, 0.1, 1.1, 0.1, 1.1"
+        "winOut, 0.3, -0.3, 0, 1"
+        "liner, 1, 1, 1, 1"
+      ];
+
+      animation = [
+        "windows, 1, 6, wind, slide"
+        "windowsIn, 1, 6, winIn, slide"
+        "windowsOut, 1, 5, winOut, slide"
+        "windowsMove, 1, 5, wind, slide"
+        "border, 1, 1, liner"
+        "borderangle, 1, 30, liner, loop"
+        "fade, 1, 10, default"
+        "workspaces, 1, 5, wind"
+      ];
+    };
+
+
 
     # animations = {
     #   enabled = true;
@@ -133,18 +156,19 @@
     #   ];
     # };
 
-    animations = {
-      enabled = "yes";
-      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-      animation = [
-        "windows, 1, 7, myBezier"
-        "windowsOut, 1, 7, default, popin 80%"
-        "border, 1, 10, default"
-        "borderangle, 1, 8, default"
-        "fade, 1, 7, default"
-        "workspaces, 1, 6, default"
-      ];
-    };
+    # animations = {
+    #   enabled = "yes";
+    #   bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+    #   animation = [
+    #     "windows, 1, 7, myBezier"
+    #     "windowsOut, 1, 7, default, popin 80%"
+    #     "border, 1, 10, default"
+    #     "borderangle, 1, 8, default"
+    #     "fade, 1, 7, default"
+    #     "workspaces, 1, 6, default"
+    #   ];
+    # };
+
     dwindle = {
       pseudotile = "yes";
       preserve_split = "yes";
@@ -219,10 +243,12 @@
       "float, class:^(thunar)$, title:^(File Operation Progress)$"
       "float, class:^(thunar)$, title:^(Confirm to replace files)$"
       "float, class:^(org.fcitx.)$"
+      "float, class:^(fcitx5-config-qt)$"
+      "float, class:^(virt-manager)$"
 
       "workspace 1 ,class:^(cool-retro-term.)$"
-      # "workspace 1 ,class:^(alacritty)$"
       "workspace 1 ,class:^(org.wezfurlong.wezterm)$"
+      "workspace 1 ,class:^(alacritty)$"
       # "workspace 1 ,class:^(kitty)$"
       "workspace 2 ,class:^(Google-chrome)$"
       "workspace 2 ,class:^(org.qutebrowser.qutebrowser)$"

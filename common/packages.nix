@@ -18,10 +18,10 @@ let
     asio
     (python311.withPackages (ps: with ps; [ pandas requests ]))
 
-    vulkan-loader
-    qt6.full
-    qt6.qtwayland
-    qtcreator
+    # vulkan-loader
+    # qt6.full
+    # qt6.qtwayland
+    # qtcreator
 
   ];
   pkgsDesktop = with pkgs;  [
@@ -119,13 +119,16 @@ in
 
   # █▀▀ █▀█ █▄░█ ▀█▀ █▀
   # █▀░ █▄█ █░▀█ ░█░ ▄█
-  fonts.packages = lib.mkMerge [ fontsExtra ];
+  fonts = {
+    packages = lib.mkMerge [ fontsExtra ];
+    enableDefaultPackages = true;
 
-  # 确保字体配置生效
-  fonts.fontconfig.defaultFonts = {
-    sansSerif = [ "Noto Sans CJK SC" "Iosevka Nerd Font" ];
-    serif = [ "Noto Serif CJK SC" "JetBrainsMono Nerd Font" ];
-    monospace = [ "Noto Sans Mono CJK SC" ];
+    # 确保字体配置生效
+    fontconfig.defaultFonts = {
+      sansSerif = [ "Noto Sans CJK SC" "Iosevka Nerd Font" ];
+      serif = [ "Noto Serif CJK SC" "JetBrainsMono Nerd Font" ];
+      monospace = [ "Noto Sans Mono CJK SC" ];
+    };
   };
 
   # █▀▀ █░░ ▄▀█ ▀█▀ █▀█ ▄▀█ █▄▀

@@ -38,15 +38,12 @@ in
     # dracula-theme.theme-dracula
 
   ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-
     extensions.Icons
     extensions.adwaita-base16
     extensions.todo-tree
     extensions.vscode-docker
     extensions.cpptools
     extensions.cmake-tools
-
-
   ];
 
   # home.file.".config/Code/User/settings.json".text = vscode-settings;

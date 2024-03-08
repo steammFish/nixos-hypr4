@@ -1,6 +1,11 @@
 { config, pkgs, username, ... }:
 let
   cursorSize = 32;
+
+  preferDark = {
+    gtk-application-prefer-dark-theme = 1;
+  };
+
 in
 {
   home.pointerCursor = {
@@ -13,6 +18,10 @@ in
 
   gtk = {
     enable = true;
+
+    # gtk3.extraConfig = preferDark;
+    # gtk4.extraConfig = preferDark;
+
     theme = {
       package = pkgs.whitesur-gtk-theme;
       name = "WhiteSur-Dark";
@@ -23,10 +32,17 @@ in
       name = "Adwaita";
     };
 
+    # font = {
+    #   name = "DejaVu Sans";
+    #   size = 13;
+    # };
+
     font = {
-      name = "Sans";
+      # name = "Iosevka Nerd Font";
+      name = "RobotoMono Nerd Font";
       size = 14;
     };
+
   };
 
 
