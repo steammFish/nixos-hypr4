@@ -87,20 +87,19 @@
     decoration = {
       rounding = 6;
       # active_opacity=0.9;
-      # inactive_opacity=0.9;
+      # inactive_opacity=0.6;
       blur = {
         enabled = true;
 
         passes = 6;
-        size = 6;
+        size = 12;
         # noise = 0.01;
 
         blurls = [
           "waybar"
-          "alacritty"
-          "kitty"
-          # "rofi"
-          "dunst"
+          "rofi"
+          # "alacritty"
+          # "kitty"
         ];
 
       };
@@ -245,7 +244,7 @@
       "float, class:^(thunar)$, title:^(Confirm to replace files)$"
       "float, class:^(org.fcitx.)$"
       "float, class:^(fcitx5-config-qt)$"
-      "float, class:^(virt-manager)$"
+      # "float, class:^(virt-manager)$"
 
       "workspace 1 ,class:^(cool-retro-term.)$"
       "workspace 1 ,class:^(org.wezfurlong.wezterm)$"

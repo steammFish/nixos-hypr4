@@ -17,6 +17,9 @@ let
       set shiftwidth=2
       set autoindent
       set smartindent
+      set fillchars=eob:\ 
+      set encoding=utf-8
+
 
       call plug#begin('~/.local/share/nvim/plugged')
 
@@ -33,9 +36,13 @@ let
 
 
       Plug 'voldikss/vim-translate-me'
+      Plug 'lilydjwg/colorizer'
+      Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } 
+      " Plug 'jistr/vim-nerdtree-tabs'
 
       call plug#end()
 
+      
       " space key as leader 
       let mapleader = " "
 
@@ -55,6 +62,10 @@ let
       vmap <silent> <Leader>r <Plug>TranslateRV
       " Translate the text in clipboard
       nmap <silent> <Leader>x <Plug>TranslateX
+
+      nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+
+
 
     '';
 in

@@ -102,6 +102,8 @@
             # "empty" = "";
             # "active" = "";
             # "urgent" = "";
+            # "active" = "";
+            # "default" = "";
           };
           "persistent-workspaces" = {
             "*" = 5;
@@ -134,7 +136,8 @@
         "battery" = {
           "format" = "{icon} {capacity}";
           "format-charging" = "󰉁 {capacity}";
-          "format-icons" = [ "" "" "" "" "" ];
+          # "format-icons" = [ "" "" "" "" "" ];
+          "format-icons" = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
           "on-click" = "kitty sh -c gotop";
           "states" = {
             "critical" = 20;

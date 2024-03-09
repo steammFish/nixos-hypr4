@@ -14,9 +14,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ags.url = "github:Aylur/ags";
     hyprland.url = "github:hyprwm/Hyprland";
-    nix-colors.url = "github:misterio77/nix-colors";
+    # ags.url = "github:Aylur/ags";
+    # nix-colors.url = "github:misterio77/nix-colors";
     # nix-colors.inputs.base16-schemes.follows = "base16-schemes"; # Be sure to add this
 
   };
@@ -27,8 +27,8 @@
     , home-manager
     , nixvim
     , hyprland
-    , nix-colors
-    , ags
+    # , nix-colors
+    # , ags
     }:
     let
       system = "x86_64-linux";

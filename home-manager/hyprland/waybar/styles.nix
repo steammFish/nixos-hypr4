@@ -60,7 +60,7 @@ in
       {
         margin: 4px 4px;
         padding:  0px 8px;
-        border-radius: 10px;
+        border-radius: 8px;
         color: @fgWhite;
         background: transparent;
         /* background-color: rgba(0,0,0,0.3); */
@@ -109,8 +109,8 @@ in
       #workspaces button {
         margin: 0px 5px;
         color: @fgSakuraPink;
-        padding-right: 18px;
-        padding-left: 8px;
+        padding-right: 12px;
+        padding-left: 2px;
         /* min-width: 32px;  */
       } 
 
