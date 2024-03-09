@@ -324,10 +324,10 @@
         "$mainMod CTRL, W, exec, hypr_start"
 
         "ALT, R, exec, zathura ~/Desktop/Linux网络编程.pdf"
-        "ALT SHIFT, 1, exec, rofi_google"
-        "ALT SHIFT, 2, exec, rofi_google_trans"
-        "ALT SHIFT, 3, exec, rofi_google_cpp"
-        "ALT SHIFT, 4, exec, rofi_google_mynixos"
+        "ALT SHIFT, 1, exec, rofi_google_trans"
+        "ALT SHIFT, 2, exec, rofi_search google"
+        "ALT SHIFT, 3, exec, rofi_search cppreference"
+        "ALT SHIFT, 4, exec, rofi_search mynixos"
 
 
 

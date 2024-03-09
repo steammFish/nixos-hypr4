@@ -44,7 +44,7 @@
       };
 
       chatGPT = {
-        name = "netease music";
+        name = "ChatGPT";
         exec = "${myapp-path}/chatGPT.sh";
         icon = "${myapp-path}/chatGPT.png";
         type = "Application";

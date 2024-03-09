@@ -32,20 +32,6 @@ let
           exit 1
         fi
       }
-      
-      # function select_wallpaper1 {
-      #   # 查找两个目录中的壁纸文件，并合并到一个列表中
-      #   wallpapers_list=$(find "$dir1" "$dir2" -type f -o -type l 2>/dev/null)
-
-      #   # 从合并后的列表中随机选择一张壁纸
-      #   WALLPAPER=$(echo "$wallpapers_list" | shuf -n 1)
-
-      #   # 检查是否找到了壁纸
-      #   if [ -z "$WALLPAPER" ]; then
-      #       echo "No wallpapers found!"
-      #       exit 1
-      #   fi
-      # }
 
       function select_wallpaper2 {
         pic1=$(find "$dir1" -type f -o -type l | shuf -n 1)
@@ -84,16 +70,6 @@ let
       hypr_exec
     '';
 
-  rofi_google = pkgs.writeShellScriptBin "rofi_google"
-    ''
-      query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "在 Google 中搜索")
-       # -filter "bilibili")
-      if [ -n "$query" ]; then
-          google-chrome-stable "https://www.google.com/search?q=$query"
-          # google-chrome --new-window "https://www.google.com/search?q=$query"
-      fi
-    '';
-
   rofi_google_trans = pkgs.writeShellScriptBin "rofi_google_trans"
     ''
       query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "Google 翻译")
@@ -101,23 +77,52 @@ let
       # query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "Google 翻译" | tr -s ' ')
       if [ -n "$query" ]; then
           google-chrome-stable "https://translate.google.com/?text=$query"
+          # google-chrome --new-window 
       fi
     '';
 
-  rofi_google_cpp = pkgs.writeShellScriptBin "rofi_google_cpp"
-    ''
-      query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "search on CPP Reference")
-      if [ -n "$query" ]; then
-          google-chrome-stable "https://duckduckgo.com/?sites=cppreference.com&q=$query"
-      fi
-    '';
 
-  rofi_google_mynixos = pkgs.writeShellScriptBin "rofi_google_mynixos"
+  rofi_search = pkgs.writeShellScriptBin "rofi_search"
     ''
-      query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "search on mynixos")
-      if [ -n "$query" ]; then
-          google-chrome-stable "https://mynixos.com/search?q=$query"
+      history_file="$HOME/.rofi_history"
+      source="$1"
+
+      # Default source is "google" if not provided
+      if [ -z "$source" ]; then
+          source="google"
       fi
+
+      # Create history file if it doesn't exist
+      if [ ! -f "$history_file" ]; then
+          touch "$history_file"
+      fi
+
+      query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "search on $source" < "$history_file" | sed -E "s/^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} $source //")
+
+      if [ -n "$query" ]; then
+          echo "$(date +"%Y-%m-%d %T") $source $query" >> "$history_file"
+    
+          # Determine search URL based on source
+          case "$source" in
+              "google")
+                  search_url="https://www.google.com/search?q=$query"
+                  ;;
+              "cppreference")
+                  search_url="https://duckduckgo.com/?sites=cppreference.com&q=$query"
+                  ;;
+              "mynixos")
+                  search_url="https://mynixos.com/search?q=$query"
+                  ;;
+              *)
+                  echo "Unknown source: $source"
+                  exit 1
+                  ;;
+          esac
+
+          google-chrome-stable "$search_url"
+      fi
+
+
     '';
 
 in
@@ -125,10 +130,8 @@ in
 {
   home.packages = [
     hypr_start
-    rofi_google
     rofi_google_trans
-    rofi_google_cpp
-    rofi_google_mynixos
+    rofi_search
   ];
 }
 
