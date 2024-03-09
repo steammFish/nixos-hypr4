@@ -11,13 +11,16 @@ let
     cmake
     gnumake
     ninja
-    # clang
-    # glibc
     ffmpeg-full
     openssl
     asio
     (python311.withPackages (ps: with ps; [ pandas requests ]))
 
+    cppreference-doc
+
+
+    # clang
+    # glibc
     # vulkan-loader
     # qt6.full
     # qt6.qtwayland

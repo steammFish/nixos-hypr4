@@ -321,10 +321,15 @@
         "$mainMod, A, exec, $menu"
         "$mainMod SHIFT, V, exec, $clipboard"
         "$mainMod, B, exec, $browser"
-        "$mainMod SHIFT, B, exec, rofi_google"
-        "$mainMod SHIFT, T, exec, rofi_google_trans"
         "$mainMod CTRL, W, exec, hypr_start"
+
         "ALT, R, exec, zathura ~/Desktop/Linux网络编程.pdf"
+        "ALT SHIFT, 1, exec, rofi_google"
+        "ALT SHIFT, 2, exec, rofi_google_trans"
+        "ALT SHIFT, 3, exec, rofi_google_cpp"
+        "ALT SHIFT, 4, exec, rofi_google_mynixos"
+
+
 
         ",Print, exec, grimblast --notify save screen"
         "SHIFT, Print, exec, grimblast --notify save area"

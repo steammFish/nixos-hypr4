@@ -103,9 +103,32 @@ let
           google-chrome-stable "https://translate.google.com/?text=$query"
       fi
     '';
+
+  rofi_google_cpp = pkgs.writeShellScriptBin "rofi_google_cpp"
+    ''
+      query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "search on CPP Reference")
+      if [ -n "$query" ]; then
+          google-chrome-stable "https://duckduckgo.com/?sites=cppreference.com&q=$query"
+      fi
+    '';
+
+  rofi_google_mynixos = pkgs.writeShellScriptBin "rofi_google_mynixos"
+    ''
+      query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "search on mynixos")
+      if [ -n "$query" ]; then
+          google-chrome-stable "https://mynixos.com/search?q=$query"
+      fi
+    '';
+
 in
 
 {
-  home.packages = [ hypr_start rofi_google rofi_google_trans ];
+  home.packages = [
+    hypr_start
+    rofi_google
+    rofi_google_trans
+    rofi_google_cpp
+    rofi_google_mynixos
+  ];
 }
 

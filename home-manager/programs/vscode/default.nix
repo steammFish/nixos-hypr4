@@ -35,15 +35,22 @@ in
   programs.vscode.enable = true;
   programs.vscode.extensions = with pkgs.vscode-extensions; [
     bbenoist.nix
-    # dracula-theme.theme-dracula
+    github.copilot
+    ms-azuretools.vscode-docker
+    ms-vscode.cpptools
+    twxs.cmake
+    gruntfuggly.todo-tree
+    dracula-theme.theme-dracula
+    # mechatroner.rainbow-csv
+
 
   ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     extensions.Icons
     extensions.adwaita-base16
-    extensions.todo-tree
-    extensions.vscode-docker
-    extensions.cpptools
-    extensions.cmake-tools
+    # extensions.todo-tree
+    # extensions.vscode-docker
+    # extensions.cpptools
+    # extensions.cmake-tools
   ];
 
   # home.file.".config/Code/User/settings.json".text = vscode-settings;

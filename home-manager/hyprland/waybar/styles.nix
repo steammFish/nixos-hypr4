@@ -1,7 +1,8 @@
 let
   # fontsize = builtins.toString fontSize + 2;
   fontsize = "26";
-  fontFamily = "'FantasqueSansM Nerd Font', 'Monospace','Font Awesome 6 Free'";
+  # fontFamily = "'FantasqueSansM Nerd Font', 'Monospace','Font Awesome 6 Free'";
+  fontFamily = "'FantasqueSansM Nerd Font', 'Font Awesome 6 Free'";
 in
 
 {
@@ -10,8 +11,8 @@ in
     ''
       /* @import "/home/ck/.cache/wal/colors-waybar.css"; */
 
-      @define-color bgBar rgba(0,0,0,0.5);
-      @define-color bgWidget rgba(0,0,0,0.4);
+      @define-color bgBar rgba(0,0,0,0.4);
+      @define-color bgWidget rgba(0,0,0,0.8);
       @define-color bgBlack #000000;
       @define-color fgWhite #ffffff;
       @define-color fgSakuraPink @fgWhite; 
@@ -21,6 +22,8 @@ in
 
       @define-color warningRed #f53c3c;
       @define-color healthGreen #26A65B;
+
+      /* @define-color bgWidget rgba(0,0,0,0.4); */
 
       * {
         font-family: ${fontFamily};
@@ -43,6 +46,7 @@ in
         background-color:  @warningRed;
       }
 
+      #tray,
       #myPlayctl,
       #workspaces,
       #custom-launcher,
@@ -101,10 +105,12 @@ in
       }
 
       #workspaces button {
-        /* margin: 0px 5px; */
         margin: 0px 5px;
         color: @fgSakuraPink;
-      }
+        padding-right: 18px;
+        padding-left: 8px;
+        /* min-width: 32px;  */
+      } 
 
        #workspaces button.empty { 
        color: @InactiveLightGray;
@@ -118,14 +124,10 @@ in
         margin-left: 20px;
       }
 
-      #clock {
+      #clock { 
         margin-right: 20px;
+        font-weight: bold; 
       }
-      
-
-      #workspaces button { min-width: 32px; } 
-      #backlight { padding: 0; }
-      #clock { font-weight: bold; }
 
       #taskbar button {
         font-weight: bold;
@@ -133,12 +135,9 @@ in
         margin: 0px 5px;
       }
 
-      #tray {
-        margin: 4px 4px; 
-        padding:  0px 8px; 
-        border-radius: 10px;
-        background-color: @InactiveLightGray;
-      }
+      #workspaces { background-color: @bgWidget; } 
+      #backlight { padding: 0; }
+      #tray { background-color: @InactiveLightGray; }
 
     '';
 
