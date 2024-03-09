@@ -46,13 +46,15 @@ in
         background-color:  @warningRed;
       }
 
+      #myDisk,
+      #taskbar,
+      #custom-sep,
       #tray,
       #myPlayctl,
       #workspaces,
       #custom-launcher,
       #clock,
       #battery,
-      #disk,
       #backlight,
       #pulseaudio
       {
@@ -130,10 +132,8 @@ in
       }
 
       #taskbar button {
-        font-weight: bold;
-        background: none;
-        margin: 0px 5px;
-      }
+        margin: 0px 4px;
+      } 
 
       #workspaces { background-color: @bgWidget; } 
       #backlight { padding: 0; }

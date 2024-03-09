@@ -75,8 +75,8 @@ in
         columns = 200;
       };
       padding = {
-        x = 15;
-        y = 15;
+        x = 2;
+        y = 2;
       };
       opacity = 0.6;
     };

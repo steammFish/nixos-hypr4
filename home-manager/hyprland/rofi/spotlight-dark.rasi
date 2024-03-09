@@ -6,9 +6,9 @@
 
 * {
     /* font:   "Montserrat 22"; */
-    font:   "FantasqueSansM Nerd Font 22"; 
+    font:   "FantasqueSansM Nerd Font 24"; 
 
-    bg0:    #24242470;
+    bg0:    #242424dd;
     bg2:    #F7879A70;
     bg1:    #7E7E7E70;
 
@@ -31,12 +31,10 @@ window {
 
     location:       center;
     width:          1440;
-    /* border-radius:  8; */
+    border-radius:  6; 
 
-    border-radius:  0; 
-    border: 1px;
+    border: 2px;
     border-color: @borderColor;
-    /* border-color: @bg2; */
 
 }
 
@@ -105,3 +103,4 @@ element-icon {
 element-text {
     text-color: inherit;
 }
+

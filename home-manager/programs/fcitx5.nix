@@ -7,7 +7,6 @@ let
 
 in
 {
-
   xdg.dataFile."fcitx5/pinyin/dictionaries/zhwiki-20220416.dict".source = pkgs.fetchurl {
     url = dict.url;
     sha256 = dict.sha256;

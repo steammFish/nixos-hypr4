@@ -2,13 +2,12 @@
 {
   imports = [
     inputs.hyprland.homeManagerModules.default
-    # ./conf
     ./waybar
     ./rofi
     ./kitty.nix
+    ./alacritty.nix
     ./dunst.nix
     ./gtk.nix
-    # ./wayland-packages.nix
   ];
 
   # █░█ █▄█ █▀█ █▀█ █░░ ▄▀█ █▄░█ █▀▄
@@ -31,9 +30,10 @@
     ];
 
     "$browser" = "google-chrome-stable";
-    "$explorer" = "thunar";
-    # "$terminal" = "kitty";
+    "$explorer" = "nautilus";
     "$terminal" = "alacritty";
+    # "$explorer" = "thunar";
+    # "$terminal" = "kitty";
     "$terminal_workspace_1" = "hyprctl dispatch workspace 1 && $terminal";
     "$menu" = "rofi -show drun -show-icons";
     "$clipboard" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
@@ -99,7 +99,7 @@
           "waybar"
           "alacritty"
           "kitty"
-          "rofi"
+          # "rofi"
           "dunst"
         ];
 
