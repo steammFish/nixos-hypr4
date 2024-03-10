@@ -1,64 +1,83 @@
 { pkgs, config, fontSize, fontFamily, ... }:
 let
   theme =
-    ''
-      # Colors (Baitong)
+''
+[colors.primary]
+background = '#1E1E2E' # base
+foreground = '#CDD6F4' # text
+# Bright and dim foreground colors
+dim_foreground = '#CDD6F4' # text
+bright_foreground = '#CDD6F4' # text
 
-      [colors.primary]
-      background = '#112a2a'
-      foreground = '#33ff33'
+# Cursor colors
+[colors.cursor]
+text = '#1E1E2E' # base
+cursor = '#F5E0DC' # rosewater
 
-      [colors.cursor]
-      text = '#112a2a'
-      cursor = '#ff00ff'
+[colors.vi_mode_cursor]
+text = '#1E1E2E' # base
+cursor = '#B4BEFE' # lavender
 
-      [colors.vi_mode_cursor]
-      text = '#112a2a'
-      cursor = '#ff00ff'
+# Search colors
+[colors.search.matches]
+foreground = '#1E1E2E' # base
+background = '#A6ADC8' # subtext0
 
-      [colors.search]
-      matches = { foreground = '#000000', background = '#1AE642' }
-      focused_match = { foreground = '#000000', background = '#ff00ff' }
+[colors.search.focused_match]
+foreground = '#1E1E2E' # base
+background = '#A6E3A1' # green
 
-      [colors.hints]
-      start = { foreground = '#1d1f21', background = '#1AE642' }
-      end = { foreground = '#1AE642', background = '#1d1f21' }
+[colors.footer_bar]
+foreground = '#1E1E2E' # base
+background = '#A6ADC8' # subtext0
 
-      [colors.line_indicator]
-      foreground = '#33ff33'
-      background = '#1d1f21'
+# Keyboard regex hints
+[colors.hints.start]
+foreground = '#1E1E2E' # base
+background = '#F9E2AF' # yellow
 
-      [colors.footer_bar]
-      background = '#731d8b'
-      foreground = '#ffffff'
+[colors.hints.end]
+foreground = '#1E1E2E' # base
+background = '#A6ADC8' # subtext0
 
-      [colors.selection]
-      text = '#112a2a'
-      background = '#1AE642'
+# Selection colors
+[colors.selection]
+text = '#1E1E2E' # base
+background = '#F5E0DC' # rosewater
 
-      # Normal colors
-      [colors.normal]
-      black   = '#000000'
-      red     = '#f77272'
-      green   = '#33ff33'
-      yellow  = '#1AE642'
-      blue    = '#68FDFE'
-      magenta = '#ff66ff'
-      cyan    = '#87CEFA'
-      white   = '#dbdbd9'
+# Normal colors
+[colors.normal]
+black = '#45475A' # surface1
+red = '#F38BA8' # red
+green = '#A6E3A1' # green
+yellow = '#F9E2AF' # yellow
+blue = '#89B4FA' # blue
+magenta = '#F5C2E7' # pink
+cyan = '#94E2D5' # teal
+white = '#BAC2DE' # subtext1
 
-      # Bright colors
-      [colors.bright]
-      black   = '#ffffff'
-      red     = '#f77272'
-      green   = '#33ff33'
-      yellow  = '#1AE642'
-      blue    = '#68FDFE'
-      magenta = '#ff66ff'
-      cyan    = '#68FDFE'
-      white   = '#dbdbd9'
+# Bright colors
+[colors.bright]
+black = '#585B70' # surface2
+red = '#F38BA8' # red
+green = '#A6E3A1' # green
+yellow = '#F9E2AF' # yellow
+blue = '#89B4FA' # blue
+magenta = '#F5C2E7' # pink
+cyan = '#94E2D5' # teal
+white = '#A6ADC8' # subtext0
 
-    '';
+# Dim colors
+[colors.dim]
+black = '#45475A' # surface1
+red = '#F38BA8' # red
+green = '#A6E3A1' # green
+yellow = '#F9E2AF' # yellow
+blue = '#89B4FA' # blue
+magenta = '#F5C2E7' # pink
+cyan = '#94E2D5' # teal
+white = '#BAC2DE' # subtext1
+'';
 in
 {
   xdg.configFile."alacritty/theme.toml".text = theme;

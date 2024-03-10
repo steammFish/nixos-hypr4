@@ -30,6 +30,6 @@
   animation-direction: alternate;
 }
 
-#workspaces button.active { color: #000; } /* 激活按钮文字颜色 */
-#workspaces button { color: #333; } /* 默认文字颜色 */
-#workspaces button.empty {  color: #aaa; } /* 空按钮文字颜色 */
+#workspaces button.active { color: #ff66cc; } /* active */
+#workspaces button { color: #333; } /* normal */
+#workspaces button.empty {  color: #aaa; } /* inactive */

@@ -34,9 +34,9 @@ in
       window#waybar {
         transition-property: background-color;
         transition-duration: .5s;
-        /* background-color: @bgBar; */
-        /* border-radius: 10px;  */
         /* background: transparent; */
+        background-color: @bgBar; 
+        /* border-radius: 10px;  */
         /* border: 1px solid @Active; */
       }
 

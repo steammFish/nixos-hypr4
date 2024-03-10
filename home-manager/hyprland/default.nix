@@ -92,7 +92,7 @@
         enabled = true;
 
         passes = 6;
-        size = 12;
+        size = 8;
         # noise = 0.01;
 
         blurls = [
