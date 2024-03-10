@@ -65,10 +65,15 @@ in
     #   # ${pkgs.pokemon-colorscripts-mac}/bin/pokemon-colorscripts -r
     # '';
 
+
+    # █▀█ █▀█ █▀█ █▀▄▀█ █▀█ ▀█▀
+    # █▀▀ █▀▄ █▄█ █░▀░█ █▀▀ ░█░
+    # source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    # ${pkgs.pfetch}/bin/pfetch
     promptInit = ''
-      # source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-      ${pkgs.pfetch}/bin/pfetch
+      ${pkgs.nitch}/bin/nitch
     '';
+
 
     zsh-autoenv.enable = true;
     autosuggestions.enable = true;

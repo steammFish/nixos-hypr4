@@ -1,5 +1,9 @@
 # nixos-hypr3
 
+## best combination
+
+> hyprland + waybar + rofi
+
 ## Tools:
 
 * bar - waybar
@@ -24,10 +28,7 @@
 * brightness - brightnessctl
 * powerManager - power-profile-daemon
 
-
-![pic](./res/img1_.png "t")
-![pic](./res/img2_.png "t")
-![pic](./res/img3_.png "t")
-![pic](./res/img4_.png "t")
-![pic](./res/img5_.png "t")
-![pic](./res/img6_.png "t")
+![pic](./res/img3_notify.png "t")
+![pic](./res/img_desktop.png "t")
+![pic](./res/img_rofi.png "t")
+![pic](./res/img_vscode.png "t")
