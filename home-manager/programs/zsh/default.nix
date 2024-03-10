@@ -12,6 +12,7 @@
 
       # Inline the content of websearch.zsh
       ${builtins.readFile ./websearch.zsh}
+      ${builtins.readFile ./custom.sh}
 
     '';
     # oh-my-zsh = {
