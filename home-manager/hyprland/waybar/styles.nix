@@ -49,6 +49,7 @@ in
       #myPlayctl,
       #workspaces,
       #custom-launcher,
+      #custom-virtWin10,
       #clock,
       #battery,
       #backlight,
@@ -123,17 +124,11 @@ in
       #workspaces button { color: @fgWhite; } 
       #workspaces button.empty {  color: @Inactive; } 
       #workspaces button.active { color: @Active; }
-
-      #custom-launcher { margin-left: 20px; }
       #taskbar button { margin: 0px 4px; } 
       #workspaces { background-color: @bgWidget; } 
       #backlight { padding: 0; }
       #tray { background-color: @Inactive; }
-
-      #clock { 
-        margin-right: 20px;
-        font-weight: bold; 
-      }
+      #clock { font-weight: bold; }
       
       @import "${anime-path}"; 
 

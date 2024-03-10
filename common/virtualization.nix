@@ -64,14 +64,22 @@
   };
   services.spice-vdagentd.enable = true;
 
-  # 查看网络
-  # $ sudo virsh net-list --all
-
-  # qemu 启动网络
-  # $ sudo virsh net-start default
-
-  # qemu 网络自启
-  # $ sudo virsh net-autostart default
-
-
 }
+
+# 查看网络
+# $ sudo virsh net-list --all
+
+# qemu 启动网络
+# $ sudo virsh net-start default
+
+# qemu 网络自启
+# $ sudo virsh net-autostart default
+
+# 修改为用户态网络
+# ```
+# <interface type="user">
+#   <mac address="52:54:00:f7:b9:f5"/>
+#   <model type="e1000e"/>
+#   <address type="pci" domain="0x0000" bus="0x01" slot="0x00" function="0x0"/>
+# </interface>
+# ```

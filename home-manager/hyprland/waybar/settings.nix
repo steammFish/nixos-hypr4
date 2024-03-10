@@ -4,19 +4,20 @@
     mainBar =
       let
         # diskcolor = "white";
-        diskcolor = "#F7879A";
+        # diskcolor = "#F7879A";
         playctl-format = {
           "Paused" = "<span foreground='#928374'>󰒮 󰐌 󰒭</span>";
           "Playing" = "<span foreground='#E5B9C6'>󰒮 󰏥 󰒭</span>";
         };
-        clock-tooltip = "<span> {:%Y-%m-%d %H:%M:%S %A}</span>\n将来は神様になりたいです。";
+        virtWin10-tooltip = "host: <span color='orange'>sudo virsh list --all</span>\nnetwork: <span color='orange'>sudo virsh net-list --all</span>";
+        clock-tooltip = " {:%Y-%m-%d %H:%M:%S (%B %A)}\n<span>将来は神様になりたいです。</span>";
         playctl-exec = "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
 
       in
       {
 
         "modules-left" = [
-          "custom/launcher"
+          "group/host"
           "hyprland/workspaces"
           "group/myPlayctl"
         ];
@@ -45,6 +46,18 @@
           };
           "modules" = [ "pulseaudio" "pulseaudio#microphone" ];
           "orientation" = "inherit";
+        };
+
+        "group/host" = {
+          "drawer" = {
+            "transition-duration" = 500;
+            "transition-left-to-right" = true;
+          };
+          "orientation" = "inherit";
+          "modules" = [
+            "custom/launcher"
+            "custom/virtWin10"
+          ];
         };
 
 
@@ -83,8 +96,6 @@
           "on-click-right" = "playerctl next";
           "format-icons" = playctl-format;
           "exec" = playctl-exec;
-
-
         };
 
         "hyprland/workspaces" = {
@@ -114,6 +125,15 @@
           "on-click" = "pkill rofi || rofi -show drun -show-icons";
           "on-click-right" = "exec hypr_start $HOME/wallpapers/default.jpg";
           "tooltip" = false;
+        };
+
+        "custom/virtWin10" = {
+          "format" = "<small> </small>";
+          "on-click" = "exec pkexec sudo virsh start win10";
+          # "on-click-right" = "exec pkexec sudo virsh shutdown --mode acpi win10";
+          "tooltip-format" = virtWin10-tooltip;
+          "tooltip" = true;
+
         };
 
         "custom/sep" = {
@@ -175,8 +195,7 @@
         };
 
         "clock" = {
-          "format" = " {:%H:%M}";
-          "format-alt" = "{:%A, %B %d, %Y (%R)}  ";
+          "format" = " {:%H:%M(%u)}";
           "tooltip-format" = clock-tooltip;
         };
 

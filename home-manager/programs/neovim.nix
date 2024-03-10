@@ -19,6 +19,7 @@ let
       set smartindent
       set fillchars=eob:\ 
       set encoding=utf-8
+      set mouse=
 
 
       call plug#begin('~/.local/share/nvim/plugged')

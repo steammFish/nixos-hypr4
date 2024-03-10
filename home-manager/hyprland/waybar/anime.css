@@ -1,25 +1,23 @@
-
-
 @keyframes colorCycle {
   0% {
-    background-color: red;
-    box-shadow: 0 0 4px rgba(255, 0, 0, 0.5); /* 初始阴影效果 */
+    background-color: #ffcccc;
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.3); /* 初始阴影效果 */
   }
   25% {
-    background-color: blue;
-    box-shadow: 0 -2px 4px rgba(0, 0, 255, 0.5); /* 向上移动 */
+    background-color: #ccccff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 255, 0.3); /* 向上移动 */
   }
   50% {
-    background-color: green;
-    box-shadow: 2px 0 4px rgba(0, 255, 0, 0.5); /* 向右移动 */
+    background-color: #ccffcc;
+    box-shadow: 2px 0 4px rgba(0, 255, 0, 0.3); /* 向右移动 */
   }
   75% {
-    background-color: yellow;
-    box-shadow: 0 2px 4px rgba(255, 255, 0, 0.5); /* 向下移动 */
+    background-color: #ffffcc;
+    box-shadow: 0 2px 4px rgba(255, 255, 0, 0.3); /* 向下移动 */
   }
   100% {
-    background-color: purple;
-    box-shadow: -2px 0 4px rgba(128, 0, 128, 0.5); /* 向左移动 */
+    background-color: #e0ccff;
+    box-shadow: -2px 0 4px rgba(128, 0, 128, 0.3); /* 向左移动 */
   }
 }
 
@@ -32,6 +30,6 @@
   animation-direction: alternate;
 }
 
-#workspaces button { color: black; } 
-#workspaces button.empty {  color: gray; } 
-#workspaces button.active { color: white; }
+#workspaces button.active { color: #000; } /* 激活按钮文字颜色 */
+#workspaces button { color: #333; } /* 默认文字颜色 */
+#workspaces button.empty {  color: #aaa; } /* 空按钮文字颜色 */
