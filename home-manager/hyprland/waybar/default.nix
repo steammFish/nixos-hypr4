@@ -11,4 +11,6 @@ in
   programs.waybar.settings = settings.settings;
   programs.waybar.style = styles.styles;
 
+  xdg.configFile."waybar/anime.css".source = ./anime.css;
+
 }

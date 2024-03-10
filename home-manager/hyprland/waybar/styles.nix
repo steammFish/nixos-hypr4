@@ -1,8 +1,7 @@
 let
-  # fontsize = builtins.toString fontSize + 2;
   fontsize = "26";
-  # fontFamily = "'FantasqueSansM Nerd Font', 'Monospace','Font Awesome 6 Free'";
-  fontFamily = "'FantasqueSansM Nerd Font', 'Font Awesome 6 Free'";
+  fontFamily = "'FantasqueSansM Nerd Font', 'Font Awesome 6 Free', 'Monospace'";
+  anime-path = "/home/ck/.config/waybar/anime.css";
 in
 
 {
@@ -41,9 +40,7 @@ in
         /* border: 1px solid @Active; */
       }
 
-      button.urgent {
-        background-color:  @warningOrange;
-      }
+      button.urgent { background-color: @warningOrange; }
 
       #myDisk,
       #taskbar,
@@ -57,7 +54,7 @@ in
       #backlight,
       #pulseaudio
       {
-        margin: 4px 4px;
+        margin: 4px 8px;
         padding:  0px 8px;
         border-radius: 8px;
         color: @fgWhite;
@@ -107,17 +104,9 @@ in
         animation-direction: alternate;
       }
 
-      label:focus {
-        background-color: @bgBlack;
-      }
-
-      #network.disconnected {
-        background-color: @criticalRed;
-      }
-
-      #tray > .passive {
-        -gtk-icon-effect: dim;
-      }
+      label:focus { background-color: @bgBlack; }
+      #network.disconnected { background-color: @criticalRed; }
+      #tray > .passive { -gtk-icon-effect: dim; }
 
       #tray > .needs-attention {
         -gtk-icon-effect: highlight;
@@ -126,38 +115,27 @@ in
 
       #workspaces button {
         margin: 0px 5px;
-        color: @fgWhite;
         padding-right: 12px;
         padding-left: 2px;
         /* min-width: 32px;  */
       } 
 
-       #workspaces button.empty { 
-       color: @Inactive;
-       } 
+      #workspaces button { color: @fgWhite; } 
+      #workspaces button.empty {  color: @Inactive; } 
+      #workspaces button.active { color: @Active; }
 
-      #workspaces button.active {
-        color: @Active;
-      }
-
-      #custom-launcher {
-        margin-left: 20px;
-
-      }
+      #custom-launcher { margin-left: 20px; }
+      #taskbar button { margin: 0px 4px; } 
+      #workspaces { background-color: @bgWidget; } 
+      #backlight { padding: 0; }
+      #tray { background-color: @Inactive; }
 
       #clock { 
         margin-right: 20px;
         font-weight: bold; 
-
       }
-
-      #taskbar button {
-        margin: 0px 4px;
-      } 
-
-      #workspaces { background-color: @bgWidget; } 
-      #backlight { padding: 0; }
-      #tray { background-color: @Inactive; }
+      
+      @import "${anime-path}"; 
 
     '';
 
