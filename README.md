@@ -28,7 +28,7 @@
 * brightness - brightnessctl
 * powerManager - power-profile-daemon
 
-![pic](./res/img3_notify.png "t")
 ![pic](./res/img_desktop.png "t")
-![pic](./res/img_rofi.png "t")
 ![pic](./res/img_vscode.png "t")
+![pic](./res/img3_notify.png "t")
+![pic](./res/img_rofi.png "t")
