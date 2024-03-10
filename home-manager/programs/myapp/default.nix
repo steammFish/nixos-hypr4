@@ -24,7 +24,6 @@
     };
 }
 
-
 # xdg.dataFile = {
 #   "applications/linuxqq.desktop".source = ./qq/linuxqq.desktop;
 # };

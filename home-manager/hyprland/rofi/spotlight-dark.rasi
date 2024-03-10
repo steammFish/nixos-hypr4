@@ -8,15 +8,15 @@
     /* font:   "Montserrat 22"; */
     font:   "FantasqueSansM Nerd Font 24"; 
 
-    bg0:    #24242470;
-    bg2:    #F7879A70;
-    bg1:    #7E7E7E70;
+    bg0:    {{color1}};
+    bg2:    {{color2}};
+    bg1:    {{color3}};
+    fg0:    {{color4}};
+    fg1:    {{color5}};
+    fg2:    {{color6}};
+    borderColor:    {{color7}};
+    textboxColor:    {{color8}};
 
-    fg0:    #DEDEDE;
-    fg1:    #FFFFFF;
-    fg2:    #DEDEDE;
-
-    borderColor:    #FFFFFF70;
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -38,7 +38,7 @@ window {
 }
 
 textbox {
-    color: #ffb7c5;
+    color: @textboxColor;
 }
 
 inputbar {
