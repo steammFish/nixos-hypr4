@@ -13,6 +13,6 @@
     ./zsh
     ./fcitx5.nix
     ./neovim.nix
-
+    ./git.nix
   ];
 }
