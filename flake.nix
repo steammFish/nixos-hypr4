@@ -27,8 +27,8 @@
     , home-manager
     , nixvim
     , hyprland
-    # , nix-colors
-    # , ags
+      # , nix-colors
+      # , ags
     }:
     let
       system = "x86_64-linux";

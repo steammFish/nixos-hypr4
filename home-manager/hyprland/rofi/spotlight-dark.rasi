@@ -35,7 +35,10 @@ window {
 
     border: 2px;
     border-color: @borderColor;
+}
 
+textbox {
+    color: #ffb7c5;
 }
 
 inputbar {

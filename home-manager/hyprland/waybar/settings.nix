@@ -137,18 +137,18 @@
           "format" = "{icon} {capacity}";
           "format-charging" = "󰉁 {capacity}";
           # "format-icons" = [ "" "" "" "" "" ];
-          "format-icons" = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+          "format-icons" = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
           "on-click" = "kitty sh -c gotop";
           "states" = {
             "critical" = 20;
-            "good" = 95;
+            "good" = 70;
             "warning" = 30;
           };
           "tooltip" = false;
         };
 
         "disk#root" = {
-          "format" = "<small><span foreground='${diskcolor}'>/:{percentage_used}</span></small>";
+          "format" = "<small>/:{percentage_used}</small>";
           "interval" = 30;
           "states" = {
             "critical" = 90;
@@ -156,7 +156,7 @@
           };
         };
         "disk#dotfiles" = {
-          "format" = "<small> <span foreground='${diskcolor}'>d:{percentage_used}</span></small>";
+          "format" = "<small>d:{percentage_used}</small>";
           "path" = "/home/ck/dotfiles";
           "interval" = 30;
           "states" = {
@@ -165,7 +165,7 @@
           };
         };
         "disk#virtualMachine" = {
-          "format" = "<small> <span foreground='${diskcolor}'>v:{percentage_used}</span></small>";
+          "format" = "<small>v:{percentage_used}</small>";
           "path" = "/home/ck/virtualMachine";
           "interval" = 30;
           "states" = {

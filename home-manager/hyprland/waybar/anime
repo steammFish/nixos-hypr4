@@ -1,0 +1,27 @@
+ /*
+      @keyframes flicker {
+        0% {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+        100% {
+          opacity: 0.5;
+          transform: scaleY(0.5);
+        }
+      }
+
+      @keyframes flowingWater {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+        animation: flicker 0.1s infinite alternate;
+        animation: flowingWater 5s infinite;
+        
+        */

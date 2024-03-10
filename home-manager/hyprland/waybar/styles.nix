@@ -10,20 +10,19 @@ in
   styles =
     ''
       /* @import "/home/ck/.cache/wal/colors-waybar.css"; */
+      /* @define-color bgBar rgba(0,0,0,0.4); */
 
-      @define-color bgBar rgba(0,0,0,0.4);
       @define-color bgWidget rgba(0,0,0,0.8);
+
       @define-color bgBlack #000000;
       @define-color fgWhite #ffffff;
-      @define-color fgSakuraPink @fgWhite; 
 
-      @define-color InactiveLightGray rgba(255,255,255,0.4);
-      @define-color activeRosePink #F7879A;
+      @define-color Inactive rgba(255,255,255,0.4);
+      @define-color Active #F7879A;
 
-      @define-color warningRed #f53c3c;
+      @define-color warningOrange #ff6700;
+      @define-color criticalRed #ff0000;
       @define-color healthGreen #26A65B;
-
-      /* @define-color bgWidget rgba(0,0,0,0.4); */
 
       * {
         font-family: ${fontFamily};
@@ -36,14 +35,14 @@ in
       window#waybar {
         transition-property: background-color;
         transition-duration: .5s;
-        background-color: @bgBar;
+        /* background-color: @bgBar; */
         /* border-radius: 10px;  */
         /* background: transparent; */
-        /* border: 1px solid @activeRosePink; */
+        /* border: 1px solid @Active; */
       }
 
       button.urgent {
-        background-color:  @warningRed;
+        background-color:  @warningOrange;
       }
 
       #myDisk,
@@ -63,8 +62,6 @@ in
         border-radius: 8px;
         color: @fgWhite;
         background: transparent;
-        /* background-color: rgba(0,0,0,0.3); */
-        /* background-color: @bgWidget; */
       }
 
       #battery.charging, #battery.plugged {
@@ -79,11 +76,32 @@ in
         }
       }
 
-      #battery.critical:not(.charging) ,
-      #battery.warning:not(.charging) {
-        background-color: @warningRed;
+      #disk {
+        color: @active;
+        margin: 4px 0px;
+        padding:  0px 4px;
+        border-radius: 6px;
+      }
+
+      #disk.critical,
+      #battery.critical:not(.charging) {
+        background-color: @criticalRed;
         color: @fgWhite;
+
+        animation-name: blink;
         animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      #disk.warning,
+      #battery.warning:not(.charging) {
+        background-color: @warningOrange;
+        color: @fgWhite;
+
+        animation-name: blink;
+        animation-duration: 1.5s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -94,7 +112,7 @@ in
       }
 
       #network.disconnected {
-        background-color: @warningRed;
+        background-color: @criticalRed;
       }
 
       #tray > .passive {
@@ -103,32 +121,34 @@ in
 
       #tray > .needs-attention {
         -gtk-icon-effect: highlight;
-        background-color: @warningRed;
+        background-color: @warningOrange;
       }
 
       #workspaces button {
         margin: 0px 5px;
-        color: @fgSakuraPink;
+        color: @fgWhite;
         padding-right: 12px;
         padding-left: 2px;
         /* min-width: 32px;  */
       } 
 
        #workspaces button.empty { 
-       color: @InactiveLightGray;
+       color: @Inactive;
        } 
 
       #workspaces button.active {
-        color: @activeRosePink;
+        color: @Active;
       }
 
       #custom-launcher {
         margin-left: 20px;
+
       }
 
       #clock { 
         margin-right: 20px;
         font-weight: bold; 
+
       }
 
       #taskbar button {
@@ -137,7 +157,7 @@ in
 
       #workspaces { background-color: @bgWidget; } 
       #backlight { padding: 0; }
-      #tray { background-color: @InactiveLightGray; }
+      #tray { background-color: @Inactive; }
 
     '';
 
