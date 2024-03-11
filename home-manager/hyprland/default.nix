@@ -243,6 +243,7 @@
       "float, class:^(thunar)$, title:^(File Operation Progress)$"
       "float, class:^(thunar)$, title:^(Confirm to replace files)$"
       "float, class:^(org.fcitx.)$"
+      "float, class:^(zenity)$"
       "float, class:^(fcitx5-config-qt)$"
       # "float, class:^(virt-manager)$"
 
@@ -327,8 +328,6 @@
         "ALT SHIFT, 2, exec, rofi_search google"
         "ALT SHIFT, 3, exec, rofi_search cppreference"
         "ALT SHIFT, 4, exec, rofi_search mynixos"
-
-
 
         ",Print, exec, grimblast --notify save screen"
         "SHIFT, Print, exec, grimblast --notify save area"

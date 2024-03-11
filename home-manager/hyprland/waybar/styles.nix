@@ -48,6 +48,7 @@ in
       #tray,
       #myPlayctl,
       #workspaces,
+      #custom-cheatsheet,
       #custom-launcher,
       #custom-virtWin10,
       #clock,

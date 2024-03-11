@@ -12,7 +12,8 @@
         virtWin10-tooltip = "host: <span color='orange'>sudo virsh list --all</span>\nnetwork: <span color='orange'>sudo virsh net-list --all</span>";
         clock-tooltip = " {:%Y-%m-%d %H:%M:%S (%B %A)}\n<span>将来は神様になりたいです。</span>";
         playctl-exec = "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
-
+        HOME = "/home/ck";
+        zenity-open = "zenity --text-info --filename=${HOME}/.config/waybar/keybindRef.txt  --title='Hyprland Cheat Sheet' --width=1000 --height=1400";
       in
       {
 
@@ -24,6 +25,7 @@
         # "modules-center" = [
         # ];
         "modules-right" = [
+          "custom/cheatsheet"
           "wlr/taskbar"
           "group/myDisk"
           "group/mysoundDevice"
@@ -47,7 +49,6 @@
           "modules" = [ "pulseaudio" "pulseaudio#microphone" ];
           "orientation" = "inherit";
         };
-
         "group/host" = {
           "drawer" = {
             "transition-duration" = 500;
@@ -59,8 +60,6 @@
             "custom/virtWin10"
           ];
         };
-
-
         "group/myDisk" = {
           "modules" = [
             "disk#root"
@@ -69,10 +68,15 @@
           ];
           "orientation" = "inherit";
         };
-
         "group/myPlayctl" = {
           "modules" = [ "custom/playerctl" "custom/playerlabel" ];
           "orientation" = "inherit";
+        };
+
+        "custom/cheatsheet" = {
+          "format" = " ";
+          "on-click" = zenity-open;
+          "tooltip-format" = "Click to view Hyprland KeyBinding";
         };
 
         "custom/playerctl" = {

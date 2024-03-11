@@ -9,11 +9,15 @@ let
 
   # 定义一个列表，包含所有脚本的名称
   myscriptNames = [
+
     "create_soft_link"
     "create_temp_project"
+    "init_nixos"
+
     "hypr_start"
     "rofi_google_trans"
     "rofi_search"
+
   ];
 
   # 使用 map 函数为每个脚本名称调用 createScriptBin 函数

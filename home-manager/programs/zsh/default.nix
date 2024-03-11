@@ -14,6 +14,7 @@
       ${builtins.readFile ./websearch.zsh}
       
       ${builtins.readFile ./docker_deploy.sh}
+      ${builtins.readFile ./yazi_cd.sh}
       ${builtins.readFile ./ck_trash.sh}
       ${builtins.readFile ./custom.sh}
 

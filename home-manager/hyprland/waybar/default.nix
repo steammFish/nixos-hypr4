@@ -12,5 +12,6 @@ in
   programs.waybar.style = styles.styles;
 
   xdg.configFile."waybar/anime.css".source = ./anime.css;
+  xdg.configFile."waybar/keybindRef.txt".source = ./keybindRef.txt;
 
 }

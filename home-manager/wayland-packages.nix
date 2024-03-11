@@ -4,6 +4,7 @@
 
   home.packages = (with pkgs; [
 
+    gnome.zenity
 
     # 终端模拟器
     kitty

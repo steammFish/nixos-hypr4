@@ -16,8 +16,8 @@
     {
       linux-qq = {
         name = "Linux QQ";
-        exec = "${myapp-path}/qq/launch_linuxqq.sh";
-        icon = "${myapp-path}/qq/tencent-qq.png";
+        exec = "${myapp-path}/qq/linux-qq.sh";
+        icon = "${myapp-path}/qq/linux-qq.png";
         type = "Application";
         categories = [ "Network" ];
       };
@@ -25,7 +25,7 @@
 }
 
 # xdg.dataFile = {
-#   "applications/linuxqq.desktop".source = ./qq/linuxqq.desktop;
+#   "applications/linuxqq.desktop".source = ./qq/linux-qq.desktop;
 # };
 
 # xdg.enable = true;

@@ -10,22 +10,13 @@ let
     "youtube-music"
   ];
   desktopEntries = origName: {
-    name = builtins.replaceStrings [ "-" ] [ " " ] origName; # 替换横线为空格用于显示名称
-    exec = "${myapp-path}/${origName}.sh"; # 使用原始名称（包含横线）用于路径
-    icon = "${myapp-path}/${origName}.png"; # 使用原始名称（包含横线）用于路径
+    name = builtins.replaceStrings [ "-" ] [ " " ] origName;
+    exec = "${myapp-path}/${origName}.sh";
+    icon = "${myapp-path}/${origName}.png";
     type = "Application";
     categories = [ "Network" ];
   };
 
-  # noIconApp-names =[
-  # ];
-  # noIconDesktopEntries = origName: {
-  #   name = builtins.replaceStrings [ "-" ] [ " " ] origName; # 替换横线为空格用于显示名称
-  #   exec = "${myapp-path}/${origName}.sh"; # 使用原始名称（包含横线）用于路径
-  #   icon = "${myapp-path}/default.png"; # 使用原始名称（包含横线）用于路径
-  #   type = "Application";
-  #   categories = [ "Network" ];
-  # };
 in
 {
   xdg.desktopEntries = builtins.listToAttrs (map

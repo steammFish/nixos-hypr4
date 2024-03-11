@@ -19,12 +19,17 @@ in
   gtk = {
     enable = true;
 
-    # gtk3.extraConfig = preferDark;
-    # gtk4.extraConfig = preferDark;
+    gtk3.extraConfig = preferDark;
+    gtk4.extraConfig = preferDark;
+
+    # theme = {
+    #   package = pkgs.whitesur-gtk-theme;
+    #   name = "WhiteSur-Dark";
+    # };
 
     theme = {
-      package = pkgs.whitesur-gtk-theme;
-      name = "WhiteSur-Dark";
+      package = pkgs.gnome.gnome-themes-extra;
+      name = "Adwaita-dark";
     };
 
     iconTheme = {
