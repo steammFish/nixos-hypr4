@@ -12,6 +12,9 @@
 
       # Inline the content of websearch.zsh
       ${builtins.readFile ./websearch.zsh}
+      
+      ${builtins.readFile ./docker_deploy.sh}
+      ${builtins.readFile ./ck_trash.sh}
       ${builtins.readFile ./custom.sh}
 
     '';

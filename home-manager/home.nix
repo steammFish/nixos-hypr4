@@ -10,7 +10,7 @@
     ./conf
     ./hyprland
     ./programs
-    ./scripts.nix
+    ./scripts
     ./services.nix
     ./wayland-packages.nix
   ];
