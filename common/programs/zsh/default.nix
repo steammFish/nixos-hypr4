@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
+
 {
 
-  # programs.zsh.shellInit = yaziInit;
+  programs.zsh.shellInit = 
+    builtins.readFile ./umount_and_remove_home.sh;
+
   # programs.bash.interactiveShellInit = yaziInit;
 
   # environment.systemPackages = with pkgs; [

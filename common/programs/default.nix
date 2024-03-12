@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ./zsh.nix
+    ./zsh
     ./thunar.nix
+    # ./nixvim.nix
   ];
 }

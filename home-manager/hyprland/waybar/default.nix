@@ -5,7 +5,7 @@ let
   styles = import ./styles.nix;
 in
 {
-  # imports = [ ./cava-internal.nix ];
+  imports = [ ./cava-internal.nix ];
 
   programs.waybar.enable = true;
   programs.waybar.settings = settings.settings;

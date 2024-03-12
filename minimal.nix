@@ -27,11 +27,11 @@ in
     options = [ "rw" "nosuid" "nodev" ]; # 根据需要添加更多的挂载选项
   };
 
-  fileSystems."/home/ck/virtualMachine" = {
-    device = "/dev/nvme0n1p5";
-    fsType = "auto";
-    options = [ "rw" "nosuid" "nodev" ];
-  };
+  # fileSystems."/home/ck/virtualMachine" = {
+  #   device = "/dev/nvme0n1p5";
+  #   fsType = "auto";
+  #   options = [ "rw" "nosuid" "nodev" ];
+  # };
 
   # services.xserver = {
   #   xkb = {

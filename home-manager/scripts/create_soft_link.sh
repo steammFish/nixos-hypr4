@@ -18,24 +18,6 @@ link_file() {
     echo "Linked $src to $dst"
 }
 
-# 处理家目录下的文件
-# link_home() {
-#     for path in "$dotfiles_dir"/home/*; do
-#         [ -e "$path" ] || continue
-#         file="$(basename "$path")"
-#         link_file "$path" "$HOME/$file"
-#     done
-# }
-
-# 处理 ~/.config 下的配置文件
-# link_config() {
-#     for path in "$dotfiles_dir"/config/*; do
-#         [ -e "$path" ] || continue
-#         file="$(basename "$path")"
-#         link_file "$path" "$HOME/.config/$file"
-#     done
-# }
-
 # 处理家目录下的文件，包括隐藏文件
 link_home() {
     for path in "$dotfiles_dir"/home/* "$dotfiles_dir"/home/.*; do

@@ -34,14 +34,17 @@ in
       window#waybar {
         transition-property: background-color;
         transition-duration: .5s;
+        border-radius: 10px;  
+        background: black;
+
         /* background: transparent; */
-        background-color: @bgBar; 
-        /* border-radius: 10px;  */
+        /* background-color: @bgBar; */
         /* border: 1px solid @Active; */
       }
 
       button.urgent { background-color: @warningOrange; }
 
+      #custom-cava-internal, 
       #myDisk,
       #taskbar,
       #custom-sep,
@@ -116,10 +119,13 @@ in
       }
 
       #workspaces button {
-        margin: 0px 5px;
-        padding-right: 12px;
-        padding-left: 2px;
-        /* min-width: 32px;  */
+        margin: 0px 0px;
+        padding-right: 16px;
+        padding-left: 8px;
+        border-radius: 30%;
+        /* padding-right: 12px;
+        margin: 0px 2px;
+        padding-left: 4px; */
       } 
 
       #workspaces button { color: @fgWhite; } 

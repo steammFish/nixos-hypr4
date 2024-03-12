@@ -102,8 +102,8 @@
         # noise = 0.01;
 
         blurls = [
-          "waybar"
           "rofi"
+          # "waybar"
           # "alacritty"
           # "kitty"
         ];
