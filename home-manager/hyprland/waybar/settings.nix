@@ -73,10 +73,23 @@
           "orientation" = "inherit";
         };
 
+        "custom/virtWin10" = {
+          "format" = "<small> </small>";
+          "on-click" = "exec pkexec sudo virsh start win10";
+          "tooltip" = true;
+          "tooltip-format" = virtWin10-tooltip;
+          # "on-click-right" = "exec pkexec sudo virsh shutdown --mode acpi win10";
+        };
         "custom/cheatsheet" = {
           "format" = " ";
           "on-click" = zenity-open;
+          "tooltip" = true;
           "tooltip-format" = "Click to view Hyprland KeyBinding";
+        };
+
+        "custom/sep" = {
+          "format" = " ▮ ";
+          "tooltip" = false;
         };
 
         "custom/playerctl" = {
@@ -128,20 +141,6 @@
           "format" = " ";
           "on-click" = "pkill rofi || rofi -show drun -show-icons";
           "on-click-right" = "exec hypr_start $HOME/wallpapers/default.jpg";
-          "tooltip" = false;
-        };
-
-        "custom/virtWin10" = {
-          "format" = "<small> </small>";
-          "on-click" = "exec pkexec sudo virsh start win10";
-          # "on-click-right" = "exec pkexec sudo virsh shutdown --mode acpi win10";
-          "tooltip-format" = virtWin10-tooltip;
-          "tooltip" = true;
-
-        };
-
-        "custom/sep" = {
-          "format" = " ▮ ";
           "tooltip" = false;
         };
 

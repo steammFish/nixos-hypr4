@@ -29,9 +29,9 @@ Screenshots:
 - Select Area: Ctrl + Print Screen
 
 Others:
-- Change Wallpaper:     Win + Ctrl + W
-- Open Cliperboard:     Win + Shift + V
-- Google Translate:     Alt + Shift + 1
-- Google Search:        Alt + Shift + 2
+- Change Wallpaper: Win + Ctrl + W
+- Open Cliperboard: Win + Shift + V
+- Google Translate: Alt + Shift + 1
+- Google Search: Alt + Shift + 2
 - CPP Reference Search: Alt + Shift + 3
-- Package Search:       Alt + Shift + 4
+- Package Search: Alt + Shift + 4

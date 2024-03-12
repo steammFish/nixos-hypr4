@@ -13,6 +13,7 @@ let
     "create_soft_link"
     "create_temp_project"
     "init_nixos"
+    "umount_and_remove_home"
 
     "hypr_start"
     "rofi_google_trans"

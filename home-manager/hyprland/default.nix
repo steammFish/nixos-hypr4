@@ -85,7 +85,7 @@
     };
 
     decoration = {
-      rounding = 6;
+      rounding = 10;
       # active_opacity=0.9;
       # inactive_opacity=0.6;
       blur = {
@@ -313,7 +313,8 @@
         "$mainMod SHIFT, RETURN, exec, $terminal_workspace_1"
         # "$mainMod CTRL, RETURN, exec, alacritty"
         "$mainMod, SLASH, exec, code"
-        "$mainMod SHIFT, SLASH, exec, code ~/nixos"
+        "$mainMod SHIFT, SLASH, exec, code ~/nixos-hypr4"
+
         # "$mainMod CTRL, SLASH, exec, hx ~/nixos"
         "$mainMod, SPACE, exec, playerctl play-pause"
         "$mainMod, E, exec, $explorer"

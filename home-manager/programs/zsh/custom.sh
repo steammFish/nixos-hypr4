@@ -1,5 +1,6 @@
 
-export CK_NIXOS_CONFIGURE="/home/ck/nixos-hypr4"
+# export CK_NIXOS_CONFIGURE="/home/ck/nixos-hypr4"
+export CK_NIXOS_CONFIGURE="/home/ck/dotfiles/home/nixos-hypr4"
 export EDITOR="hx"
 
 alias update_nixos="sudo nixos-rebuild switch --flake $CK_NIXOS_CONFIGURE"
