@@ -11,9 +11,11 @@ let
   myscriptNames = [
 
     "create_soft_link"
-    "create_temp_project"
+    "link_check"
+
     "init_nixos"
     "umount_and_remove_home"
+    "create_temp_project"
 
     "hypr_start"
     "rofi_google_trans"

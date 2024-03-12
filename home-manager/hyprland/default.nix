@@ -34,9 +34,15 @@
     "$terminal" = "alacritty";
     # "$explorer" = "thunar";
     # "$terminal" = "kitty";
+
     "$terminal_workspace_1" = "hyprctl dispatch workspace 1 && $terminal";
     "$menu" = "rofi -show drun -show-icons";
     "$clipboard" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+
+    "$read_book" = "zathura ~/Desktop/Linux网络编程.pdf";
+    "$save_full_screen" = "grimblast --notify save screen";
+    "$save_window" = "grimblast --notify save area";
+    "$edit_area" = "grim -g \"$(slurp)\" - | swappy -f -";
 
     "$color0" = "rgba(ffccccee)";
     "$color1" = "rgba(f7879aee)";
@@ -205,7 +211,7 @@
     bindm = [
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
-      "ALT, mouse:272, resizewindow"
+      "ALT,      mouse:272, resizewindow"
     ];
 
     windowrule = [
@@ -280,21 +286,21 @@
         # ", XF86AudioMute, exec, ~/.config/eww/scripts/toggle_osd.sh --toggle"
 
         ",XF86MonBrightnessDown, exec,brightnessctl set 10%-"
-        ",XF86MonBrightnessUp, exec,brightnessctl set +10%"
-        ",XF86AudioMicMute, exec, pamixer --default-source --toggle-mute"
-        ",XF86AudioMute, exec, pamixer --toggle-mute"
-        ",XF86AudioLowerVolume, exec, pamixer --decrease 5"
-        ",XF86AudioRaiseVolume, exec, pamixer --increase 5"
-        ",XF86AudioPlay, exec, playerctl play-pause"
-        ",XF86AudioPause, exec, playerctl play-pause"
+        ",XF86MonBrightnessUp,   exec,brightnessctl set +10%"
+        ",XF86AudioLowerVolume,  exec, pamixer --decrease 5"
+        ",XF86AudioRaiseVolume,  exec, pamixer --increase 5"
+        ",XF86AudioMicMute,    exec, pamixer --default-source --toggle-mute"
+        ",XF86AudioMute,       exec, pamixer --toggle-mute"
+        ",XF86AudioPlay,       exec, playerctl play-pause"
+        ",XF86AudioPause,      exec, playerctl play-pause"
 
         "$mainMod, mouse_down, workspace, e+1"
-        "$mainMod, mouse_up, workspace, e-1"
+        "$mainMod, mouse_up,   workspace, e-1"
 
-        "$mainMod, left, movefocus, l"
+        "$mainMod, left,  movefocus, l"
         "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
+        "$mainMod, up,    movefocus, u"
+        "$mainMod, down,  movefocus, d"
 
         # "$mainMod, Q, exec, $terminal"
         "$mainMod, C, killactive,"
@@ -307,36 +313,32 @@
         "$mainMod, G, fullscreen, 0"
         "$mainMod, T, toggleopaque, # transparent"
 
-        "$mainMod, S, togglespecialworkspace, magic"
-        "$mainMod SHIFT, S, movetoworkspace, special:magic"
-        "$mainMod, RETURN, exec, $terminal"
+        "$mainMod, S,            togglespecialworkspace, magic"
+        "$mainMod SHIFT, S,      movetoworkspace, special:magic"
+        "$mainMod, RETURN,       exec, $terminal"
         "$mainMod SHIFT, RETURN, exec, $terminal_workspace_1"
-        # "$mainMod CTRL, RETURN, exec, alacritty"
-        "$mainMod, SLASH, exec, code"
-        "$mainMod SHIFT, SLASH, exec, code ~/nixos-hypr4"
+        "$mainMod, SLASH,        exec, code"
+        "$mainMod SHIFT, SLASH,  exec, code ~/nixos-hypr4"
+        "$mainMod, SPACE,        exec, playerctl play-pause"
+        "$mainMod, E,            exec, $explorer"
+        "$mainMod SHIFT, E,      exec, kitty sh -c yazi"
+        "$mainMod, A,            exec, $menu"
+        "$mainMod SHIFT, V,      exec, $clipboard"
+        "$mainMod, B,            exec, $browser"
+        "$mainMod CTRL, W,       exec, hypr_start"
 
-        # "$mainMod CTRL, SLASH, exec, hx ~/nixos"
-        "$mainMod, SPACE, exec, playerctl play-pause"
-        "$mainMod, E, exec, $explorer"
-        "$mainMod SHIFT, E, exec, kitty sh -c yazi"
-        "$mainMod, A, exec, $menu"
-        "$mainMod SHIFT, V, exec, $clipboard"
-        "$mainMod, B, exec, $browser"
-        "$mainMod CTRL, W, exec, hypr_start"
-
-        "ALT, R, exec, zathura ~/Desktop/Linux网络编程.pdf"
         "ALT SHIFT, 1, exec, rofi_google_trans"
         "ALT SHIFT, 2, exec, rofi_search google"
         "ALT SHIFT, 3, exec, rofi_search cppreference"
         "ALT SHIFT, 4, exec, rofi_search mynixos"
+        "ALT, R,       exec, $read_book"
+        ",Print,       exec, $save_full_screen"
+        "SHIFT, Print, exec, $save_window"
+        "CTRL, Print,  exec, $edit_area"
 
-        ",Print, exec, grimblast --notify save screen"
-        "SHIFT, Print, exec, grimblast --notify save area"
-        "CTRL, Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
         # ", Print, exec, grim $(xdg-user-dir PICTURES)/screenshots/$(date +'%s_grim.png') && notify-send \"Saved to ~/Pictures/screenshots\""
         # "ALT CTRL, Print, exec, grimblast copy area"
         # "CTRL, Print, exec, grim -g \"$(slurp)\" - | wl-copy"
-
       ]
       ++ (
         # workspaces

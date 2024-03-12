@@ -34,5 +34,6 @@ if [ -n "$query" ]; then
             ;;
     esac
 
+    hyprctl dispatch workspace 2
     google-chrome-stable "$search_url"
 fi
