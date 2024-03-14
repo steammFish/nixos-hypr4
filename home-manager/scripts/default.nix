@@ -20,6 +20,7 @@ let
     "rofi_google_trans"
     "rofi_search"
     "rofi_search_v2"
+    "rofi_search_v3"
 
     "virt_start_win10"
     "docker_start_chat"
