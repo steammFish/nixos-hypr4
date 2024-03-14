@@ -33,7 +33,7 @@
 }
 
 window {
-    background-color: #39393999;
+    background-color: #000000CC;
     border:           1;
     padding:          5;
 

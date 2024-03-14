@@ -2,7 +2,6 @@
 
 let
 
-
   filebrowser =
     ''
       {
@@ -33,7 +32,6 @@ in
   home.file = {
     "wallpapers".source = ./wallpapers;
     ".filebrowser.json".text = filebrowser;
-    # ".config/swappy/config".text = swappy;
   };
 
   xdg.configFile = {

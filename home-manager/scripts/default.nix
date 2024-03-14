@@ -19,6 +19,7 @@ let
     "hypr_start"
     "rofi_google_trans"
     "rofi_search"
+    "rofi_search_v2"
 
     "virt_start_win10"
     "docker_start_chat"

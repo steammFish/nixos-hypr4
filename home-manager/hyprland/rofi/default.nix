@@ -8,8 +8,12 @@ let
       @theme "/home/ck/.config/rofi/glue_pro_blue.rasi"
 
       * { font: "FantasqueSansM Nerd Font 24"; } 
-      window { border: 2px; }
+      window { 
+        border: 2px; 
+        border-radius: 6; 
+      }
       element-icon { size: 1em; }
+      message { border: 2px dash 0px 0px ; }
 
     '';
 

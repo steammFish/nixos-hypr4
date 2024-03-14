@@ -92,7 +92,7 @@
     };
 
     decoration = {
-      rounding = 0;
+      rounding = 6;
       # active_opacity=0.9;
       # inactive_opacity=0.6;
       blur = {
@@ -103,8 +103,8 @@
         # noise = 0.01;
 
         blurls = [
-          "rofi"
           "alacritty"
+          # "rofi"
           # "waybar"
           # "kitty"
         ];
@@ -330,14 +330,17 @@
         "$mainMod, B,            exec, $browser"
         "$mainMod CTRL, W,       exec, hypr_start"
 
-        "ALT SHIFT, 1, exec, rofi_google_trans"
-        "ALT SHIFT, 2, exec, rofi_search google"
-        "ALT SHIFT, 3, exec, rofi_search cppreference"
-        "ALT SHIFT, 4, exec, rofi_search mynixos"
         "ALT, R,       exec, $read_book"
         ",Print,       exec, $save_full_screen"
         "SHIFT, Print, exec, $save_window"
         "CTRL, Print,  exec, $edit_area"
+
+        # "ALT SHIFT, 1, exec, rofi_google_trans"
+        # "ALT SHIFT, 2, exec, rofi_search google"
+        # "ALT SHIFT, 3, exec, rofi_search cppreference"
+        # "ALT SHIFT, 4, exec, rofi_search mynixos"
+        # "$mainMod SHIFT, B,      exec, rofi_search_v2"
+        "$mainMod SHIFT, B,      exec, rofi_search_v3"
 
         # ", Print, exec, grim $(xdg-user-dir PICTURES)/screenshots/$(date +'%s_grim.png') && notify-send \"Saved to ~/Pictures/screenshots\""
         # "ALT CTRL, Print, exec, grimblast copy area"
