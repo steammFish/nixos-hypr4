@@ -37,7 +37,8 @@
 
     "$terminal_workspace_1" = "hyprctl dispatch workspace 1 && $terminal";
     "$menu" = "rofi -show drun -show-icons";
-    "$clipboard" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+    "$clipboard" = "cliphist list | rofi -dmenu -p 'cliphist' | cliphist decode | wl-copy";
+    "$runner" = "rofi -show run";
 
     "$read_book" = "zathura ~/Desktop/Linux网络编程.pdf";
     "$save_full_screen" = "grimblast --notify save screen";
@@ -91,7 +92,7 @@
     };
 
     decoration = {
-      rounding = 10;
+      rounding = 0;
       # active_opacity=0.9;
       # inactive_opacity=0.6;
       blur = {
@@ -325,6 +326,7 @@
         "$mainMod SHIFT, E,      exec, kitty sh -c yazi"
         "$mainMod, A,            exec, $menu"
         "$mainMod SHIFT, V,      exec, $clipboard"
+        "$mainMod, R,            exec, $runner"
         "$mainMod, B,            exec, $browser"
         "$mainMod CTRL, W,       exec, hypr_start"
 

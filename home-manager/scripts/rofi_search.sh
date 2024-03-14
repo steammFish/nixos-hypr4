@@ -12,7 +12,8 @@ if [ ! -f "$history_file" ]; then
     touch "$history_file"
 fi
 
-query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "search on $source" < "$history_file" | sed -E "s/^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} $source //")
+# query=$( (echo -n) | rofi -dmenu -p "Search:" -mesg "search on $source" < "$history_file" | sed -E "s/^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} $source //")
+query=$( (echo -n) | rofi -dmenu -p "$source" < "$history_file" | sed -E "s/^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} $source //")
 
 if [ -n "$query" ]; then
     echo "$(date +"%Y-%m-%d %T") $source $query" >> "$history_file"

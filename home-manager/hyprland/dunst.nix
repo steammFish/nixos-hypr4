@@ -24,7 +24,7 @@ let
       transparency = 30;
       corner_radius = 6;
       frame_color = "#ffffff70";
-      frame_width = 1;
+      frame_width = 2;
     };
 
     urgency_low = {

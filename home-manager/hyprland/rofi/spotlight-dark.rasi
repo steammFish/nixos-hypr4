@@ -16,7 +16,7 @@
     fg2:    {{color6}};
     borderColor:    {{color7}};
     textboxColor:    {{color8}};
-
+    textBoxBg:    {{color9}};
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -68,7 +68,7 @@ entry {
 message {
     border:             2px 0 0;
     border-color:       @bg1;
-    background-color:   @bg1;
+    background-color:   @textBoxBg;
 }
 
 textbox {
@@ -80,7 +80,7 @@ listview {
     columns:    1;
 
     fixed-height:   false;
-    border:         1px 0 0;
+    border:         2px 0 0;
     border-color:   @bg1;
 }
 

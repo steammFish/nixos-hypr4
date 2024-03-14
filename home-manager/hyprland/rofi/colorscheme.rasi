@@ -1,0 +1,42 @@
+* {
+    alternate-normal-background: transparent;
+    alternate-urgent-background: transparent;
+    alternate-active-background: transparent;
+    normal-background:           transparent;
+    urgent-background:           transparent;
+    background:                  transparent;
+    spacing:                     2;
+    background-color:            rgba(0, 0, 0, 0%);
+    active-background:           #393939; /* RGBA (57, 57, 57, 100%) */
+    bordercolor:                 #393939; /* RGBA (57, 57, 57, 100%) */
+    lightbg:                     #eee8d5; /* RGBA (238, 232, 213, 100%) */
+    selected-active-foreground:  #205171; /* RGBA (32, 81, 113, 100%) */
+    lightfg:                     #586875; /* RGBA (88, 104, 117, 100%) */
+    selected-urgent-foreground:  #ffc39c; /* RGBA (255, 195, 156, 100%) */
+    red:                         #dc322f; /* RGBA (220, 50, 47, 100%) */
+    urgent-foreground:           #f3843d; /* RGBA (243, 132, 61, 100%) */
+    alternate-urgent-foreground: #f3843d; /* RGBA (243, 132, 61, 100%) */
+    selected-normal-foreground:  #ffffff; /* RGBA (255, 255, 255, 100%) */
+    foreground:                  #ffffff; /* RGBA (255, 255, 255, 100%) */
+    normal-foreground:           #ffffff; /* RGBA (255, 255, 255, 100%) */
+    border-color:                #ffffff70;
+    alternate-normal-foreground: #ffffff; /* RGBA (255, 255, 255, 100%) */
+    alternate-active-foreground: #268bd2; /* RGBA (38, 139, 210, 100%) */
+    selected-active-background:  #268bd2; /* RGBA (38, 139, 210, 100%) */
+    selected-urgent-background:  #268bd2; /* RGBA (38, 139, 210, 100%) */
+    blue:                        #268bd2; /* RGBA (38, 139, 210, 100%) */
+    active-foreground:           #268bd2; /* RGBA (38, 139, 210, 100%) */
+    selected-normal-background:  #268bd2; /* RGBA (38, 139, 210, 100%) */
+    separatorcolor:              #268bd2; /* RGBA (38, 139, 210, 100%) */
+
+    /* border-color:                #ffffff; */ /* RGBA (255, 255, 255, 100%) */
+}
+
+window {
+    background-color: #39393999;
+    border:           1;
+    padding:          5;
+
+    /* background-color: #39393970; */ /* RGBA (57, 57, 57, 95%) */
+}
+

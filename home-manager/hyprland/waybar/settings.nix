@@ -83,14 +83,14 @@
 
         "custom/virtWin10" = {
           "format" = "<small> </small>";
-          "on-click" = "exec pkexec sudo virsh start win10 && notify-send 'window 10 have been started on qemu!'";
+          "on-click" = "exec virt_start_win10";
           # "on-click-right" = "exec pkexec sudo virsh shutdown --mode acpi win10";
           "tooltip" = true;
           "tooltip-format" = virtWin10-tooltip;
         };
         "custom/chatgpt" = {
           "format" = "<small>🍅</small>";
-          "on-click" = "docker start chatgpt-web-midjourney-proxy && google-chrome-stable http://localhost:6015/ && notify-send 'chatGPT have been started!'";
+          "on-click" = "exec docker_start_chat";
           "on-click-right" = "docker stop chatgpt-web-midjourney-proxy";
           "tooltip" = true;
           "tooltip-format" = "click to start chatGPT docker service";

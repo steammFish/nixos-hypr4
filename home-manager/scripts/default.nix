@@ -20,6 +20,9 @@ let
     "rofi_google_trans"
     "rofi_search"
 
+    "virt_start_win10"
+    "docker_start_chat"
+
   ];
 
   # 使用 map 函数为每个脚本名称调用 createScriptBin 函数
