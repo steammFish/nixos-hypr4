@@ -10,40 +10,24 @@ let
       @import "~/.cache/wal/colors-rofi-dark.rasi"  */
     '';
 
-  mycolors =
-    let
-
-      background = "#1E1E2E"; # base
-      foreground = "#CDD6F4"; # text
-      black = "#45475A"; # surface1
-      red = "#F38BA8"; # red
-      green = "#A6E3A1"; # green
-      yellow = "#F9E2AF"; # yellow
-      blue = "#89B4FA"; # blue
-      magenta = "#F5C2E7"; # pink
-      cyan = "#94E2D5"; # teal
-      white = "#BAC2DE"; # subtext1
-
-      opacity = "99";
-
-    in
-    {
-      bg = {
-        color1 = "${background}${opacity}";
-        color2 = "${red}"; # red
-        color3 = "${background}${opacity}";
-      };
-
-      fg = {
-        color4 = "${foreground}";
-        color5 = "${foreground}";
-        color6 = "${foreground}";
-      };
-      other = {
-        color7 = "${foreground}${opacity}"; # border
-        color8 = "${red}"; # textbox
-      };
+  mycolors = {
+    bg = {
+      color1 = "#24242499";
+      color2 = "#F7879A99";
+      color3 = "#7E7E7E99";
     };
+
+    fg = {
+      color4 = "#DEDEDE";
+      color5 = "#FFFFFF";
+      color6 = "#DEDEDE";
+    };
+
+    other = {
+      color7 = "#FFFFFF99"; # border 
+      color8 = "#ffb7c5"; # textbox
+    };
+  };
 
   templatePath = ./spotlight-dark.rasi;
   templateContent = builtins.readFile templatePath;

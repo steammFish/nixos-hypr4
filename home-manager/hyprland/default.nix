@@ -19,14 +19,14 @@
   wayland.windowManager.hyprland.settings = {
     monitor = ",preferred,auto,1.0";
     exec-once = [
-      "${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
+      # "${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
+      "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       "hypr_start $HOME/wallpapers/default.jpg"
       "fcitx5"
       "$terminal"
       "$browser"
       # "ags"
       # "hypr_start $HOME/wallpapers/paper3.jpg"
-      # "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
     ];
 
     "$browser" = "google-chrome-stable";
@@ -103,8 +103,8 @@
 
         blurls = [
           "rofi"
+          "alacritty"
           # "waybar"
-          # "alacritty"
           # "kitty"
         ];
 
@@ -252,6 +252,7 @@
       "float, class:^(zenity)$"
       "float, class:^(fcitx5-config-qt)$"
       # "float, class:^(virt-manager)$"
+      "float, class:^(untitled*)$"
 
       "workspace 1 ,class:^(cool-retro-term.)$"
       "workspace 1 ,class:^(org.wezfurlong.wezterm)$"

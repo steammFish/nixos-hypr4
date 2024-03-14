@@ -60,6 +60,7 @@
           "modules" = [
             "custom/launcher"
             "custom/virtWin10"
+            "custom/chatgpt"
           ];
         };
         "group/myDisk" = {
@@ -82,10 +83,17 @@
 
         "custom/virtWin10" = {
           "format" = "<small> </small>";
-          "on-click" = "exec pkexec sudo virsh start win10";
+          "on-click" = "exec pkexec sudo virsh start win10 && notify-send 'window 10 have been started on qemu!'";
+          # "on-click-right" = "exec pkexec sudo virsh shutdown --mode acpi win10";
           "tooltip" = true;
           "tooltip-format" = virtWin10-tooltip;
-          # "on-click-right" = "exec pkexec sudo virsh shutdown --mode acpi win10";
+        };
+        "custom/chatgpt" = {
+          "format" = "<small>🍅</small>";
+          "on-click" = "docker start chatgpt-web-midjourney-proxy && google-chrome-stable http://localhost:6015/ && notify-send 'chatGPT have been started!'";
+          "on-click-right" = "docker stop chatgpt-web-midjourney-proxy";
+          "tooltip" = true;
+          "tooltip-format" = "click to start chatGPT docker service";
         };
         "custom/cheatsheet" = {
           "format" = " ";
@@ -140,7 +148,7 @@
             "empty" = "";
           };
           "persistent-workspaces" = {
-            "*" = 5;
+            "*" = 6;
           };
         };
         "custom/launcher" = {
@@ -213,8 +221,8 @@
           };
           "format-muted" = "";
           "scroll-step" = 1;
-          "on-click" = "pamixer --toggle-mute";
           "on-click-right" = "pavucontrol";
+          "on-click" = "pamixer --toggle-mute";
           "on-scroll-down" = "pamixer --decrease 1";
           "on-scroll-up" = "pamixer --increase 1";
         };
@@ -222,6 +230,7 @@
           "format-source" = " {volume}%";
           "format" = "{format_source}";
           "format-source-muted" = "";
+          "on-click" = "pamixer --default-source --toggle-mute";
           "on-scroll-down" = "pamixer --default-source  -d 2";
           "on-scroll-up" = "pamixer --default-source  -i 2";
         };

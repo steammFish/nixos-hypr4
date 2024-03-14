@@ -22,11 +22,6 @@ in
     gtk3.extraConfig = preferDark;
     gtk4.extraConfig = preferDark;
 
-    # theme = {
-    #   package = pkgs.whitesur-gtk-theme;
-    #   name = "WhiteSur-Dark";
-    # };
-
     theme = {
       package = pkgs.gnome.gnome-themes-extra;
       name = "Adwaita-dark";
@@ -37,20 +32,23 @@ in
       name = "Adwaita";
     };
 
-    # font = {
-    #   name = "DejaVu Sans";
-    #   size = 13;
-    # };
-
     font = {
       # name = "Iosevka Nerd Font";
       name = "RobotoMono Nerd Font";
       size = 14;
     };
 
+    # font = {
+    #   name = "DejaVu Sans";
+    #   size = 13;
+    # };
+
+    # theme = {
+    #   package = pkgs.whitesur-gtk-theme;
+    #   name = "WhiteSur-Dark";
+    # };
+
   };
-
-
 
   # 配置 GTK 3 书签
   xdg.userDirs.enable = true;
@@ -63,23 +61,21 @@ in
   ];
 
 
+  # home.packages = with pkgs; [
 
+  #   whitesur-cursors
+  #   whitesur-icon-theme
+  #   # whitesur-gtk-theme
+  #   # bibata-cursors
+  #   papirus-icon-theme
+  #   mojave-gtk-theme
+  #   ant-theme
+  #   ant-bloody-theme
+  #   ant-nebula-theme
+  #   flat-remix-gtk
+  #   colloid-gtk-theme
 
-  home.packages = with pkgs; [
-
-    whitesur-cursors
-    whitesur-icon-theme
-    # whitesur-gtk-theme
-    # bibata-cursors
-    papirus-icon-theme
-    mojave-gtk-theme
-    ant-theme
-    ant-bloody-theme
-    ant-nebula-theme
-    flat-remix-gtk
-    colloid-gtk-theme
-
-  ];
+  # ];
 
 
 

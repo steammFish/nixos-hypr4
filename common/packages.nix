@@ -9,8 +9,8 @@ let
     gcc
     gdb
     cmake
-    gnumake
     ninja
+    gnumake
     ffmpeg-full
     openssl
     asio
@@ -18,13 +18,13 @@ let
 
     cppreference-doc
 
+    qt6.full
+    qtcreator
 
     # clang
     # glibc
     # vulkan-loader
-    # qt6.full
     # qt6.qtwayland
-    # qtcreator
 
   ];
   pkgsDesktop = with pkgs;  [

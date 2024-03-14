@@ -2,7 +2,7 @@
 
 {
 
-  programs.zsh.shellInit = 
+  programs.zsh.shellInit =
     builtins.readFile ./umount_and_remove_home.sh;
 
   # programs.bash.interactiveShellInit = yaziInit;
