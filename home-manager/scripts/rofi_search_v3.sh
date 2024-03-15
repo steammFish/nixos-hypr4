@@ -1,4 +1,3 @@
-
 # 文件路径定义
 history_file="$HOME/.rofi_search_history"
 bookmark_file="$HOME/.rofi_bookmarks"
@@ -21,8 +20,8 @@ engines=(
 # 构建搜索引擎选择菜单
 engine_names=$(printf "%s\n" "${!engines[@]}")
 
-# 读取书签并转换为带前缀的菜单项
-bookmarks_menu=$(awk -F',' '{printf "[Bookmark] %s\n", $1}' "$bookmark_file")
+# 读取书签并转换为带前缀的菜单项，跳过以#开头的行
+bookmarks_menu=$(awk -F',' '!/^#/ {printf "[Bookmark] %s\n", $1}' "$bookmark_file")
 
 # 读取历史记录并添加前缀
 history_menu=$(awk '{printf "[History] %s\n", $0}' "$history_file")
@@ -32,6 +31,12 @@ menu_items="Type to search...\n$bookmarks_menu\n$history_menu"
 
 # 显示rofi菜单
 selected_item=$(echo -e "$menu_items" | rofi -dmenu -p "Enter query or select:")
+
+# 检查输入是否为空
+if [ -z "$selected_item" ]; then
+    # 用户没有输入，退出脚本
+    exit 0
+fi
 
 # 检查是否完全匹配书签
 if echo "$bookmarks_menu" | grep -Fxq "$selected_item"; then
@@ -65,5 +70,4 @@ else
 
     fi
 fi
-
 

@@ -17,10 +17,11 @@ let
     "create_temp_project"
 
     "hypr_start"
-    "rofi_google_trans"
-    "rofi_search"
-    "rofi_search_v2"
+    # "rofi_google_trans"
+    # "rofi_search"
+    # "rofi_search_v2"
     "rofi_search_v3"
+    "rofi_wifi"
 
     "virt_start_win10"
     "docker_start_chat"

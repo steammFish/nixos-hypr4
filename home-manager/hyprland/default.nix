@@ -340,7 +340,9 @@
         # "ALT SHIFT, 3, exec, rofi_search cppreference"
         # "ALT SHIFT, 4, exec, rofi_search mynixos"
         # "$mainMod SHIFT, B,      exec, rofi_search_v2"
-        "$mainMod SHIFT, B,      exec, rofi_search_v3"
+
+        "ALT SHIFT, 1, exec, rofi_search_v3"
+        "ALT SHIFT, 2, exec, rofi_wifi"
 
         # ", Print, exec, grim $(xdg-user-dir PICTURES)/screenshots/$(date +'%s_grim.png') && notify-send \"Saved to ~/Pictures/screenshots\""
         # "ALT CTRL, Print, exec, grimblast copy area"
