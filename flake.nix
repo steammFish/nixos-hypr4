@@ -40,8 +40,15 @@
         hostname = "ck-nixos";
         userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" "mpd" ];
 
+        defaultApp = {
+          terminal = "alacritty";
+          clipboard = "";
+          launcher = "";
+          webBrowser = "";
+          fileBrowser = "";
+        };
+
         majorColor = "#F7879A";
-        fontFamily = "FantasqueSansM Nerd Font Mono"; # TODO:
         serif = "FantasqueSansM Nerd Font Mono";
         sansSerif = "RobotoMono Nerd Font";
         fontSize = 22;
