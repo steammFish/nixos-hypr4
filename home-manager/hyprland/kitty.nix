@@ -1,4 +1,4 @@
-{ pkgs, config, username, fontFamily, fontSize, ... }:
+{ pkgs, config, username, serif, fontSize, ... }:
 let
   kitty =
     ''
@@ -8,10 +8,10 @@ let
       confirm_os_window_close 0
       background_opacity      0.6
       font_size ${builtins.toString fontSize}
-      font_family      ${fontFamily}
-      bold_font        ${fontFamily}
-      italic_font      ${fontFamily}
-      bold_italic_font ${fontFamily}
+      font_family      ${serif}
+      bold_font        ${serif}
+      italic_font      ${serif}
+      bold_italic_font ${serif}
 
       # BEGIN_KITTY_THEME
       # Crayon Pony Fish

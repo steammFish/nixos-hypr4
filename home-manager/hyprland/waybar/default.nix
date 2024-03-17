@@ -1,4 +1,4 @@
-{ config, pkgs, fontSize, fontFamily, ... }:
+{ config, pkgs, fontSize, serif, ... }:
 
 let
   settings = import ./settings.nix;

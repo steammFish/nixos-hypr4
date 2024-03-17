@@ -6,7 +6,6 @@
   "security.workspace.trust.untrustedFiles": "newWindow",
   "security.workspace.trust.startupPrompt": "never",
   "security.workspace.trust.enabled": false,
-  "editor.minimap.side": "left",
   "editor.fontFamily": "'FantasqueSansM Nerd Font Mono','Maple Mono', 'monospace', monospace",
   "extensions.autoUpdate": false,
   "workbench.statusBar.visible": true,
@@ -15,9 +14,18 @@
   "terminal.sourceControlRepositoriesKind": "both",
   "telemetry.telemetryLevel": "off",
   "window.zoomLevel": 3,
-  "workbench.activityBar.location": "hidden",
   "workbench.iconTheme": "icons",
   "workbench.colorTheme": "Gruvbox Dark Medium",
   "editor.guides.bracketPairs": true,
-  "cmake.configureOnOpen": true
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 4,
+  "cmake.configureOnOpen": true,
+  "workbench.activityBar.location": "hidden",
+  "editor.minimap.side": "right",
+  "editor.minimap.maxColumn": 180,
+  "editor.minimap.enabled": true,
+  "explorer.sortOrder": "type",
+  "workbench.sideBar.location": "left"
 }

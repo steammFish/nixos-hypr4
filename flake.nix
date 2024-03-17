@@ -38,12 +38,16 @@
         inherit inputs;
         username = "ck";
         hostname = "ck-nixos";
+        userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" "mpd" ];
+
+        majorColor = "#F7879A";
+        fontFamily = "FantasqueSansM Nerd Font Mono"; # TODO:
+        serif = "FantasqueSansM Nerd Font Mono";
+        sansSerif = "RobotoMono Nerd Font";
         fontSize = 22;
         cursorSize = 32;
-        fontFamily = "FantasqueSansM Nerd Font Mono";
-        # fontFamily = "MesloLGM Nerd Font";
-        majorColor = "#F7879A";
-        userGroups = [ "networkmanager" "wheel" "keyd" "video" "input" "mpd" ];
+        borderSize = 2;
+        borderRadius = 6;
       };
 
     in

@@ -1,4 +1,4 @@
-{ pkgs, config, fontSize, fontFamily, ... }:
+{ pkgs, config, fontSize, serif, ... }:
 let
   theme =
     ''
@@ -100,7 +100,7 @@ in
       opacity = 0.6;
     };
     font = {
-      normal.family = fontFamily;
+      normal.family = serif;
       size = fontSize;
       # normal.style = "Regular";
       # size = 18;

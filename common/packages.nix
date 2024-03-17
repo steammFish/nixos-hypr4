@@ -14,12 +14,13 @@ let
     ffmpeg-full
     openssl
     asio
+    valgrind # Debugging and profiling tool suite
+
     (python311.withPackages (ps: with ps; [ pandas requests ]))
-
     cppreference-doc
-
     qt6.full
     qtcreator
+
 
     # clang
     # glibc
