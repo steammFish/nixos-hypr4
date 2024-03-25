@@ -30,6 +30,7 @@
       ${builtins.readFile ./ck_trash.sh}
       ${builtins.readFile ./fzf_ext.sh}
       ${builtins.readFile ./custom.sh}
+      ${builtins.readFile ./create_c_and_h_files.sh}
 
     '';
     # oh-my-zsh = {

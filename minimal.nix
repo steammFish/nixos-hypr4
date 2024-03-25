@@ -59,6 +59,7 @@ in
     tldr
     dnsutils
     ntfs3g
+    inetutils
 
     dconf2nix
     nmap
